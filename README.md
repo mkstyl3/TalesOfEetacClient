@@ -1,1 +1,3 @@
-# TalesOfEetacClient is the client version for TalesOfEetac game in Android
+# TalesOfEetacClient
+
+The client side version for TalesOfEetac game in Android
