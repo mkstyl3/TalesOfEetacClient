@@ -20,9 +20,11 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 
     private MainThread thread;
     private Droid droid;
+    private ProtaAnimated prota;
 
     public MainGamePanel(Context context) {
-        super(context);
+       /* cambios por ProtaAnimated
+          super(context);
         // adding the callback (this) to the surface holder to intercept events
         getHolder().addCallback(this);
 
@@ -33,7 +35,12 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
         thread = new MainThread(getHolder(), this);
 
         // make the GamePanel focusable so it can handle events
-        setFocusable(true);
+        setFocusable(true); */
+
+       prota = new ProtaAnimated(BitmapFactory.decodeResource(getResources(),R.drawable.), 10, 50, 30, 47, 5, 5);
+
+       //create the loop thread
+        thread = new MainThread(getHolder(),this);
     }
 
     @Override
@@ -103,6 +110,13 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
     }
 
     public void update() {
+
+        //añadido por ProtaAnimated hasta...
+
+        ProtaAnimated.update(System.currentTimeMillis());
+
+        //... aquí
+
         // check collision with right wall if heading right
         if (droid.getSpeed().getxDirection() == Speed.DIRECTION_RIGHT
                 && droid.getX() + droid.getBitmap().getWidth() / 2 >= getWidth()) {
