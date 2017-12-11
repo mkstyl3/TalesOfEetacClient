@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -14,7 +15,7 @@ import android.view.SurfaceView;
  * Created by mike on 22/11/17.
  */
 
-public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback{
+public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback {
 
     private static final String TAG = MainGamePanel.class.getSimpleName();
 
@@ -27,7 +28,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
         getHolder().addCallback(this);
 
         // create droid and load bitmap
-        droid = new Droid(BitmapFactory.decodeResource(getResources(), R.drawable.link1), 50, 50);
+        droid = new Droid(BitmapFactory.decodeResource(getResources(), R.drawable.link1), 500, 500);
 
         // create the game loop thread
         thread = new MainThread(getHolder(), this);
@@ -100,31 +101,6 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
         // fills the canvas with black
         canvas.drawColor(Color.BLACK);
         droid.draw(canvas);
-    }
-
-    public void update() {
-        // check collision with right wall if heading right
-        if (droid.getSpeed().getxDirection() == Speed.DIRECTION_RIGHT
-                && droid.getX() + droid.getBitmap().getWidth() / 2 >= getWidth()) {
-            droid.getSpeed().toggleXDirection();
-        }
-        // check collision with left wall if heading left
-        if (droid.getSpeed().getxDirection() == Speed.DIRECTION_LEFT
-                && droid.getX() - droid.getBitmap().getWidth() / 2 <= 0) {
-            droid.getSpeed().toggleXDirection();
-        }
-        // check collision with bottom wall if heading down
-        if (droid.getSpeed().getyDirection() == Speed.DIRECTION_DOWN
-                && droid.getY() + droid.getBitmap().getHeight() / 2 >= getHeight()) {
-            droid.getSpeed().toggleYDirection();
-        }
-        // check collision with top wall if heading up
-        if (droid.getSpeed().getyDirection() == Speed.DIRECTION_UP
-                && droid.getY() - droid.getBitmap().getHeight() / 2 <= 0) {
-            droid.getSpeed().toggleYDirection();
-        }
-        // Update the lone droid
-        droid.update();
     }
 
 }
