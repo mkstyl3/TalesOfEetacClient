@@ -2,6 +2,7 @@ package dsa.upc.edu.talesofeetacclient;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Rect;
 
 /**
  * Created by mike on 1/12/17.
@@ -57,7 +58,11 @@ public class Droid {
     }
 
     public void draw(Canvas canvas) {
-        canvas.drawBitmap(bitmap, x - (bitmap.getWidth() / 2), y - (bitmap.getHeight() / 2), null);
+        //cambios por ProtaAnimated
+        //canvas.drawBitmap(bitmap, x - (bitmap.getWidth() / 2), y - (bitmap.getHeight() / 2), null);
+
+        Rect destRect = new Rect(getX()), getY(), getX() + spriteWidth, getY() + spriteHeight);
+        canvas.drawBitmap(bitmap, sourceRect, destRect, null);
     }
 
     public void handleActionDown(int eventX, int eventY) {

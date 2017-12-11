@@ -35,6 +35,7 @@ public class MainThread extends Thread {
     @SuppressLint("WrongCall")
     @Override
     public void run() {
+
         Canvas canvas;
         Log.d(TAG, "Starting game loop");
         while (running) {
