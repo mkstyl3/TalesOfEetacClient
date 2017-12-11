@@ -30,11 +30,11 @@ public class ProtaAnimated {
         this.bitmap = bitmap;
         this.x = x;
         this.y = y;
-        currentFrame = 0;
+        //currentFrame = 0;
         frameNr = frameCount;
         spriteWidth = bitmap.getWidth()/frameCount;
         spriteHeight = bitmap.getHeight();
-        sourceRect = new Rect('0, 0, spriteWidth, spriteHeight');
+        //sourceRect = new Rect('0, 0, spriteWidth, spriteHeight');
         framePeriod = 1000 / fps;
         frameTicker = 01;
     }
@@ -43,19 +43,19 @@ public class ProtaAnimated {
         if (gameTime > frameTicker + framePeriod){
          frameTicker = gameTime;
          //increment the frame;
-            currentFrame++;
+          /*  currentFrame++;
             if (currentFrame >= frameNr){
                 currentFrame = 0;
-            }
+            }*/
         }
         //define the rectangle to cut out sprite
-        this.sourceRect.left = currentFrame * spriteWidth;
+        //this.sourceRect.left = currentFrame * spriteWidth;
         this.sourceRect.right = this.sourceRect.left + spriteWidth;
     }
 
     public void draw(Canvas canvas) {
-        Rect destRect = new Rect(getX()), getY(), getX() + spriteWidth, getY() + spriteHeight);
-        canvas.drawBitmap(bitmap, sourceRect, destRect, null);
+        /*Rect destRect = new Rect(getX()), getY(), getX() + spriteWidth, getY() + spriteHeight);
+        canvas.drawBitmap(bitmap, sourceRect, destRect, null);*/
     }
 
 }

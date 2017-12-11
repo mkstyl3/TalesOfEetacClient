@@ -24,6 +24,11 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
     private ProtaAnimated prota;
 
     public MainGamePanel(Context context) {
+        super(context);
+    }
+
+    /*
+    public MainGamePanel(Context context) {
        /* cambios por ProtaAnimated
           super(context);
         // adding the callback (this) to the surface holder to intercept events
@@ -36,7 +41,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
         thread = new MainThread(getHolder(), this);
 
         // make the GamePanel focusable so it can handle events
-        setFocusable(true); */
+        setFocusable(true);
 
        prota = new ProtaAnimated(BitmapFactory.decodeResource(getResources(),R.drawable.), 10, 50, 30, 47, 5, 5);
 
@@ -44,6 +49,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
         thread = new MainThread(getHolder(),this);
     }
 
+    */
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width,
                                int height) {
@@ -110,7 +116,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
         droid.draw(canvas);
     }
 
-
+    /*
     public void update() {
 
         //añadido por ProtaAnimated hasta...
@@ -141,5 +147,5 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
         }
         // Update the lone droid
         droid.update();
-    }
+    }*/
 }
