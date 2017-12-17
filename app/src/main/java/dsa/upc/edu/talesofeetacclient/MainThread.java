@@ -46,7 +46,7 @@ public class MainThread extends Thread {
                 synchronized (surfaceHolder) {
                     // update game state
                     // draws the canvas on the panel
-                    this.gamePanel.onDraw(canvas);
+                    //this.gamePanel.onDraw(canvas);
                 }
             } finally {
                 // in case of an exception the surface is not left in

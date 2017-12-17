@@ -1,4 +1,4 @@
-package dsa.upc.edu.talesofeetacclient;
+package dsa.upc.edu.talesofeetacclient.View;
 
 
 import android.app.Activity;
@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import dsa.upc.edu.talesofeetacclient.Controller.ApiAdapter;
 import dsa.upc.edu.talesofeetacclient.Model.Main.User;
-import okhttp3.ResponseBody;
+import dsa.upc.edu.talesofeetacclient.R;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -39,7 +39,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_login);
         loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(this);
-        usernameText = (EditText) findViewById(R.id.usernameText);
+        usernameText = (EditText) findViewById(R.id.id2Text);
         passwordText = (EditText) findViewById(R.id.passwordText);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
@@ -58,7 +58,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         progressBar.setVisibility(View.VISIBLE);
         progressBar.setProgress(10);
         User u = new User();
-        u.setUsername(username);
+        u.setName(username);
         u.setPassword(password);
         Call<User> call = ApiAdapter.getApiService("http://10.0.2.2:8080/talesofeetac/db/").getUserLoginService(u);
         call.enqueue(new GetUserLoginCallback());
@@ -73,6 +73,9 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             User user = response.body();
             progressBar.setProgress(30);
             intent.putExtra("data", user);
+            progressBar.setProgress(100);
+            progressBar.setVisibility(View.GONE);
+            startActivityForResult(intent,1);
         }
 
         @Override

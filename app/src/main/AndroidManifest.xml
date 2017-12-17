@@ -11,17 +11,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainGameActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".View.LoginActivity"
             android:label="@string/title_activity_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity
+            android:name=".View.MainActivity"
+            android:label="@string/title_activity_main"></activity>
+        <activity android:name=".View.UserInfo" />
+        <activity
+            android:name=".View.ItemInfo"
+            android:label="@string/title_activity_iteminfo"></activity>
     </application>
 
 </manifest>

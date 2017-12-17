@@ -10,7 +10,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by mike on 11/12/17.
  */
 
-public class Item implements Parcelable{
+public class Item implements Parcelable {
 
     //Variable declarations
     @SerializedName("id")
@@ -25,21 +25,17 @@ public class Item implements Parcelable{
     @SerializedName("description")
     @Expose
     private String description;
-    @SerializedName("value")
-    @Expose
-    private double value;
     @SerializedName("cost")
     @Expose
     private int cost;
 
     //Constructors
 
-    public Item(int id, String name, int type, String description, double value, int cost) {
+    public Item(int id, String name, int type, String description, int cost) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.description = description;
-        this.value = value;
         this.cost = cost;
     }
 
@@ -52,7 +48,6 @@ public class Item implements Parcelable{
         name = in.readString();
         type = in.readInt();
         description = in.readString();
-        value = in.readDouble();
         cost = in.readInt();
     }
 
@@ -99,14 +94,6 @@ public class Item implements Parcelable{
         this.description = description;
     }
 
-    public double getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
     public int getCost() {
         return cost;
     }
@@ -126,7 +113,6 @@ public class Item implements Parcelable{
         parcel.writeString(name);
         parcel.writeInt(type);
         parcel.writeString(description);
-        parcel.writeDouble(value);
         parcel.writeInt(cost);
     }
 }

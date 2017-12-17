@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dsa.upc.edu.talesofeetacclient.View.ItemInfo">
+
+    <TextView
+        android:id="@+id/name2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/id2Text"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <TextView
+        android:id="@+id/cost2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/type2Text"
+        tools:layout_editor_absoluteY="439dp" />
+
+    <TextView
+        android:id="@+id/type2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/name2Text"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <TextView
+        android:id="@+id/id2View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/item2View"
+        tools:layout_editor_absoluteY="319dp" />
+
+    <TextView
+        android:id="@+id/name2View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/id2View"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <ImageView
+        android:id="@+id/item2View"
+        android:layout_width="256dp"
+        android:layout_height="191dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.208" />
+
+    <TextView
+        android:id="@+id/cost2View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/type2View"
+        tools:layout_editor_absoluteY="439dp" />
+
+    <TextView
+        android:id="@+id/id2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/item2View"
+        tools:layout_editor_absoluteY="320dp" />
+
+    <TextView
+        android:id="@+id/type2View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/name2View"
+        tools:layout_editor_absoluteY="398dp" />
+</android.support.constraint.ConstraintLayout>

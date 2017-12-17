@@ -108,7 +108,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
         }
         return true;
     }
-
+    /*
     @Override
     protected void onDraw(Canvas canvas) {
         // fills the canvas with black
@@ -116,7 +116,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
         droid.draw(canvas);
     }
 
-    /*
+
     public void update() {
 
         //añadido por ProtaAnimated hasta...

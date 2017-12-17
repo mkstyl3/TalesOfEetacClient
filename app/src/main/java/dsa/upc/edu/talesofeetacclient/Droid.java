@@ -57,13 +57,13 @@ public class Droid {
         this.speed = speed;
     }
 
-    public void draw(Canvas canvas) {
+    /*public void draw(Canvas canvas) {
         //cambios por ProtaAnimated
         //canvas.drawBitmap(bitmap, x - (bitmap.getWidth() / 2), y - (bitmap.getHeight() / 2), null);
 
         Rect destRect = new Rect(getX()), getY(), getX() + spriteWidth, getY() + spriteHeight);
         canvas.drawBitmap(bitmap, sourceRect, destRect, null);
-    }
+    }*/
 
     public void handleActionDown(int eventX, int eventY) {
         if (eventX >= (x - bitmap.getWidth() / 2) && (eventX <= (x + bitmap.getWidth()/2))) {

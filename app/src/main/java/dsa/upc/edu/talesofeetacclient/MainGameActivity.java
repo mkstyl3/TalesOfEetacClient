@@ -6,9 +6,9 @@ import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class MainActivity extends Activity {
+public class MainGameActivity extends Activity {
     /** Called when the activity is first created. */
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = MainGameActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -7,7 +7,6 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -20,24 +19,22 @@ public class User implements Parcelable {
     @SerializedName("id")
     @Expose
     private int id;
-    @SerializedName("username")
+    @SerializedName("name")
     @Expose
-    private String username;
+    private String name;
     @SerializedName("password")
     @Expose
     private String password;
-    @SerializedName("lastMap")
+    @SerializedName("email")
     @Expose
-    private int lastMap;
+    private String email;
     @SerializedName("items")
     @Expose
     private List<Item> items;
     @SerializedName("location")
     @Expose
     private Location location;
-    @SerializedName("admin")
-    @Expose
-    private boolean admin;
+
 
     //Constructors
 
@@ -45,19 +42,18 @@ public class User implements Parcelable {
 
     }
 
-    public User(int id, String username, String password, Location location) {
+    public User(int id, String name, String password, Location location) {
         this.id = id;
-        this.username = username;
+        this.name = name;
         this.password = password;
         this.items = new ArrayList<>();
         this.location = location;
     }
 
-    public User(int id, String username, String password, boolean admin) {
+    public User(int id, String name, String password) {
         this.id = id;
-        this.username = username;
+        this.name = name;
         this.password = password;
-        this.admin = admin;
         this.items = new ArrayList<>();
     }
 
@@ -71,6 +67,14 @@ public class User implements Parcelable {
         this.id = id;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public Location getLocation() {
         return location;
     }
@@ -79,12 +83,12 @@ public class User implements Parcelable {
         this.location = location;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
@@ -93,17 +97,6 @@ public class User implements Parcelable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public int getLastMap() {return lastMap;}
-
-    public void setLastMap(int lastMap) {this.lastMap = lastMap;}
-
-    public boolean getAdmin() {
-        return admin;
-    }
-    public void setAdmin(boolean admin) {
-        this.admin = admin;
     }
 
     public List<Item> getItems() {
@@ -125,12 +118,11 @@ public class User implements Parcelable {
 
     protected User(Parcel in) {
         id = in.readInt();
-        username = in.readString();
+        name = in.readString();
         password = in.readString();
-        lastMap = in.readInt();
+        email = in.readString();
         items = in.createTypedArrayList(Item.CREATOR);
         location = in.readParcelable(Location.class.getClassLoader());
-        admin = in.readByte() != 0;
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {
@@ -153,11 +145,10 @@ public class User implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeInt(id);
-        parcel.writeString(username);
+        parcel.writeString(name);
         parcel.writeString(password);
-        parcel.writeInt(lastMap);
+        parcel.writeString(email);
         parcel.writeTypedList(items);
         parcel.writeParcelable(location, i);
-        parcel.writeByte((byte) (admin ? 1 : 0));
     }
 }
