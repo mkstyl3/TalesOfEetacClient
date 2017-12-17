@@ -132,7 +132,7 @@ public class SpriteSheetAnimation extends Activity{
             paint = new Paint();
 
             //Load Rhas from his .png file
-            bitmapRha = BitmapFactory.decodeResource(this.getResources(), R.drawable.rha_300x104);
+            //bitmapRha = BitmapFactory.decodeResource(this.getResources(), R.drawable.rha_300x104);
 
             //Scale the bitmap to the correct size
             //we need to do this because android automatically
@@ -157,10 +157,10 @@ public class SpriteSheetAnimation extends Activity{
                 long startFrameTIme = System.currentTimeMillis();
 
                 //Update the frame
-                update();
+                //update();
 
                 //Draw the frame
-                draw();
+                //draw();
 
                 //Calculate the fps this frame
                 //we can then use the result to

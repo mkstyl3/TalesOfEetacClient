@@ -44,8 +44,8 @@ public class ItemInfo extends Activity {
 
         id2View.setText(String.valueOf(item.getId()));
         name2View.setText(item.getName());
-        type2View.setText(item.getType());
-        cost2View.setText(item.getCost());
+        type2View.setText(String.valueOf(item.getType()));
+        cost2View.setText(String.valueOf(item.getCost()));
         //Picasso.with(getBaseContext()).load(user.getAvatarUrl()).into(userAvatarView);
         Picasso.with(getBaseContext()).load("http://i.imgur.com/DvpvklR.png").into(item2View);
     }
