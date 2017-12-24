@@ -78,21 +78,21 @@ public class GameView extends SurfaceView implements Runnable {
 
             // Capture the current time in milliseconds in startFrameTime
             long startFrameTime = System.currentTimeMillis();
+            synchronized (ourHolder) {
+                // Update the frame
+                update();
 
-            // Update the frame
-            update();
+                // Draw the frame
+                draw();
 
-            // Draw the frame
-            draw();
-
-            // Calculate the fps this frame
-            // We can then use the result to
-            // time animations and more.
-            timeThisFrame = System.currentTimeMillis() - startFrameTime;
-            if (timeThisFrame > 0) {
-                fps = 1000 / timeThisFrame;
+                // Calculate the fps this frame
+                // We can then use the result to
+                // time animations and more.
+                timeThisFrame = System.currentTimeMillis() - startFrameTime;
+                if (timeThisFrame > 0) {
+                    fps = 1000 / timeThisFrame;
+                }
             }
-
         }
 
     }
