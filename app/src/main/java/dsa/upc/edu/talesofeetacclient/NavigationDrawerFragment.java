@@ -63,6 +63,7 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
     private Intent intent;
+    private Intent intent2;
     User user;
 
     public NavigationDrawerFragment() {
@@ -207,6 +208,13 @@ public class NavigationDrawerFragment extends Fragment {
                     intent = new Intent(getActivity(), UserInfo.class);
                     intent.putExtra("profile", user);
                     startActivityForResult(intent,2 );
+                    break;
+                }
+                case 1: {
+                    intent2 = new Intent(getActivity(), MainGameActivity.class);
+                    intent2.putExtra("profile", user);
+                    startActivityForResult(intent2,3 );
+                    break;
                 }
             }
             mDrawerListView.setItemChecked(position, true);

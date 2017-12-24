@@ -27,7 +27,8 @@
         <activity android:name=".View.UserInfo" />
         <activity
             android:name=".View.ItemInfo"
-            android:label="@string/title_activity_iteminfo"></activity>
+            android:label="@string/title_activity_iteminfo">
+        </activity>
     </application>
 
 </manifest>
