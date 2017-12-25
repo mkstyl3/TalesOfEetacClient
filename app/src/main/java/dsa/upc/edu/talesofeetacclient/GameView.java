@@ -1,12 +1,13 @@
 package dsa.upc.edu.talesofeetacclient;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -52,6 +53,33 @@ public class GameView extends SurfaceView implements Runnable {
     // He starts 10 pixels from the left
     float bobXPosition = 10;
 
+    // These next two values can be anything you like
+    // As long as the ratio doesn't distort the sprite too much
+    private int frameWidth;
+    private int frameHeight;
+
+    // How many frames are there on the sprite sheet?
+    private int frameCount = 4;
+
+    // Start at the first frame - where else?
+    private int currentFrame = 0;
+
+    // What time was it when we last changed frames
+    private long lastFrameChangeTime = 0;
+
+    // How long should each frame last
+    private int frameLengthInMilliseconds = 100;
+
+    private Rect frameToDraw = new Rect();
+
+    // A rect that defines an area of the screen
+    // on which to draw
+    RectF whereToDraw = new RectF();
+
+    private static final int[] DIRECTION_TO_ANIMATION_MAP = { 3, 1, 0, 2 };
+
+    private int direction;
+
     // When the we initialize (call new()) on gameView
     // This special constructor method runs
     public GameView(Context context) {
@@ -65,10 +93,23 @@ public class GameView extends SurfaceView implements Runnable {
         paint = new Paint();
 
         // Load Bob from his .png file
-        bitmapBob = BitmapFactory.decodeResource(this.getResources(), R.drawable.link1);
+        bitmapBob = BitmapFactory.decodeResource(this.getResources(), R.drawable.link128x128);
+        frameHeight = bitmapBob.getHeight() / 4;
+        frameWidth = bitmapBob.getWidth() /4;
+        frameToDraw.set(0,
+                0,
+                frameWidth,
+                frameHeight);
+        whereToDraw.set(bobXPosition, 0,
+                bobXPosition + frameWidth,
+                frameHeight);
+        // Scale the bitmap to the correct size
+        // We need to do this because Android automatically
+        // scales bitmaps based on screen density
+        //bitmapBob = Bitmap.createScaledBitmap(bitmapBob, frameWidth * frameCount, frameHeight, false);
 
         // Set our boolean to true - game on!
-        playing = true;
+        //playing = true;
 
     }
 
@@ -131,11 +172,61 @@ public class GameView extends SurfaceView implements Runnable {
             canvas.drawText("FPS:" + fps, 20, 40, paint);
 
             // Draw bob at bobXPosition, 200 pixels
-            canvas.drawBitmap(bitmapBob, bobXPosition, 200, paint);
+            //canvas.drawBitmap(bitmapBob, bobXPosition, 200, paint);
+
+            whereToDraw.set((int)bobXPosition,
+                    300,
+                    (int)bobXPosition + frameWidth,
+                    300+frameHeight);
+
+            getCurrentFrame(direction);
+
+            canvas.drawBitmap(bitmapBob,
+                    frameToDraw,
+                    whereToDraw, paint);
+
+            // Draw bob at bobXPosition, 200 pixels
+            //canvas.drawBitmap(bitmapBob, bobXPosition, 200, paint);
 
             // Draw everything to the screen
             ourHolder.unlockCanvasAndPost(canvas);
         }
+
+    }
+
+    public void getCurrentFrame(int direction){
+
+        long time  = System.currentTimeMillis();
+        if(isMoving) {// Only animate if bob is moving
+            if ( time > lastFrameChangeTime + frameLengthInMilliseconds) {
+                lastFrameChangeTime = time;
+                currentFrame++;
+                if (currentFrame >= frameCount) {
+
+                    currentFrame = 0;
+                }
+            }
+        }
+        //update the left and right values of the source of
+        //the next frame on the spritesheet
+        frameToDraw.left = currentFrame * frameWidth;
+        switch (direction) {
+            case 0 : {
+                break;
+            }
+            case 1 : {
+                break;
+            }
+            case 2 : {
+                frameToDraw.offsetTo(currentFrame * frameWidth, 2*frameHeight);
+                break;
+            }
+            case 3 : {
+                break;
+            }
+
+        }
+        frameToDraw.right = frameToDraw.left + frameWidth;
 
     }
 
@@ -171,7 +262,7 @@ public class GameView extends SurfaceView implements Runnable {
 
                 // Set isMoving so Bob is moved in the update method
                 isMoving = true;
-
+                direction = DIRECTION_TO_ANIMATION_MAP[3];
                 break;
 
             // Player has removed finger from screen
