@@ -1,1 +1,14 @@
-.idea
+# Intellij / AndroidS
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+
+
+#log4j / logd?
+*.log
+
+#

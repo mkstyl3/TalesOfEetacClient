@@ -26,9 +26,9 @@ public class UserCell extends Cell {
         this.u = u;
     }
 
-    @Override
+    /*@Override
     public String getSYMBOL() {
         return this.symbol;
-    }
+    }*/
 
 }

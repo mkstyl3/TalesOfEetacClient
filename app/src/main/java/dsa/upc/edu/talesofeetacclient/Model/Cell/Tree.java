@@ -4,11 +4,11 @@ public class Tree extends Cell {
 
     final protected String symbol = "T";
 
-    public Tree () {}
+    public Tree () {};
 
-    @Override
+    /*@Override
     public String getSYMBOL() {
         return this.symbol;
-    }
+    }*/
 
 }

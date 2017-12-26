@@ -116,6 +116,7 @@ public class GameView extends SurfaceView implements Runnable {
         bitmapBob = BitmapFactory.decodeResource(this.getResources(), R.drawable.link128x128);
         frameHeight = bitmapBob.getHeight() /4;
         frameWidth = bitmapBob.getWidth() /4;
+        //Void rectangle with .png's file size
         frameToDrawX.set(0,
                 0,
                 frameWidth,
@@ -201,7 +202,7 @@ public class GameView extends SurfaceView implements Runnable {
             paint.setTextSize(45);
 
             // Display the current fps on the screen
-            canvas.drawText("FPS:" + fps, 20, 40, paint);
+            canvas.drawText("FPS:" + fps, screenWidth/3 +100, 1130, paint);
 
             whereToDrawX.set((int)bobXPosition,
                     bobYPosition,
@@ -212,8 +213,17 @@ public class GameView extends SurfaceView implements Runnable {
                     frameToDrawX,
                     whereToDrawX, paint);
             DrawControls();
+
+            DrawCell();
+
             ourHolder.unlockCanvasAndPost(canvas);
         }
+    }
+
+    private void DrawCell() {
+        Rect rect = new Rect(screenWidth/2,36,screenWidth/2+84,36+84);
+        Bitmap bitmapCell = BitmapFactory.decodeResource(this.getResources(), R.drawable.dngn_closed_door84x84);
+        canvas.drawBitmap(bitmapCell, null, rect, null);
     }
 
     private void DrawControls() {

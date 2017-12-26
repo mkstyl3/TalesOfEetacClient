@@ -6,8 +6,8 @@ public class PlantaPatatas extends Cell {
 
     public PlantaPatatas () {}
 
-    @Override
+    /*@Override
     public String getSYMBOL() {
         return this.symbol;
-    }
+    }*/
 }

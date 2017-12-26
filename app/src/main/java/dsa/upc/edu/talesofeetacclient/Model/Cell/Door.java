@@ -17,8 +17,8 @@ public class Door extends Cell {
         this.nextMap = nextmap;
     }
 
-    @Override
+    /*@Override
     public String getSYMBOL() {
         return this.symbol;
-    }
+    }*/
 }

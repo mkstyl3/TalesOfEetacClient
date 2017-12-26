@@ -6,6 +6,11 @@ package dsa.upc.edu.talesofeetacclient.Model.Cell;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 */
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+
 import dsa.upc.edu.talesofeetacclient.Model.Main.Location;
 
 
@@ -29,11 +34,28 @@ public abstract class Cell {
 
     onMapLoc is inherited*/
     protected Location onMapLoc;
+    protected Bitmap bitmap;
+    protected Canvas canvas;
+    protected Rect rect;
+    protected Drawable drawable;
 
     //Custom implementation on Subclasses
-    public abstract String getSYMBOL();
+    //public abstract String getSYMBOL();
 
-    //No Constructor because it's abstract
+    public Cell (){}
+
+    public Cell (Location location, Bitmap bitmap, Canvas canvas, Drawable drawable) {
+        this.onMapLoc = location;
+        this.bitmap = bitmap;
+        this.canvas = canvas;
+        cellMapper(location);
+
+    }
+
+    private void cellMapper(Location location) {
+        int x = location.getX();
+        int y = location.getY();
+    }
 
     /*Getters and Setters
 
@@ -44,4 +66,36 @@ public abstract class Cell {
     public void setOnMapLoc(Location loc) {
         this.onMapLoc = loc;
     }
+    public Bitmap getBitmap() {
+        return bitmap;
+    }
+
+    public void setBitmap(Bitmap bitmap) {
+        this.bitmap = bitmap;
+    }
+
+    public Canvas getCanvas() {
+        return canvas;
+    }
+
+    public void setCanvas(Canvas canvas) {
+        this.canvas = canvas;
+    }
+
+    public Rect getRect() {
+        return rect;
+    }
+
+    public void setRect(Rect rect) {
+        this.rect = rect;
+    }
+
+    public Drawable getDrawable() {
+        return drawable;
+    }
+
+    public void setDrawable(Drawable drawable) {
+        this.drawable = drawable;
+    }
+
 }

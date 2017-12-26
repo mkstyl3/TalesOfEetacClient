@@ -17,8 +17,9 @@ public class NPC extends Cell {
     public void setDialogue(String dialogue) {
         this.dialogue = dialogue;
     }
-    @Override
+
+    /*@Override
     public String getSYMBOL() {
         return this.SYMBOL;
-    }
+    }*/
 }

@@ -6,8 +6,8 @@ public class Field extends Cell {
 
     public Field () {}
 
-    @Override
+    /*@Override
     public String getSYMBOL() {
         return this.symbol;
-    }
+    }*/
 }

@@ -6,8 +6,8 @@ public class Wall extends Cell {
 
     public Wall () {}
 
-    @Override
+    /*@Override
     public String getSYMBOL() {
         return this.symbol;
-    }
+    }*/
 }
