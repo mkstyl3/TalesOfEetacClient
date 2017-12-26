@@ -1,7 +1,6 @@
 package dsa.upc.edu.talesofeetacclient;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -14,8 +13,6 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-import dsa.upc.edu.talesofeetacclient.View.GameImage;
-
 /**
  * Created by mike on 22/11/17.
  */
@@ -24,11 +21,9 @@ public class GameView extends SurfaceView implements Runnable {
 
     // This is our thread
     Thread gameThread = null;
-    private float mScreenDensity;
-    private Context mGameContext;
-    private int mScreenXMax = 0;
-    private int mScreenYMax = 0;
 
+    private int screenHeight = 0;
+    private int screenWidth = 0;
     // This is new. We need a SurfaceHolder
     // When we use Paint and Canvas in a thread
     // We will see it in action in the draw method soon.
@@ -58,8 +53,8 @@ public class GameView extends SurfaceView implements Runnable {
     float walkSpeedPerSecond = 150;
 
     // He starts 10 pixels from the left
-    float bobXPosition = 10;
-    float bobYPosition = 10;
+    float bobXPosition = 36;
+    float bobYPosition = 36;
 
     // These next two values can be anything you like
     // As long as the ratio doesn't distort the sprite too much
@@ -83,29 +78,20 @@ public class GameView extends SurfaceView implements Runnable {
     // A rect that defines an area of the screen
     // on which to draw
     RectF whereToDrawX = new RectF();
-    RectF whereToDrawY = new RectF();
 
     private static final int[] DIRECTION_TO_ANIMATION_MAP = { 3, 1, 0, 2 };
 
     private int direction;
-    private static final int CONTROLS_PADDING = 10;
 
     private static final int START_STAGE = 1;
     private static final int START_LEVEL = 1;
 
-    private static final int DIRECTION_UP = 1;
-    private static final int DIRECTION_DOWN = 2;
-    private static final int DIRECTION_LEFT = 3;
-    private static final int DIRECTION_RIGHT = 4;
-    private static final int DIRECTION_A = 5;
-    private static final int DIRECTION_B = 6;
-
-    private GameImage ctrlUpArrowImage = null;
-    private GameImage ctrlDownArrowImage = null;
-    private GameImage ctrlLeftArrowImage = null;
-    private GameImage ctrlRightArrowImage = null;
-
-    Resources res;
+    private static final int CONTROLS_UP = 3;
+    private static final int CONTROLS_DOWN = 0;
+    private static final int CONTROLS_LEFT = 1;
+    private static final int CONTROLS_RIGHT = 2;
+    private static final int CONTROLS_A = 4;
+    private static final int CONTROLS_B = 5;
 
     private Rect controlsUpRect;
     private Rect controlsDownRect;
@@ -114,8 +100,6 @@ public class GameView extends SurfaceView implements Runnable {
     private Rect controlsARect;
     private Rect controlsBRect;
 
-
-
     // When the we initialize (call new()) on gameView
     // This special constructor method runs
     public GameView(Context context) {
@@ -123,53 +107,32 @@ public class GameView extends SurfaceView implements Runnable {
         // SurfaceView class to set up our object.
         // How kind.
         super(context);
-        this.mGameContext = context;
 
         // Initialize ourHolder and paint objects
         ourHolder = getHolder();
         paint = new Paint();
 
-        res = context.getResources();
-
-
         // Load Bob from his .png file
         bitmapBob = BitmapFactory.decodeResource(this.getResources(), R.drawable.link128x128);
-        frameHeight = bitmapBob.getHeight() / 4;
+        frameHeight = bitmapBob.getHeight() /4;
         frameWidth = bitmapBob.getWidth() /4;
         frameToDrawX.set(0,
                 0,
                 frameWidth,
                 frameHeight);
-        whereToDrawX.set(bobXPosition, 0,
-                bobXPosition + frameWidth,
-                frameHeight);
-
-        whereToDrawY.set(bobXPosition, 0,
-                bobYPosition + frameWidth,
-                frameHeight);
-        // Scale the bitmap to the correct size
-        // We need to do this because Android automatically
-        // scales bitmaps based on screen density
-        //bitmapBob = Bitmap.createScaledBitmap(bitmapBob, frameWidth * frameCount, frameHeight, false);
-
-        // Set our boolean to true - game on!
-        //playing = true;
-
+        // Scale the bitmap to the correct size <--- Maybe we need it later
     }
 
     @Override
     public void run() {
         while (playing) {
-
             // Capture the current time in milliseconds in startFrameTime
             long startFrameTime = System.currentTimeMillis();
             synchronized (ourHolder) {
                 // Update the frame
                 update();
-
                 // Draw the frame
                 draw();
-
                 // Calculate the fps this frame
                 // We can then use the result to
                 // time animations and more.
@@ -179,14 +142,12 @@ public class GameView extends SurfaceView implements Runnable {
                 }
             }
         }
-
     }
 
     // Everything that needs to be updated goes in here
     // In later projects we will have dozens (arrays) of objects.
     // We will also do other things like collision detection.
     public void update() {
-
         // If bob is moving (the player is touching the screen)
         // then move him to the right based on his target speed and the current fps.
         if(isMoving){
@@ -195,45 +156,43 @@ public class GameView extends SurfaceView implements Runnable {
                     bobYPosition = bobYPosition - (walkSpeedPerSecond / fps);
                     break;
                 }
-
                 case 0 : {
                     bobYPosition = bobYPosition + (walkSpeedPerSecond / fps);
                     break;
                 }
-
                 case 1 : {
                     bobXPosition = bobXPosition - (walkSpeedPerSecond / fps);
                     break;
                 }
-
                 case 2 : {
                     bobXPosition = bobXPosition + (walkSpeedPerSecond / fps);
                     break;
                 }
             }
         }
-
     }
 
     // Draw the newly updated scene
     public void draw() {
-
         // Make sure our drawing surface is valid or we crash
         if (ourHolder.getSurface().isValid()) {
             // Lock the canvas ready to draw
             canvas = ourHolder.lockCanvas();
-            int playScreenHeight = canvas.getHeight()/2;
-            int playScreenWidth = canvas.getWidth();
-            mScreenXMax = canvas.getWidth();
-            mScreenYMax = canvas.getHeight();
+            screenWidth = canvas.getWidth();
+            screenHeight = canvas.getHeight();
 
-            Paint paint2 = new Paint();
-            paint2.setColor(Color.argb(255,  26, 128, 182));
+            Paint playScreenPaint = new Paint();
+            playScreenPaint.setColor(Color.argb(255,  26, 128, 182));
+
+            Paint screenBorderPaint = new Paint();
+            screenBorderPaint.setColor(Color.argb(255,96,96,96));
+
             // Draw the background color
             canvas.drawColor(Color.argb(255,96,96,96));
-            canvas.drawRect(0,0,playScreenWidth,playScreenHeight,paint2);
-            // Draw the background color
-
+            canvas.drawRect(0,0,screenWidth,1080,playScreenPaint);
+            canvas.drawRect(0,0,36,1080,screenBorderPaint);
+            canvas.drawRect(0,0,1080,36,screenBorderPaint);
+            canvas.drawRect(1044,0,1080,1080,screenBorderPaint);
 
             // Choose the brush color for drawing
             paint.setColor(Color.argb(255,  249, 129, 0));
@@ -244,58 +203,45 @@ public class GameView extends SurfaceView implements Runnable {
             // Display the current fps on the screen
             canvas.drawText("FPS:" + fps, 20, 40, paint);
 
-            // Draw bob at bobXPosition, 200 pixels
-
-            //canvas.drawBitmap(bitmapBob, bobXPosition, 200, paint);
-
             whereToDrawX.set((int)bobXPosition,
                     bobYPosition,
                     (int)bobXPosition + frameWidth,
                     bobYPosition+frameHeight);
-
             getCurrentFrame(direction);
-
             canvas.drawBitmap(bitmapBob,
                     frameToDrawX,
                     whereToDrawX, paint);
-
             DrawControls();
-
-            // Draw bob at bobXPosition, 200 pixels
-            //canvas.drawBitmap(bitmapBob, bobXPosition, 200, paint);
-
-            // Draw everything to the screen
             ourHolder.unlockCanvasAndPost(canvas);
         }
     }
 
     private void DrawControls() {
         //Up Control
-        controlsUpRect = new Rect(160, mScreenYMax/2 + 200, 160+120,mScreenYMax/2 +200+120);
+        controlsUpRect = new Rect(160, screenHeight /2 + 200+200, 160+120, screenHeight /2 +200+120+200);
         Bitmap bitmapControlUp = BitmapFactory.decodeResource(this.getResources(), R.drawable.ctrl_up_arrow);
         canvas.drawBitmap(bitmapControlUp,null, controlsUpRect,null);
         //Left Control
-        controlsLeftRect = new Rect(40, mScreenYMax/2 + 280, 40+120,mScreenYMax/2 +280+120);
+        controlsLeftRect = new Rect(40, screenHeight /2 + 280+200, 40+120, screenHeight /2 +280+120+200);
         Bitmap bitmapControlLeft = BitmapFactory.decodeResource(this.getResources(), R.drawable.ctrl_left_arrow);
         canvas.drawBitmap(bitmapControlLeft,null, controlsLeftRect,null);
         //Right Control
-        controlsRightRect = new Rect(280, mScreenYMax/2 + 280, 280+120,mScreenYMax/2 +280+120);
+        controlsRightRect = new Rect(280, screenHeight /2 + 280+200, 280+120, screenHeight /2 +280+120+200);
         Bitmap bitmapControlRight = BitmapFactory.decodeResource(this.getResources(), R.drawable.ctrl_right_arrow);
         canvas.drawBitmap(bitmapControlRight,null, controlsRightRect,null);
         //Down Control
-        controlsDownRect = new Rect(160, mScreenYMax/2 + 360, 160+120,mScreenYMax/2 +360+120);
+        controlsDownRect = new Rect(160, screenHeight /2 + 360+200, 160+120, screenHeight /2 +360+120+200);
         Bitmap bitmapControlDown = BitmapFactory.decodeResource(this.getResources(), R.drawable.ctrl_down_arrow);
         canvas.drawBitmap(bitmapControlDown,null, controlsDownRect,null);
         //A Control
-        controlsARect = new Rect(720, mScreenYMax/2 + 360, 720+130,mScreenYMax/2 +360+130);
+        controlsARect = new Rect(720, screenHeight /2 + 360+200, 720+130, screenHeight /2 +360+130+200);
         Bitmap bitmapControlA = BitmapFactory.decodeResource(this.getResources(), R.drawable.controls_a);
         canvas.drawBitmap(bitmapControlA,null, controlsARect,null);
         //B Control
-        controlsBRect = new Rect(800, mScreenYMax/2 + 200, 800+120,mScreenYMax/2 +200+120);
+        controlsBRect = new Rect(800, screenHeight /2 + 200+200, 800+120, screenHeight /2 +200+120+200);
         Bitmap bitmapControlB = BitmapFactory.decodeResource(this.getResources(), R.drawable.controls_b);
         canvas.drawBitmap(bitmapControlB,null, controlsBRect,null);
     }
-
 
     public void getCurrentFrame(int direction){
 
@@ -330,10 +276,8 @@ public class GameView extends SurfaceView implements Runnable {
                 frameToDrawX.offsetTo(currentFrame * frameWidth, 1*frameHeight);
                 break;
             }
-
         }
         frameToDrawX.right = frameToDrawX.left + frameWidth;
-
     }
 
     // If SimpleGameEngine Activity is paused/stopped
@@ -345,7 +289,6 @@ public class GameView extends SurfaceView implements Runnable {
         } catch (InterruptedException e) {
             Log.e("Error:", "joining thread");
         }
-
     }
 
     // If SimpleGameEngine Activity is started then
@@ -364,7 +307,8 @@ public class GameView extends SurfaceView implements Runnable {
         switch (motionEvent.getAction() & MotionEvent.ACTION_MASK) {
 
             // Player has touched the screen
-            case MotionEvent.ACTION_DOWN:
+            case MotionEvent.ACTION_DOWN: {
+
                 final int x = (int) motionEvent.getX();
                 final int y = (int) motionEvent.getY();
 
@@ -409,30 +353,18 @@ public class GameView extends SurfaceView implements Runnable {
                     //actionB = yes;
                     break;
                 }
+            }
 
-                //private static final int[] DIRECTION_TO_ANIMATION_MAP = { 3, 1, 0, 2 };
-
-
-            // Player has removed finger from screen
-            case MotionEvent.ACTION_UP:
-
+                // Player has removed finger from screen
+            case MotionEvent.ACTION_UP: {
                 // Set isMoving so Bob does not move
                 isMoving = false;
 
                 break;
+            }
         }
+
+
         return true;
     }
-
-
-    /*
-    private static final int DIRECTION_UP = 1;
-    private static final int DIRECTION_DOWN = 2;
-    private static final int DIRECTION_LEFT = 3;
-    private static final int DIRECTION_RIGHT = 4;
-    private static final int DIRECTION_A = 5;
-    private static final int DIRECTION_B = 6;
-    */
-
-
 }
