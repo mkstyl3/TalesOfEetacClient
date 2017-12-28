@@ -1,9 +1,10 @@
+# Intellij
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
+*.iws
+
+# Mac
 .DS_Store
-/build
-/captures
-.externalNativeBuild
+
+#log
+*.log
