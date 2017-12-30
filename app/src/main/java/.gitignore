@@ -6,9 +6,4 @@
 # Mac
 .DS_Store
 
-
-
-#log4j / logd?
 *.log
-
-#

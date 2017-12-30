@@ -48,13 +48,14 @@ public abstract class Cell {
         this.onMapLoc = location;
         this.bitmap = bitmap;
         this.canvas = canvas;
-        cellMapper(location);
+        this.rect = cellMapper(location);
 
     }
 
-    private void cellMapper(Location location) {
+    private Rect cellMapper(Location location) {
         int x = location.getX();
         int y = location.getY();
+        return null;
     }
 
     /*Getters and Setters
@@ -97,5 +98,7 @@ public abstract class Cell {
     public void setDrawable(Drawable drawable) {
         this.drawable = drawable;
     }
+
+
 
 }

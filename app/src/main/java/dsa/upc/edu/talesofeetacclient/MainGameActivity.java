@@ -1,19 +1,25 @@
 package dsa.upc.edu.talesofeetacclient;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+
+import dsa.upc.edu.talesofeetacclient.Model.Main.User;
 
 public class MainGameActivity extends Activity {
     // gameView will be the view of the game
     // It will also hold the logic of the game
     // and respond to screen touches as well
     GameView gameView;
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Initialize gameView and set it as the view
-        gameView = new GameView(this);
+        Intent intent = getIntent();
+        user = intent.getParcelableExtra("profile");
+        gameView = new GameView(this,user);
         setContentView(gameView);
 
     }

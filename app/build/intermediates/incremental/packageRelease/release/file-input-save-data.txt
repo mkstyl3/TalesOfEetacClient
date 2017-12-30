@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Fri Dec 29 16:04:34 CET 2017
+0.baseType=DIRECTORY
+0.base=/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/transforms/dex/release/0
+0.path=classes.dex
+0.set=DEX
+count=1

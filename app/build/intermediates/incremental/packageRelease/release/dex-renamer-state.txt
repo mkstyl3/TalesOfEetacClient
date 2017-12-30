@@ -1,0 +1,4 @@
+#Fri Dec 29 16:04:34 CET 2017
+base.0=/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/transforms/dex/release/0
+path.0=classes.dex
+renamed.0=classes.dex

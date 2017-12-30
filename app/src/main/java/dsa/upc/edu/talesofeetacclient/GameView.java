@@ -1,6 +1,8 @@
 package dsa.upc.edu.talesofeetacclient;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -8,10 +10,15 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+
+import dsa.upc.edu.talesofeetacclient.Model.Cell.Cell;
+import dsa.upc.edu.talesofeetacclient.Model.Cell.UserCell;
+import dsa.upc.edu.talesofeetacclient.Model.Main.User;
 
 /**
  * Created by mike on 22/11/17.
@@ -100,19 +107,25 @@ public class GameView extends SurfaceView implements Runnable {
     private Rect controlsARect;
     private Rect controlsBRect;
 
+    User user;
+
     // When the we initialize (call new()) on gameView
     // This special constructor method runs
-    public GameView(Context context) {
+    public GameView(Context context, User u) {
         // The next line of code asks the
         // SurfaceView class to set up our object.
         // How kind.
         super(context);
+        user = new User();
+        user = u;
 
         // Initialize ourHolder and paint objects
         ourHolder = getHolder();
         paint = new Paint();
 
         // Load Bob from his .png file
+        Cell userCell = new UserCell(u);
+
         bitmapBob = BitmapFactory.decodeResource(this.getResources(), R.drawable.link128x128);
         frameHeight = bitmapBob.getHeight() /4;
         frameWidth = bitmapBob.getWidth() /4;
@@ -377,4 +390,6 @@ public class GameView extends SurfaceView implements Runnable {
 
         return true;
     }
+
+
 }
