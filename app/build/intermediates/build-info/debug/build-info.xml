@@ -5,27 +5,32 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.0.1"
-    timestamp="1514634269089"
+    timestamp="1514720682172"
     token="-5603789278999123448"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="48" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="6" />
     <task
         name="verifier"
-        duration="0" />
+        duration="1" />
+
+    <artifact
+        location="/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1514633932504"
+        timestamp="1514716954937"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
@@ -66,7 +71,12 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1514634269089"
-        verifier="COLD_SWAP_REQUESTED" />
+        ir-eligibility="COMPATIBLE"
+        timestamp="1514720682172"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+    </build>
 
 </instant-run>

@@ -11,11 +11,14 @@ import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import dsa.upc.edu.talesofeetacclient.Model.Main.Location;
 
 
 /* Necesary to Serialize and Deserialize abstract classes and its childs. */
-/*
+
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
         include = JsonTypeInfo.As.PROPERTY,
@@ -27,7 +30,7 @@ import dsa.upc.edu.talesofeetacclient.Model.Main.Location;
         @JsonSubTypes.Type(value = Wall.class, name = "Wall"),
         @JsonSubTypes.Type(value = Field.class, name = "Field"),
         @JsonSubTypes.Type(value = NPC.class, name = "NPC")
-})*/
+})
 public abstract class Cell {
 
     /*Variables
@@ -35,27 +38,22 @@ public abstract class Cell {
     onMapLoc is inherited*/
     protected Location onMapLoc;
     protected Bitmap bitmap;
-    protected Canvas canvas;
     protected Rect rect;
-    protected Drawable drawable;
 
     //Custom implementation on Subclasses
     //public abstract String getSYMBOL();
 
     public Cell (){}
 
-    public Cell (Location location, Bitmap bitmap, Canvas canvas, Drawable drawable) {
+    public Cell (Location location, Bitmap bitmap, Rect rect) {
         this.onMapLoc = location;
         this.bitmap = bitmap;
-        this.canvas = canvas;
-        this.rect = cellMapper(location);
-
+        this.rect = rect;
     }
 
-    private Rect cellMapper(Location location) {
-        int x = location.getX();
-        int y = location.getY();
-        return null;
+    public Cell (Location location, Rect rect) {
+        this.onMapLoc = location;
+        this.rect = rect;
     }
 
     /*Getters and Setters
@@ -75,14 +73,6 @@ public abstract class Cell {
         this.bitmap = bitmap;
     }
 
-    public Canvas getCanvas() {
-        return canvas;
-    }
-
-    public void setCanvas(Canvas canvas) {
-        this.canvas = canvas;
-    }
-
     public Rect getRect() {
         return rect;
     }
@@ -90,15 +80,4 @@ public abstract class Cell {
     public void setRect(Rect rect) {
         this.rect = rect;
     }
-
-    public Drawable getDrawable() {
-        return drawable;
-    }
-
-    public void setDrawable(Drawable drawable) {
-        this.drawable = drawable;
-    }
-
-
-
 }

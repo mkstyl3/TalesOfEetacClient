@@ -16,8 +16,19 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
 import dsa.upc.edu.talesofeetacclient.Model.Cell.Cell;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.UserCell;
+import dsa.upc.edu.talesofeetacclient.Model.Main.Location;
+import dsa.upc.edu.talesofeetacclient.Model.Main.Map;
 import dsa.upc.edu.talesofeetacclient.Model.Main.User;
 
 /**
@@ -108,6 +119,8 @@ public class GameView extends SurfaceView implements Runnable {
     private Rect controlsBRect;
 
     User user;
+    List<Cell> cells;
+    List<Map> maps;
 
     // When the we initialize (call new()) on gameView
     // This special constructor method runs
@@ -122,9 +135,12 @@ public class GameView extends SurfaceView implements Runnable {
         // Initialize ourHolder and paint objects
         ourHolder = getHolder();
         paint = new Paint();
+        initializeObjects();
 
         // Load Bob from his .png file
-        Cell userCell = new UserCell(u);
+        maps.add(createMap(1));
+
+
 
         bitmapBob = BitmapFactory.decodeResource(this.getResources(), R.drawable.link128x128);
         frameHeight = bitmapBob.getHeight() /4;
@@ -135,6 +151,31 @@ public class GameView extends SurfaceView implements Runnable {
                 frameWidth,
                 frameHeight);
         // Scale the bitmap to the correct size <--- Maybe we need it later
+        
+
+    }
+
+    private void initializeObjects() {
+        maps = new ArrayList<>();
+    }
+
+    public Map getMap (int id) {
+        return this.maps.get(id - 1);
+    }
+
+    public void setMap (Map map) {
+        this.maps.set(map.getId() - 1, map);
+    }
+
+    public void setCell(int mapId, Cell cell) {
+        this.getMap(mapId).setCell(cell);
+    }
+
+    public Cell getCell(int mapId, Location l) {
+        return getMap(mapId).getCell(l);
+    }
+    public Cell getCellByCoords(int mapId, int x, int y) {
+        return getMap(mapId).getCellByCoords(x,y);
     }
 
     @Override
@@ -195,42 +236,54 @@ public class GameView extends SurfaceView implements Runnable {
             screenWidth = canvas.getWidth();
             screenHeight = canvas.getHeight();
 
-            Paint playScreenPaint = new Paint();
-            playScreenPaint.setColor(Color.argb(255,  26, 128, 182));
-
-            Paint screenBorderPaint = new Paint();
-            screenBorderPaint.setColor(Color.argb(255,96,96,96));
-
-            // Draw the background color
-            canvas.drawColor(Color.argb(255,96,96,96));
-            canvas.drawRect(0,0,screenWidth,1080,playScreenPaint);
-            canvas.drawRect(0,0,36,1080,screenBorderPaint);
-            canvas.drawRect(0,0,1080,36,screenBorderPaint);
-            canvas.drawRect(1044,0,1080,1080,screenBorderPaint);
-
-            // Choose the brush color for drawing
-            paint.setColor(Color.argb(255,  249, 129, 0));
-
-            // Make the text a bit bigger
-            paint.setTextSize(45);
-
-            // Display the current fps on the screen
-            canvas.drawText("FPS:" + fps, screenWidth/3 +100, 1130, paint);
-
+            drawUserInterface(screenWidth, screenHeight);
+            drawMap(1, canvas);
+            //DrawCell();
+            //drawUserCell(user);
             whereToDrawX.set((int)bobXPosition,
                     bobYPosition,
                     (int)bobXPosition + frameWidth,
-                    bobYPosition+frameHeight);
+                    bobYPosition + frameHeight);
             getCurrentFrame(direction);
             canvas.drawBitmap(bitmapBob,
                     frameToDrawX,
                     whereToDrawX, paint);
-            DrawControls();
-
-            DrawCell();
 
             ourHolder.unlockCanvasAndPost(canvas);
         }
+    }
+
+    private void drawMap(int mapId, Canvas canvas) {
+        for (int i=0; i<144; i++) {
+            canvas.drawBitmap(getMap(mapId).getCellArray()[i].getBitmap(),null, getMap(mapId).getCellArray()[i].getRect(), null );
+        }
+    }
+
+    private void drawUserInterface(int screenWidth, int screenHeight) {
+        Paint playScreenPaint = new Paint();
+        playScreenPaint.setColor(Color.argb(255,  26, 128, 182));
+
+        Paint screenBorderPaint = new Paint();
+        screenBorderPaint.setColor(Color.argb(255,96,96,96));
+
+        // Draw the background color
+        canvas.drawColor(Color.argb(255,96,96,96));
+        canvas.drawRect(0,0,screenWidth,1044,playScreenPaint);
+        canvas.drawRect(0,0,35,1044,screenBorderPaint);
+        canvas.drawRect(0,0,1044,35,screenBorderPaint);
+        canvas.drawRect(1044,0, 1080, 1044,screenBorderPaint);
+
+        // Choose the brush color for drawing
+        paint.setColor(Color.argb(255,  249, 129, 0));
+
+        // Make the text a bit bigger
+        paint.setTextSize(45);
+
+        // Display the current fps on the screen
+        canvas.drawText("FPS:" + fps, screenWidth/3 +100, 1130, paint);
+
+        DrawControls();
+
     }
 
     private void DrawCell() {
@@ -389,6 +442,42 @@ public class GameView extends SurfaceView implements Runnable {
 
 
         return true;
+    }
+
+    public Map createMap (int mapId) {
+        //logger.info("loadMap: Loading map...");
+        try {
+            StringBuilder s = new StringBuilder();
+            s.append("map").append(mapId).append(".txt");
+            ObjectMapper mapper = new ObjectMapper();
+            BufferedReader br = new BufferedReader(new InputStreamReader(this.getResources().openRawResource(R.raw.map1)), 8192);
+            Cell cells[] = mapper.readValue(br, Cell[].class);
+            for (Cell cell : cells) {
+                if (cell.getClass().getSimpleName().equals("Door")) {
+                    cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.dngn_closed_door84x84));
+                }
+                else if (cell.getClass().getSimpleName().equals("Wall")) {
+                    cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.stone_brick4_84x84));
+                }
+                else if (cell.getClass().getSimpleName().equals("Tree")) {
+                    cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.tree1_red84x84));
+                }
+                else if (cell.getClass().getSimpleName().equals("Field")) {
+                    cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.dirt_s84x84));
+                }
+
+            }
+            Map map = new Map(mapId, cells);
+            //logger.info("loadMap: map loaded.");
+
+            return map;
+        }
+        catch (IOException ex)
+        {
+            //logger.fatal("File not found");
+
+            return null;
+        }
     }
 
 

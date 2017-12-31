@@ -1,12 +1,26 @@
 package dsa.upc.edu.talesofeetacclient.Model.Cell;
 
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+
+import dsa.upc.edu.talesofeetacclient.R;
+
 public class Door extends Cell {
 
     private int nextMap;
-    final private String symbol = "D";
 
 
-    public Door () { } //"yes, it is unnecessary to include super() in the child constructor", because super() is a call to the "accessible no-args constructor"
+
+    private Bitmap bitmap;
+
+
+    public Door () {
+
+    } //"yes, it is unnecessary to include super() in the child constructor", because super() is a call to the "accessible no-args constructor"
 
 
     public int getNextMap() {
@@ -21,4 +35,7 @@ public class Door extends Cell {
     public String getSYMBOL() {
         return this.symbol;
     }*/
+
+
+
 }

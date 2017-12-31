@@ -11,11 +11,21 @@ public class Map {
     private int id;
     private Cell[] cellArray;
 
+    public Cell[] getCellArray() {
+        return cellArray;
+    }
+
+    public void setCellArray(Cell[] cellArray) {
+        this.cellArray = cellArray;
+    }
+
+
+
     public Map () {}
 
     public Map (int id, Cell[] cellmap) {
         this.id = id;
-        cellArray = new Cell[100];
+        cellArray = new Cell[144];
         this.cellArray = cellmap;
     }
 
