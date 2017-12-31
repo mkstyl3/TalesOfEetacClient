@@ -74,6 +74,8 @@ public class GameView extends SurfaceView implements Runnable {
     float bobXPosition = 36;
     float bobYPosition = 36;
 
+
+
     // These next two values can be anything you like
     // As long as the ratio doesn't distort the sprite too much
     private int frameWidth;
@@ -95,9 +97,9 @@ public class GameView extends SurfaceView implements Runnable {
 
     // A rect that defines an area of the screen
     // on which to draw
-    RectF whereToDrawX = new RectF();
+    Rect whereToDrawX = new Rect();
 
-    private static final int[] DIRECTION_TO_ANIMATION_MAP = { 3, 1, 0, 2 };
+    private static final int[] DIRECTION_TO_ANIMATION_MAP = {3, 1, 0, 2};
 
     private int direction;
 
@@ -131,6 +133,7 @@ public class GameView extends SurfaceView implements Runnable {
         super(context);
         user = new User();
         user = u;
+        user.setLocation(new Location ((int)bobXPosition,(int)bobYPosition));
 
         // Initialize ourHolder and paint objects
         ourHolder = getHolder();
@@ -141,10 +144,9 @@ public class GameView extends SurfaceView implements Runnable {
         maps.add(createMap(1));
 
 
-
         bitmapBob = BitmapFactory.decodeResource(this.getResources(), R.drawable.link128x128);
-        frameHeight = bitmapBob.getHeight() /4;
-        frameWidth = bitmapBob.getWidth() /4;
+        frameHeight = bitmapBob.getHeight() / 4;
+        frameWidth = bitmapBob.getWidth() / 4;
         //Void rectangle with .png's file size
         frameToDrawX.set(0,
                 0,
@@ -159,11 +161,11 @@ public class GameView extends SurfaceView implements Runnable {
         maps = new ArrayList<>();
     }
 
-    public Map getMap (int id) {
+    public Map getMap(int id) {
         return this.maps.get(id - 1);
     }
 
-    public void setMap (Map map) {
+    public void setMap(Map map) {
         this.maps.set(map.getId() - 1, map);
     }
 
@@ -174,8 +176,9 @@ public class GameView extends SurfaceView implements Runnable {
     public Cell getCell(int mapId, Location l) {
         return getMap(mapId).getCell(l);
     }
+
     public Cell getCellByCoords(int mapId, int x, int y) {
-        return getMap(mapId).getCellByCoords(x,y);
+        return getMap(mapId).getCellByCoords(x, y);
     }
 
     @Override
@@ -205,27 +208,38 @@ public class GameView extends SurfaceView implements Runnable {
     public void update() {
         // If bob is moving (the player is touching the screen)
         // then move him to the right based on his target speed and the current fps.
-        if(isMoving){
+        if (isMoving) {
+            Location nextCellLoc = new Location();
             switch (direction) {
-                case 3 : {
+                case 3: {
+                    Rect rect2 = new Rect();
+                    nextCellLoc.setCoords(user.getLocation().getX(), user.getLocation().getY() - 1);
+                    rect2.set(whereToDrawX.left,whereToDrawX.top-84,whereToDrawX.right, whereToDrawX.bottom-84);
+
                     bobYPosition = bobYPosition - (walkSpeedPerSecond / fps);
+                    user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
                     break;
                 }
-                case 0 : {
+                case 0: {
                     bobYPosition = bobYPosition + (walkSpeedPerSecond / fps);
+                    user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
                     break;
                 }
-                case 1 : {
+                case 1: {
                     bobXPosition = bobXPosition - (walkSpeedPerSecond / fps);
+                    user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
                     break;
                 }
-                case 2 : {
+                case 2: {
                     bobXPosition = bobXPosition + (walkSpeedPerSecond / fps);
+                    user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
                     break;
                 }
             }
+
         }
     }
+
 
     // Draw the newly updated scene
     public void draw() {
@@ -240,10 +254,10 @@ public class GameView extends SurfaceView implements Runnable {
             drawMap(1, canvas);
             //DrawCell();
             //drawUserCell(user);
-            whereToDrawX.set((int)bobXPosition,
-                    bobYPosition,
-                    (int)bobXPosition + frameWidth,
-                    bobYPosition + frameHeight);
+            whereToDrawX.set((int) bobXPosition,
+                    (int)bobYPosition,
+                    (int) bobXPosition + frameWidth,
+                    (int)bobYPosition + frameHeight);
             getCurrentFrame(direction);
             canvas.drawBitmap(bitmapBob,
                     frameToDrawX,
@@ -254,70 +268,100 @@ public class GameView extends SurfaceView implements Runnable {
     }
 
     private void drawMap(int mapId, Canvas canvas) {
-        for (int i=0; i<144; i++) {
-            canvas.drawBitmap(getMap(mapId).getCellArray()[i].getBitmap(),null, getMap(mapId).getCellArray()[i].getRect(), null );
+        for (int i = 0; i < 144; i++) {
+            canvas.drawBitmap(getMap(mapId).getCellArray()[i].getBitmap(), null, getMap(mapId).getCellArray()[i].getRect(), null);
         }
     }
 
     private void drawUserInterface(int screenWidth, int screenHeight) {
         Paint playScreenPaint = new Paint();
-        playScreenPaint.setColor(Color.argb(255,  26, 128, 182));
+        playScreenPaint.setColor(Color.argb(255, 26, 128, 182));
 
         Paint screenBorderPaint = new Paint();
-        screenBorderPaint.setColor(Color.argb(255,96,96,96));
+        screenBorderPaint.setColor(Color.argb(255, 96, 96, 96));
 
         // Draw the background color
-        canvas.drawColor(Color.argb(255,96,96,96));
-        canvas.drawRect(0,0,screenWidth,1044,playScreenPaint);
-        canvas.drawRect(0,0,35,1044,screenBorderPaint);
-        canvas.drawRect(0,0,1044,35,screenBorderPaint);
-        canvas.drawRect(1044,0, 1080, 1044,screenBorderPaint);
+        canvas.drawColor(Color.argb(255, 96, 96, 96));
+        canvas.drawRect(0, 0, screenWidth, 1044, playScreenPaint);
+        canvas.drawRect(0, 0, 35, 1044, screenBorderPaint);
+        canvas.drawRect(0, 0, 1044, 35, screenBorderPaint);
+        canvas.drawRect(1044, 0, 1080, 1044, screenBorderPaint);
 
         // Choose the brush color for drawing
-        paint.setColor(Color.argb(255,  249, 129, 0));
+        paint.setColor(Color.argb(255, 50, 34, 50));
 
         // Make the text a bit bigger
         paint.setTextSize(45);
 
         // Display the current fps on the screen
-        canvas.drawText("FPS:" + fps, screenWidth/3 +100, 1130, paint);
+        canvas.drawText("FPS:" + fps, screenWidth / 3 + 100, 1130, paint);
+        canvas.drawText("CellLoc:" + user.getLocation().getX()+","+user.getLocation().getY(), screenWidth / 3 + 60, 1180, paint);
+
 
         DrawControls();
 
     }
 
     private void DrawCell() {
-        Rect rect = new Rect(screenWidth/2,36,screenWidth/2+84,36+84);
+        Rect rect = new Rect(screenWidth / 2, 36, screenWidth / 2 + 84, 36 + 84);
         Bitmap bitmapCell = BitmapFactory.decodeResource(this.getResources(), R.drawable.dngn_closed_door84x84);
         canvas.drawBitmap(bitmapCell, null, rect, null);
     }
 
     private void DrawControls() {
         //Up Control
-        controlsUpRect = new Rect(160, screenHeight /2 + 200+200, 160+120, screenHeight /2 +200+120+200);
+        controlsUpRect = new Rect(160, screenHeight / 2 + 200 + 200, 160 + 120, screenHeight / 2 + 200 + 120 + 200);
         Bitmap bitmapControlUp = BitmapFactory.decodeResource(this.getResources(), R.drawable.ctrl_up_arrow);
-        canvas.drawBitmap(bitmapControlUp,null, controlsUpRect,null);
+        canvas.drawBitmap(bitmapControlUp, null, controlsUpRect, null);
         //Left Control
-        controlsLeftRect = new Rect(40, screenHeight /2 + 280+200, 40+120, screenHeight /2 +280+120+200);
+        controlsLeftRect = new Rect(40, screenHeight / 2 + 280 + 200, 40 + 120, screenHeight / 2 + 280 + 120 + 200);
         Bitmap bitmapControlLeft = BitmapFactory.decodeResource(this.getResources(), R.drawable.ctrl_left_arrow);
-        canvas.drawBitmap(bitmapControlLeft,null, controlsLeftRect,null);
+        canvas.drawBitmap(bitmapControlLeft, null, controlsLeftRect, null);
         //Right Control
-        controlsRightRect = new Rect(280, screenHeight /2 + 280+200, 280+120, screenHeight /2 +280+120+200);
+        controlsRightRect = new Rect(280, screenHeight / 2 + 280 + 200, 280 + 120, screenHeight / 2 + 280 + 120 + 200);
         Bitmap bitmapControlRight = BitmapFactory.decodeResource(this.getResources(), R.drawable.ctrl_right_arrow);
-        canvas.drawBitmap(bitmapControlRight,null, controlsRightRect,null);
+        canvas.drawBitmap(bitmapControlRight, null, controlsRightRect, null);
         //Down Control
-        controlsDownRect = new Rect(160, screenHeight /2 + 360+200, 160+120, screenHeight /2 +360+120+200);
+        controlsDownRect = new Rect(160, screenHeight / 2 + 360 + 200, 160 + 120, screenHeight / 2 + 360 + 120 + 200);
         Bitmap bitmapControlDown = BitmapFactory.decodeResource(this.getResources(), R.drawable.ctrl_down_arrow);
-        canvas.drawBitmap(bitmapControlDown,null, controlsDownRect,null);
+        canvas.drawBitmap(bitmapControlDown, null, controlsDownRect, null);
         //A Control
-        controlsARect = new Rect(720, screenHeight /2 + 360+200, 720+130, screenHeight /2 +360+130+200);
+        controlsARect = new Rect(720, screenHeight / 2 + 360 + 200, 720 + 130, screenHeight / 2 + 360 + 130 + 200);
         Bitmap bitmapControlA = BitmapFactory.decodeResource(this.getResources(), R.drawable.controls_a);
-        canvas.drawBitmap(bitmapControlA,null, controlsARect,null);
+        canvas.drawBitmap(bitmapControlA, null, controlsARect, null);
         //B Control
-        controlsBRect = new Rect(800, screenHeight /2 + 200+200, 800+120, screenHeight /2 +200+120+200);
+        controlsBRect = new Rect(800, screenHeight / 2 + 200 + 200, 800 + 120, screenHeight / 2 + 200 + 120 + 200);
         Bitmap bitmapControlB = BitmapFactory.decodeResource(this.getResources(), R.drawable.controls_b);
-        canvas.drawBitmap(bitmapControlB,null, controlsBRect,null);
+        canvas.drawBitmap(bitmapControlB, null, controlsBRect, null);
     }
+
+    public boolean isCollisionDetected(Rect rect1, Rect rect2) {
+
+
+        if (Rect.intersects(rect1, rect2)) {
+            Rect collisionBounds = getCollisionBounds(rect1, rect2);
+            for (int i = collisionBounds.left; i < collisionBounds.right; i++) {
+                for (int j = collisionBounds.top; j < collisionBounds.bottom; j++) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+
+
+
+    private static Rect getCollisionBounds(Rect rect1, Rect rect2) {
+        int left = (int) Math.max(rect1.left, rect2.left);
+        int top = (int) Math.max(rect1.top, rect2.top);
+        int right = (int) Math.min(rect1.right, rect2.right);
+        int bottom = (int) Math.min(rect1.bottom, rect2.bottom);
+        return new Rect(left, top, right, bottom);
+    }
+
+
 
     public void getCurrentFrame(int direction){
 
@@ -478,6 +522,204 @@ public class GameView extends SurfaceView implements Runnable {
 
             return null;
         }
+    }
+
+    private Location locateUser(int x, int y) {
+        int xNex =-1;
+        int yNex = -1;
+        if(x < 121) {
+            yNex = 0;
+            if (y < 121) xNex = 0;
+            else if (y>120 && y<205) xNex = 1;
+            else if (y>204 && y<289) xNex = 2;
+            else if (y>288 && y<373) xNex = 3;
+            else if (y>372 && y<457) xNex = 4;
+            else if (y>456 && y<541) xNex = 5;
+            else if (y>540 && y<647) xNex = 6;
+            else if (y>624 && y<709) xNex = 7;
+            else if (y>708 && y<793) xNex = 8;
+            else if (y>792 && y<877) xNex = 9;
+            else if (y>876 && y<961) xNex = 10;
+            else if (y>960 && y<1045) xNex = 11;
+        }
+
+        if(x>120 && x<205) {
+            yNex = 1;
+            if (y < 121) xNex = 0;
+            else if (y>120 && y<205) xNex = 1;
+            else if (y>204 && y<289) xNex = 2;
+            else if (y>288 && y<373) xNex = 3;
+            else if (y>372 && y<457) xNex = 4;
+            else if (y>456 && y<541) xNex = 5;
+            else if (y>540 && y<647) xNex = 6;
+            else if (y>624 && y<709) xNex = 7;
+            else if (y>708 && y<793) xNex = 8;
+            else if (y>792 && y<877) xNex = 9;
+            else if (y>876 && y<961) xNex = 10;
+            else if (y>960 && y<1045) xNex = 11;
+        }
+
+        if(x>204 && x<289) {
+            yNex = 2;
+            if (y < 121) xNex = 0;
+            else if (y>120 && y<205) xNex = 1;
+            else if (y>204 && y<289) xNex = 2;
+            else if (y>288 && y<373) xNex = 3;
+            else if (y>372 && y<457) xNex = 4;
+            else if (y>456 && y<541) xNex = 5;
+            else if (y>540 && y<647) xNex = 6;
+            else if (y>624 && y<709) xNex = 7;
+            else if (y>708 && y<793) xNex = 8;
+            else if (y>792 && y<877) xNex = 9;
+            else if (y>876 && y<961) xNex = 10;
+            else if (y>960 && y<1045) xNex = 11;
+        }
+
+        if(x>288 && x<373) {
+            yNex = 3;
+            if (y < 121) xNex = 0;
+            else if (y>120 && y<205) xNex = 1;
+            else if (y>204 && y<289) xNex = 2;
+            else if (y>288 && y<373) xNex = 3;
+            else if (y>372 && y<457) xNex = 4;
+            else if (y>456 && y<541) xNex = 5;
+            else if (y>540 && y<647) xNex = 6;
+            else if (y>624 && y<709) xNex = 7;
+            else if (y>708 && y<793) xNex = 8;
+            else if (y>792 && y<877) xNex = 9;
+            else if (y>876 && y<961) xNex = 10;
+            else if (y>960 && y<1045) xNex = 11;
+        }
+
+        if(x>372 && x<457) {
+            yNex = 4;
+            if (y < 121) xNex = 0;
+            else if (y>120 && y<205) xNex = 1;
+            else if (y>204 && y<289) xNex = 2;
+            else if (y>288 && y<373) xNex = 3;
+            else if (y>372 && y<457) xNex = 4;
+            else if (y>456 && y<541) xNex = 5;
+            else if (y>540 && y<647) xNex = 6;
+            else if (y>624 && y<709) xNex = 7;
+            else if (y>708 && y<793) xNex = 8;
+            else if (y>792 && y<877) xNex = 9;
+            else if (y>876 && y<961) xNex = 10;
+            else if (y>960 && y<1045) xNex = 11;
+        }
+
+        if(x>456 && x<541) {
+            yNex = 5;
+            if (y < 121) xNex = 0;
+            else if (y>120 && y<205) xNex = 1;
+            else if (y>204 && y<289) xNex = 2;
+            else if (y>288 && y<373) xNex = 3;
+            else if (y>372 && y<457) xNex = 4;
+            else if (y>456 && y<541) xNex = 5;
+            else if (y>540 && y<647) xNex = 6;
+            else if (y>624 && y<709) xNex = 7;
+            else if (y>708 && y<793) xNex = 8;
+            else if (y>792 && y<877) xNex = 9;
+            else if (y>876 && y<961) xNex = 10;
+            else if (y>960 && y<1045) xNex = 11;
+        }
+
+        if(x>540 && x<625) {
+            yNex =6;
+            if (y < 121) xNex = 0;
+            else if (y>120 && y<205) xNex = 1;
+            else if (y>204 && y<289) xNex = 2;
+            else if (y>288 && y<373) xNex = 3;
+            else if (y>372 && y<457) xNex = 4;
+            else if (y>456 && y<541) xNex = 5;
+            else if (y>540 && y<647) xNex = 6;
+            else if (y>624 && y<709) xNex = 7;
+            else if (y>708 && y<793) xNex = 8;
+            else if (y>792 && y<877) xNex = 9;
+            else if (y>876 && y<961) xNex = 10;
+            else if (y>960 && y<1045) xNex = 11;
+        }
+
+        if(x>624 && x<709) {
+            yNex =7;
+            if (y < 121) xNex = 0;
+            else if (y>120 && y<205) xNex = 1;
+            else if (y>204 && y<289) xNex = 2;
+            else if (y>288 && y<373) xNex = 3;
+            else if (y>372 && y<457) xNex = 4;
+            else if (y>456 && y<541) xNex = 5;
+            else if (y>540 && y<647) xNex = 6;
+            else if (y>624 && y<709) xNex = 7;
+            else if (y>708 && y<793) xNex = 8;
+            else if (y>792 && y<877) xNex = 9;
+            else if (y>876 && y<961) xNex = 10;
+            else if (y>960 && y<1045) xNex = 11;
+        }
+
+        if(x>708 && x<793) {
+            yNex = 8;
+            if (y < 121) xNex = 0;
+            else if (y>120 && y<205) xNex = 1;
+            else if (y>204 && y<289) xNex = 2;
+            else if (y>288 && y<373) xNex = 3;
+            else if (y>372 && y<457) xNex = 4;
+            else if (y>456 && y<541) xNex = 5;
+            else if (y>540 && y<647) xNex = 6;
+            else if (y>624 && y<709) xNex = 7;
+            else if (y>708 && y<793) xNex = 8;
+            else if (y>792 && y<877) xNex = 9;
+            else if (y>876 && y<961) xNex = 10;
+            else if (y>960 && y<1045) xNex = 11;
+        }
+
+        if(x>792 && x<877) {
+            yNex = 9;
+            if (y < 121) xNex = 0;
+            else if (y>120 && y<205) xNex = 1;
+            else if (y>204 && y<289) xNex = 2;
+            else if (y>288 && y<373) xNex = 3;
+            else if (y>372 && y<457) xNex = 4;
+            else if (y>456 && y<541) xNex = 5;
+            else if (y>540 && y<647) xNex = 6;
+            else if (y>624 && y<709) xNex = 7;
+            else if (y>708 && y<793) xNex = 8;
+            else if (y>792 && y<877) xNex = 9;
+            else if (y>876 && y<961) xNex = 10;
+            else if (y>960 && y<1045) xNex = 11;
+        }
+
+        if(x>876 && x<961) {
+            yNex = 10;
+            if (y < 121) xNex = 0;
+            else if (y>120 && y<205) xNex = 1;
+            else if (y>204 && y<289) xNex = 2;
+            else if (y>288 && y<373) xNex = 3;
+            else if (y>372 && y<457) xNex = 4;
+            else if (y>456 && y<541) xNex = 5;
+            else if (y>540 && y<647) xNex = 6;
+            else if (y>624 && y<709) xNex = 7;
+            else if (y>708 && y<793) xNex = 8;
+            else if (y>792 && y<877) xNex = 9;
+            else if (y>876 && y<961) xNex = 10;
+            else if (y>960 && y<1045) xNex = 11;
+        }
+
+        if(x>960 && x<1045) {
+            yNex = 11;
+            if (y < 121) xNex = 0;
+            else if (y>120 && y<205) xNex = 1;
+            else if (y>204 && y<289) xNex = 2;
+            else if (y>288 && y<373) xNex = 3;
+            else if (y>372 && y<457) xNex = 4;
+            else if (y>456 && y<541) xNex = 5;
+            else if (y>540 && y<647) xNex = 6;
+            else if (y>624 && y<709) xNex = 7;
+            else if (y>708 && y<793) xNex = 8;
+            else if (y>792 && y<877) xNex = 9;
+            else if (y>876 && y<961) xNex = 10;
+            else if (y>960 && y<1045) xNex = 11;
+        }
+
+        return new Location(xNex,yNex);
     }
 
 

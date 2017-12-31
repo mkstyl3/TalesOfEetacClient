@@ -35,7 +35,6 @@ public class User implements Parcelable {
     @Expose
     private Location location;
 
-
     //Constructors
 
     public User () {
@@ -151,4 +150,25 @@ public class User implements Parcelable {
         parcel.writeTypedList(items);
         parcel.writeParcelable(location, i);
     }
+    /*
+    private Location getLocByPixelCoords (int x, int y) {
+        int xSol =-1;
+        int ySol =-1;
+        Location loc = new Location();
+        if(x<121) {
+            ySol = 0;
+            if (y<121) xSol = 0;
+            else if (y>120 && y<205) xSol = 1;
+            else if (y>120 && y<205) xSol = 1;
+            else if (y>120 && y<205) xSol = 1;
+            else if (y>120 && y<205) xSol = 1;
+            else if (y>120 && y<205) xSol = 1;
+            else if (y>120 && y<205) xSol = 1;
+            else if (y>120 && y<205) xSol = 1;
+            else if (y>120 && y<205) xSol = 1;
+            else if (y>120 && y<205) xSol = 1;
+
+            }
+        }
+    }*/
 }
