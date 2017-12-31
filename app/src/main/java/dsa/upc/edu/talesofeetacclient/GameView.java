@@ -151,7 +151,7 @@ public class GameView extends SurfaceView implements Runnable {
                 frameWidth,
                 frameHeight);
         // Scale the bitmap to the correct size <--- Maybe we need it later
-        
+
 
     }
 

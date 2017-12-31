@@ -2,8 +2,17 @@
 .idea/
 *.iml
 *.iws
+/local.properties
+/build
+
 
 # Mac
 .DS_Store
 
 *.log
+
+#Gradle
+.gradle
+/gradle
+
+
