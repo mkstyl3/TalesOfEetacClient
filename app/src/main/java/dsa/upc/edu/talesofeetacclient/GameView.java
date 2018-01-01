@@ -71,8 +71,8 @@ public class GameView extends SurfaceView implements Runnable {
     float walkSpeedPerSecond = 150;
 
     // He starts 10 pixels from the left
-    float bobXPosition = 36;
-    float bobYPosition = 36;
+    float bobXPosition = 120;
+    float bobYPosition = 120;
 
 
 
@@ -136,7 +136,7 @@ public class GameView extends SurfaceView implements Runnable {
         super(context);
         user = new User();
         user = u;
-        user.setLocation(new Location (0,0));
+        user.setLocation(new Location (1,1));
         userCell= new UserCell(user);
 
         // Initialize ourHolder and paint objects
@@ -216,49 +216,79 @@ public class GameView extends SurfaceView implements Runnable {
             nextCellLoc = new Location();
             switch (direction) {
                 case 3: {
-                    //Rect rect2 = new Rect();
                     nextCellLoc.setCoords(user.getLocation().getX()-1, user.getLocation().getY());
-                    //rect2.set(whereToDrawX.left,whereToDrawX.top-84,whereToDrawX.right, whereToDrawX.bottom-84);
-                    /*switch (getCell(currentMapId, nextCellLoc).getType()) {
-                        case "Door": {
+                    int collisionResult = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
+                    switch (collisionResult) {
+                        case 0:
+                        {
+                            bobYPosition = bobYPosition - (walkSpeedPerSecond / fps);
+                            user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
                             break;
                         }
-                        case "Field": {
+                        case 1: //Do nothing
                             break;
-                        }
-                        case "NPC": {
+                        case 2:
                             break;
-                        }
-                        case "Tree": {
+                        case 3:
                             break;
-                        }
-                        case "UserCell": {
-                            break;
-                        }
-                        case "Wall": {
-                            break;
-                        }*/
-                        ;
-                    boolean bool = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
-                    if (!bool) {
-                        bobYPosition = bobYPosition - (walkSpeedPerSecond / fps);
-                        user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
                     }
                     break;
                 }
                 case 0: {
-                    bobYPosition = bobYPosition + (walkSpeedPerSecond / fps);
-                    user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
+                    nextCellLoc.setCoords(user.getLocation().getX()+1, user.getLocation().getY());
+                    int collisionResult = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
+                    switch (collisionResult) {
+                        case 0:
+                        {
+                            bobYPosition = bobYPosition + (walkSpeedPerSecond / fps);
+                            user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
+                            break;
+                        }
+                        case 1: //Do nothing
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                    }
                     break;
                 }
                 case 1: {
-                    bobXPosition = bobXPosition - (walkSpeedPerSecond / fps);
-                    user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
+                    nextCellLoc.setCoords(user.getLocation().getX(), user.getLocation().getY()-1);
+                    int collisionResult = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
+                    switch (collisionResult) {
+                        case 0:
+                        {
+                            bobXPosition = bobXPosition - (walkSpeedPerSecond / fps);
+                            user.setLocation(locateUser(whereToDrawX.centerX(), whereToDrawX.centerY()));
+                            break;
+                        }
+                        case 1: //Do nothing
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                    }
                     break;
                 }
                 case 2: {
-                    bobXPosition = bobXPosition + (walkSpeedPerSecond / fps);
-                    user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
+                    nextCellLoc.setCoords(user.getLocation().getX(), user.getLocation().getY()+1);
+                    int collisionResult = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
+                    switch (collisionResult) {
+                        case 0:
+                        {
+                            bobXPosition = bobXPosition + (walkSpeedPerSecond / fps);
+                            user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
+                            break;
+                        }
+                        case 1: //Do nothing
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                    }
                     break;
                 }
             }
@@ -299,6 +329,8 @@ public class GameView extends SurfaceView implements Runnable {
             canvas.drawBitmap(getMap(mapId).getCellArray()[i].getBitmap(), null, getMap(mapId).getCellArray()[i].getRect(), null);
         }
     }
+
+
 
     private void drawUserInterface(int screenWidth, int screenHeight) {
         Paint playScreenPaint = new Paint();
@@ -362,21 +394,31 @@ public class GameView extends SurfaceView implements Runnable {
         canvas.drawBitmap(bitmapControlB, null, controlsBRect, null);
     }
 
-    public boolean isCollisionDetected(Rect rect1, Rect rect2) {
+    public int isCollisionDetected(Rect rect1, Rect rect2) {
 
-
+        final int[] COLLISION_WITH = {0,1,2,3}; //0=NoCollision
         if (Rect.intersects(rect1, rect2)) {
             Rect collisionBounds = getCollisionBounds(rect1, rect2);
             for (int i = collisionBounds.left; i < collisionBounds.right; i++) {
                 for (int j = collisionBounds.top; j < collisionBounds.bottom; j++) {
-                    if(getCell(currentMapId, nextCellLoc).getType().equals("Wall")) {
-                        return true;
+                    switch (getCell(currentMapId, nextCellLoc).getType()){
+                        case "Wall":
+                        case "Tree": {
+                            return COLLISION_WITH[1];
+                        }
+                        case "Door": {
+                            return COLLISION_WITH[2];
+                        }
+                        case "NPC": {
+                            return COLLISION_WITH[3];
+                        }
                     }
+
                 }
             }
         }
 
-        return false;
+        return COLLISION_WITH[0];
     }
 
 

@@ -30,16 +30,16 @@ public class Map {
     }
 
     public Cell getCell (Location cellLoc) {
-        return cellArray[cellLoc.getX()*10+cellLoc.getY()];
+        return cellArray[cellLoc.getX()*12+cellLoc.getY()];
     }
 
     public Cell getCellByCoords (int x, int y) {
-        return cellArray[x*10+y];
+        return cellArray[x*12+y];
     }
 
 
     public void setCell (Cell cell) {
-        this.cellArray[cell.getOnMapLoc().getX()*10+cell.getOnMapLoc().getY()] = cell;
+        this.cellArray[cell.getOnMapLoc().getX()*12+cell.getOnMapLoc().getY()] = cell;
     }
 
     public int getId() {
