@@ -196,6 +196,10 @@
         "source": "/home/mike/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/def9297c263366fe207633a2ee909867/res/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
+        "merged": "/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/res/merged/debug/drawable-hdpi_chest2_closed84x84.png.flat",
+        "source": "/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/res/drawable-hdpi/chest2_closed84x84.png"
+    },
+    {
         "merged": "/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/res/merged/debug/layout_notification_template_media_custom.xml.flat",
         "source": "/home/mike/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/edeb9a1d43d2b0c01773aa6f044439ea/res/layout/notification_template_media_custom.xml"
     },

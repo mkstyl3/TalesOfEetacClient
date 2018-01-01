@@ -420,7 +420,9 @@
     	   "type": "Field"
     	},
     	{
-
+           "chest": {
+                        "id":1
+                    },
     	   "onMapLoc": {
            			 	    "x":2,
            			 	    "y":4
@@ -432,10 +434,12 @@
                                              		"bottom":288
 
                                           },
-    	   "type": "Field"
+    	   "type": "ChestCell"
     	},
     	{
-
+            "chest": {
+                                    "id":0
+                                },
     	   "onMapLoc": {
            			 	    "x":2,
            			 	    "y":5
@@ -447,7 +451,7 @@
                                              		"bottom":288
 
                                           },
-    	   "type": "Field"
+    	   "type": "ChestCell"
     	},
     	{
 

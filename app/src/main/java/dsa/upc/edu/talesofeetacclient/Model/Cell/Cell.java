@@ -7,9 +7,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 */
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -29,13 +27,15 @@ import dsa.upc.edu.talesofeetacclient.Model.Main.Location;
         @JsonSubTypes.Type(value = UserCell.class, name = "UserCell"),
         @JsonSubTypes.Type(value = Wall.class, name = "Wall"),
         @JsonSubTypes.Type(value = Field.class, name = "Field"),
-        @JsonSubTypes.Type(value = NPC.class, name = "NPC")
+        @JsonSubTypes.Type(value = NPC.class, name = "NPC"),
+        @JsonSubTypes.Type(value = ChestCell.class, name = "ChestCell")
 })
 public abstract class Cell {
 
     /*Variables
 
     onMapLoc is inherited*/
+
     protected Location onMapLoc;
     protected Bitmap bitmap;
     protected Rect rect;

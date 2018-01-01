@@ -38,7 +38,7 @@ public class User implements Parcelable {
     //Constructors
 
     public User () {
-
+        this.items = new ArrayList<>();
     }
 
     public User(int id, String name, String password, Location location) {
