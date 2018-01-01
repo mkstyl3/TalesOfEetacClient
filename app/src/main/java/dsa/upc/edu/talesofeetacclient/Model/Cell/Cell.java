@@ -39,9 +39,9 @@ public abstract class Cell {
     protected Location onMapLoc;
     protected Bitmap bitmap;
     protected Rect rect;
+    protected String type;
 
     //Custom implementation on Subclasses
-    //public abstract String getSYMBOL();
 
     public Cell (){}
 
@@ -79,5 +79,9 @@ public abstract class Cell {
 
     public void setRect(Rect rect) {
         this.rect = rect;
+    }
+
+    public String getType() {
+        return type;
     }
 }

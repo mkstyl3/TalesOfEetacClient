@@ -123,6 +123,9 @@ public class GameView extends SurfaceView implements Runnable {
     User user;
     List<Cell> cells;
     List<Map> maps;
+    Cell userCell;
+    private int currentMapId = 1;
+    Location nextCellLoc;
 
     // When the we initialize (call new()) on gameView
     // This special constructor method runs
@@ -133,7 +136,8 @@ public class GameView extends SurfaceView implements Runnable {
         super(context);
         user = new User();
         user = u;
-        user.setLocation(new Location ((int)bobXPosition,(int)bobYPosition));
+        user.setLocation(new Location (0,0));
+        userCell= new UserCell(user);
 
         // Initialize ourHolder and paint objects
         ourHolder = getHolder();
@@ -143,10 +147,9 @@ public class GameView extends SurfaceView implements Runnable {
         // Load Bob from his .png file
         maps.add(createMap(1));
 
-
-        bitmapBob = BitmapFactory.decodeResource(this.getResources(), R.drawable.link128x128);
-        frameHeight = bitmapBob.getHeight() / 4;
-        frameWidth = bitmapBob.getWidth() / 4;
+        userCell.setBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.link128x128));
+        frameHeight = userCell.getBitmap().getHeight() / 4;
+        frameWidth = userCell.getBitmap().getWidth() / 4;
         //Void rectangle with .png's file size
         frameToDrawX.set(0,
                 0,
@@ -159,6 +162,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     private void initializeObjects() {
         maps = new ArrayList<>();
+        nextCellLoc = new Location();
     }
 
     public Map getMap(int id) {
@@ -209,15 +213,37 @@ public class GameView extends SurfaceView implements Runnable {
         // If bob is moving (the player is touching the screen)
         // then move him to the right based on his target speed and the current fps.
         if (isMoving) {
-            Location nextCellLoc = new Location();
+            nextCellLoc = new Location();
             switch (direction) {
                 case 3: {
-                    Rect rect2 = new Rect();
-                    nextCellLoc.setCoords(user.getLocation().getX(), user.getLocation().getY() - 1);
-                    rect2.set(whereToDrawX.left,whereToDrawX.top-84,whereToDrawX.right, whereToDrawX.bottom-84);
-
-                    bobYPosition = bobYPosition - (walkSpeedPerSecond / fps);
-                    user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
+                    //Rect rect2 = new Rect();
+                    nextCellLoc.setCoords(user.getLocation().getX()-1, user.getLocation().getY());
+                    //rect2.set(whereToDrawX.left,whereToDrawX.top-84,whereToDrawX.right, whereToDrawX.bottom-84);
+                    /*switch (getCell(currentMapId, nextCellLoc).getType()) {
+                        case "Door": {
+                            break;
+                        }
+                        case "Field": {
+                            break;
+                        }
+                        case "NPC": {
+                            break;
+                        }
+                        case "Tree": {
+                            break;
+                        }
+                        case "UserCell": {
+                            break;
+                        }
+                        case "Wall": {
+                            break;
+                        }*/
+                        ;
+                    boolean bool = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
+                    if (!bool) {
+                        bobYPosition = bobYPosition - (walkSpeedPerSecond / fps);
+                        user.setLocation(locateUser(whereToDrawX.centerX(),whereToDrawX.centerY()));
+                    }
                     break;
                 }
                 case 0: {
@@ -258,8 +284,9 @@ public class GameView extends SurfaceView implements Runnable {
                     (int)bobYPosition,
                     (int) bobXPosition + frameWidth,
                     (int)bobYPosition + frameHeight);
+            userCell.setRect(whereToDrawX);
             getCurrentFrame(direction);
-            canvas.drawBitmap(bitmapBob,
+            canvas.drawBitmap(userCell.getBitmap(),
                     frameToDrawX,
                     whereToDrawX, paint);
 
@@ -342,7 +369,9 @@ public class GameView extends SurfaceView implements Runnable {
             Rect collisionBounds = getCollisionBounds(rect1, rect2);
             for (int i = collisionBounds.left; i < collisionBounds.right; i++) {
                 for (int j = collisionBounds.top; j < collisionBounds.bottom; j++) {
-                    return true;
+                    if(getCell(currentMapId, nextCellLoc).getType().equals("Wall")) {
+                        return true;
+                    }
                 }
             }
         }

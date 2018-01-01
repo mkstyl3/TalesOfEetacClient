@@ -5,7 +5,7 @@ package dsa.upc.edu.talesofeetacclient.Model.Cell;
  */
 public class NPC extends Cell {
 
-    final protected String SYMBOL = "N";
+    private final String type = "NPC";
     private String dialogue;
 
     public NPC () {};
@@ -18,8 +18,9 @@ public class NPC extends Cell {
         this.dialogue = dialogue;
     }
 
-    /*@Override
-    public String getSYMBOL() {
-        return this.SYMBOL;
-    }*/
+    @Override
+    public String getType() {
+        return type;
+    }
+
 }

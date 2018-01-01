@@ -2,13 +2,14 @@ package dsa.upc.edu.talesofeetacclient.Model.Cell;
 
 public class Tree extends Cell {
 
-    final protected String symbol = "T";
+    private final String type = "Tree";
 
     public Tree () {};
 
-    /*@Override
-    public String getSYMBOL() {
-        return this.symbol;
-    }*/
+    @Override
+    public String getType() {
+        return type;
+    }
+
 
 }

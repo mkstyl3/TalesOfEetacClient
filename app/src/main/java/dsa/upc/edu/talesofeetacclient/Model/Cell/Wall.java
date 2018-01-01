@@ -2,12 +2,12 @@ package dsa.upc.edu.talesofeetacclient.Model.Cell;
 
 public class Wall extends Cell {
 
-    final protected String symbol = "#";
+    private final String type = "Wall";
 
     public Wall () {}
 
-    /*@Override
-    public String getSYMBOL() {
-        return this.symbol;
-    }*/
+    @Override
+    public String getType() {
+        return type;
+    }
 }

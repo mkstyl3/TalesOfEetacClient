@@ -4,7 +4,7 @@ import dsa.upc.edu.talesofeetacclient.Model.Main.User;
 
 public class UserCell extends Cell {
 
-    final protected String symbol = "@";
+    private final String type = "UserCell";
 
     private User u;
 
@@ -26,9 +26,9 @@ public class UserCell extends Cell {
         this.u = u;
     }
 
-    /*@Override
-    public String getSYMBOL() {
-        return this.symbol;
-    }*/
+    @Override
+    public String getType() {
+        return type;
+    }
 
 }

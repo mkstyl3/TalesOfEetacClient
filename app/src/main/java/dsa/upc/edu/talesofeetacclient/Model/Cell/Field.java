@@ -2,12 +2,15 @@ package dsa.upc.edu.talesofeetacclient.Model.Cell;
 
 public class Field extends Cell {
 
-    final protected String symbol = " ";
+
+
+    private final String type = "Field";
 
     public Field () {}
 
-    /*@Override
-    public String getSYMBOL() {
-        return this.symbol;
-    }*/
+    @Override
+    public String getType() {
+        return type;
+    }
+
 }

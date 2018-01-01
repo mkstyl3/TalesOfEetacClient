@@ -12,10 +12,7 @@ import dsa.upc.edu.talesofeetacclient.R;
 public class Door extends Cell {
 
     private int nextMap;
-
-
-
-    private Bitmap bitmap;
+    private final String type = "Door";
 
 
     public Door () {
@@ -31,11 +28,8 @@ public class Door extends Cell {
         this.nextMap = nextmap;
     }
 
-    /*@Override
-    public String getSYMBOL() {
-        return this.symbol;
-    }*/
-
-
-
+    @Override
+    public String getType() {
+        return type;
+    }
 }
