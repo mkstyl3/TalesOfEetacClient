@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "/home/mike/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/edeb9a1d43d2b0c01773aa6f044439ea/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\ecb5da9e006b2cb8e3a190f2ac9ce1f3\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

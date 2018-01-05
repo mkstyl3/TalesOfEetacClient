@@ -1,4 +1,4 @@
-#Mon Jan 01 18:01:44 CET 2018
-base.0=/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/transforms/dexMerger/debug/1
+#Fri Jan 05 16:53:23 CET 2018
+base.0=C\:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 path.0=classes.dex
 renamed.0=classes.dex

@@ -1,17 +1,17 @@
 #Internal package file, do not edit.
-#Sat Dec 30 22:22:13 CET 2017
-2.base=/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/transforms/dexMerger/debug/14
+#Fri Jan 05 16:54:28 CET 2018
+2.base=C\:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
 5.set=DEX
 0.path=classes.dex
 2.baseType=DIRECTORY
-3.base=/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/transforms/dexMerger/debug/13
+3.base=C\:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
 2.set=DEX
 1.path=classes.dex
-4.base=/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/transforms/dexMerger/debug/16
+4.base=C\:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
 count=6
 5.baseType=DIRECTORY
 2.path=classes.dex
-5.base=/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/transforms/dexMerger/debug/12
+5.base=C\:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
 4.set=DEX
 3.path=classes.dex
 3.baseType=DIRECTORY
@@ -19,9 +19,9 @@ count=6
 4.path=classes.dex
 1.baseType=DIRECTORY
 5.path=classes.dex
-0.base=/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/transforms/dexMerger/debug/15
+0.base=C\:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
 0.baseType=DIRECTORY
 3.set=DEX
-1.base=/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/intermediates/transforms/dexMerger/debug/17
+1.base=C\:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
 4.baseType=DIRECTORY
 0.set=DEX

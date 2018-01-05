@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dsa.upc.edu.talesofeetacclient.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-12-29T15:04:51" hostname="PerryManson" time="0.001">
+<testsuite name="dsa.upc.edu.talesofeetacclient.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-05T15:49:27" hostname="DESKTOP-512S9HD" time="0.001">
   <properties/>
   <testcase name="addition_isCorrect" classname="dsa.upc.edu.talesofeetacclient.ExampleUnitTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
