@@ -8,3 +8,9 @@
 
 #log
 *.log
+
+app/build/
+
+# Gradle
+.gradle
+
