@@ -1,12 +1,16 @@
 package dsa.upc.edu.talesofeetacclient;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.text.Layout;
+import android.text.StaticLayout;
+import android.text.TextPaint;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -17,18 +21,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Queue;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
 
 import dsa.upc.edu.talesofeetacclient.Controller.ApiAdapter;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.Cell;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.ChestCell;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.UserCell;
-import dsa.upc.edu.talesofeetacclient.Model.Main.Chest;
 import dsa.upc.edu.talesofeetacclient.Model.Main.Item;
 import dsa.upc.edu.talesofeetacclient.Model.Main.Location;
 import dsa.upc.edu.talesofeetacclient.Model.Main.Map;
@@ -72,6 +71,8 @@ public class GameView extends SurfaceView implements Runnable {
 
     // Bob starts off not moving
     boolean isMoving = false;
+    boolean actionA = false;
+    boolean actionB = false;
 
     // He can walk at 150 pixels per second
     float walkSpeedPerSecond = 150;
@@ -131,7 +132,9 @@ public class GameView extends SurfaceView implements Runnable {
     Cell userCell;
     private int currentMapId = 1;
     Location nextCellLoc;
+    int collisionResult;
     //Queue<ChestCell> chestCellItemsFromCurrentMap = new ArrayDeque<>();
+    List<Item> items;
 
 
     // When the we initialize (call new()) on gameView
@@ -178,6 +181,7 @@ public class GameView extends SurfaceView implements Runnable {
     private void initializeObjects() {
         maps = new ArrayList<>();
         nextCellLoc = new Location();
+        items = new ArrayList<>();
     }
 
     public Map getMap(int id) {
@@ -244,9 +248,10 @@ public class GameView extends SurfaceView implements Runnable {
             switch (direction) {
                 case 3: {
                     nextCellLoc.setCoords(user.getLocation().getX() - 1, user.getLocation().getY());
-                    int collisionResult = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
+                    collisionResult = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
+                    Cell nextCell = getCell(currentMapId, nextCellLoc);
                     switch (collisionResult) {
-                        case 0: {
+                        case 0: { //0=No collision,
                             bobYPosition = bobYPosition - (walkSpeedPerSecond / fps);
                             user.setLocation(locateUser(whereToDrawX.centerX(), whereToDrawX.centerY()));
                             break;
@@ -258,6 +263,10 @@ public class GameView extends SurfaceView implements Runnable {
                         case 3:
                             break;
                         case 4:
+                            if (actionA) {
+                                getChestItemList(((ChestCell) nextCell).getChest().getId());
+                                actionA = false;
+                            }
                             break;
                     }
                     break;
@@ -327,7 +336,6 @@ public class GameView extends SurfaceView implements Runnable {
         }
     }
 
-
     // Draw the newly updated scene
     public void draw() {
         // Make sure our drawing surface is valid or we crash
@@ -350,6 +358,8 @@ public class GameView extends SurfaceView implements Runnable {
             canvas.drawBitmap(userCell.getBitmap(),
                     frameToDrawX,
                     whereToDrawX, paint);
+
+            DrawControls();
 
             ourHolder.unlockCanvasAndPost(canvas);
         }
@@ -383,11 +393,22 @@ public class GameView extends SurfaceView implements Runnable {
         paint.setTextSize(45);
 
         // Display the current fps on the screen
-        canvas.drawText("FPS:" + fps, screenWidth / 3 + 100, 1130, paint);
-        canvas.drawText("CellLoc:" + user.getLocation().getX() + "," + user.getLocation().getY(), screenWidth / 3 + 60, 1180, paint);
+        //canvas.drawText("FPS:" + fps, screenWidth / 3 + 100, 1130, paint);
+        //canvas.drawText("CellLoc:" + user.getLocation().getX() + "," + user.getLocation().getY(), screenWidth / 3 + 60, 1180, paint);
 
 
-        DrawControls();
+
+    }
+
+    private void drawDialogue (String string) {
+
+        Canvas canvas = new Canvas();
+        Paint dialoguePaint = new Paint();
+
+        dialoguePaint.setColor(Color.argb(255, 0, 0, 0));
+        Rect rect = new Rect (36, 1080, 1044, 1248);
+
+        canvas.drawRect(rect,dialoguePaint);
 
     }
 
@@ -556,13 +577,12 @@ public class GameView extends SurfaceView implements Runnable {
                     break;
                 } else if (controlsARect.contains(x, y)) {
                     // Set isMoving so Bob is moved in the update method
-                    isMoving = false;
-                    //actionA = yes;
+
+                    actionA = true;
                     break;
                 } else if (controlsBRect.contains(x, y)) {
                     // Set isMoving so Bob is moved in the update method
-                    isMoving = false;
-                    //actionB = yes;
+                    actionB = true;
                     break;
                 }
             }
@@ -571,7 +591,6 @@ public class GameView extends SurfaceView implements Runnable {
             case MotionEvent.ACTION_UP: {
                 // Set isMoving so Bob does not move
                 isMoving = false;
-
                 break;
             }
         }
@@ -625,27 +644,27 @@ public class GameView extends SurfaceView implements Runnable {
 
 
         return true;
-    }
+    } */
+
+
     public void getChestItemList(int chestId) {
         Call<List<Item>> call = ApiAdapter.getApiService("http://10.0.2.2:8080/talesofeetac/db/").getChestItemsService(chestId);
-        call.enqueue(new getChestItemListCallback());
+        call.enqueue(new GetChestItemListCallback());
     }
 
-    private class getChestItemListCallback implements Callback<List<Item>> {
+    private class GetChestItemListCallback implements Callback<List<Item>> {
 
         @Override
         public void onResponse(Call<List<Item>> call, Response<List<Item>> response) {
-            List<Item> items = response.body();
-            Location loc = chestCellItemsFromCurrentMap.element().getOnMapLoc();
-            chestCellItemsFromCurrentMap.poll();
-            ((ChestCell) getCell(currentMapId, loc)).getChest().setItems(items);
+            items = response.body();
+
         }
 
         @Override
         public void onFailure(Call<List<Item>> call, Throwable t) {
 
         }
-    }*/
+    }
 
     private Location locateUser(int x, int y) {
         int xNex =-1;

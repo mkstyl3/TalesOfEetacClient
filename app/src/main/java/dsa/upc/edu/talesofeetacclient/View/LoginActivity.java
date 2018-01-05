@@ -59,7 +59,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         progressBar.setProgress(10);
         User u = new User();
         u.setName(username);
-        u.setPassword(password);
+        u.setPassword(password); // "http://10.0.2.2:8080/talesofeetac/db/"
         Call<User> call = ApiAdapter.getApiService("http://10.0.2.2:8080/talesofeetac/db/").getUserLoginService(u);
         call.enqueue(new GetUserLoginCallback());
     }
@@ -80,7 +80,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
         @Override
         public void onFailure(Call<User> call, Throwable t) {
-
+            Toast.makeText(getBaseContext(), "We've got NO connection!", Toast.LENGTH_SHORT).show();
         }
     }
 }
