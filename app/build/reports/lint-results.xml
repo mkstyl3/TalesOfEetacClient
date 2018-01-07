@@ -641,11 +641,11 @@
         summary="Missing View constructors for XML inflation"
         explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:&#xA;* `View(Context context)`&#xA;* `View(Context context, AttributeSet attrs)`&#xA;* `View(Context context, AttributeSet attrs, int defStyle)`&#xA;&#xA;If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
         errorLine1=" * Created by mike on 22/11/17."
-        errorLine2="          ~~~~~~~~">
+        errorLine2="           ~~~~~~~~">
         <location
             file="C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\java\dsa\upc\edu\talesofeetacclient\GameView.java"
-            line="41"
-            column="11"/>
+            line="40"
+            column="12"/>
     </issue>
 
     <issue
@@ -656,12 +656,12 @@
         priority="6"
         summary="Accessibility in Custom Views"
         explanation="If a `View` that overrides `onTouchEvent` or uses an `OnTouchListener` does not also implement `performClick` and call it when clicks are detected, the `View` may not handle accessibility actions properly. Logic handling the click actions should ideally be placed in `View#performClick` as some accessibility services invoke `performClick` when a click action should occur."
-        errorLine1="        try {"
-        errorLine2="~~~~~~~~~~~~">
+        errorLine1="        playing = false;"
+        errorLine2="     ~~~~~~~~~~~~">
         <location
             file="C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\java\dsa\upc\edu\talesofeetacclient\GameView.java"
-            line="509"
-            column="1"/>
+            line="529"
+            column="6"/>
     </issue>
 
     <issue

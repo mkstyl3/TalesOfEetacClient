@@ -140,6 +140,10 @@
         "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\66356c498d2a3d9aec13a00beeb469b2\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\debug\\raw_map3.txt.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\raw\\map3.txt"
+    },
+    {
         "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\66356c498d2a3d9aec13a00beeb469b2\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
     },

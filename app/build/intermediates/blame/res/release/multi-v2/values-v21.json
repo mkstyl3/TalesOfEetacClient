@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\ecb5da9e006b2cb8e3a190f2ac9ce1f3\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\a2254c94c8ea6b9ecf79e5e3ec520f81\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\66356c498d2a3d9aec13a00beeb469b2\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

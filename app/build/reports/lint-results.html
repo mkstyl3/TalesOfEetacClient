@@ -176,7 +176,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 69 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Fri Jan 05 16:49:22 CET 2018      </nav>
+Check performed at Fri Jan 05 17:21:23 CET 2018      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -1113,14 +1113,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/dsa/upc/edu/talesofeetacclient/GameView.java">../../src/main/java/dsa/upc/edu/talesofeetacclient/GameView.java</a>:41</span>: <span class="message">Custom view <code>GameView</code> is missing constructor used by tools: <code>(Context)</code> or <code>(Context,AttributeSet)</code> or <code>(Context,AttributeSet,int)</code></span><br /><pre class="errorlines">
-<span class="lineno">  38 </span><span class="keyword">import</span> retrofit2.Response;
-<span class="lineno">  39 </span>
-<span class="lineno">  40 </span><span class="javadoc">/**
-</span><span class="caretline"><span class="lineno">  41 </span><span class="javadoc"> * Created</span><span class="warning"><span class="javadoc"> by mike</span></span><span class="javadoc"> on 22/11/17.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javadoc">
-</span><span class="lineno">  42 </span><span class="javadoc"> */</span>
-<span class="lineno">  43 </span>
-<span class="lineno">  44 </span><span class="keyword">public</span> <span class="keyword">class</span> GameView <span class="keyword">extends</span> SurfaceView <span class="keyword">implements</span> Runnable {
+<span class="location"><a href="../../src/main/java/dsa/upc/edu/talesofeetacclient/GameView.java">../../src/main/java/dsa/upc/edu/talesofeetacclient/GameView.java</a>:40</span>: <span class="message">Custom view <code>GameView</code> is missing constructor used by tools: <code>(Context)</code> or <code>(Context,AttributeSet)</code> or <code>(Context,AttributeSet,int)</code></span><br /><pre class="errorlines">
+<span class="lineno">  37 </span><span class="keyword">import</span> retrofit2.Response;
+<span class="lineno">  38 </span>
+<span class="lineno">  39 </span><span class="javadoc">/**
+</span><span class="caretline"><span class="lineno">  40 </span><span class="javadoc"> * Created </span><span class="warning"><span class="javadoc">by mike </span></span><span class="javadoc">on 22/11/17.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javadoc">
+</span><span class="lineno">  41 </span><span class="javadoc"> */</span>
+<span class="lineno">  42 </span>
+<span class="lineno">  43 </span><span class="keyword">public</span> <span class="keyword">class</span> GameView <span class="keyword">extends</span> SurfaceView <span class="keyword">implements</span> Runnable {
 </pre>
 
 </div>
@@ -1165,14 +1165,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/dsa/upc/edu/talesofeetacclient/GameView.java">../../src/main/java/dsa/upc/edu/talesofeetacclient/GameView.java</a>:509</span>: <span class="message">Custom view <code>GameView</code> overrides <code>onTouchEvent</code> but not <code>performClick</code></span><br /><pre class="errorlines">
-<span class="lineno"> 506 </span>    <span class="comment">// shutdown our thread.</span>
-<span class="lineno"> 507 </span>    <span class="keyword">public</span> <span class="keyword">void</span> pause() {
-<span class="lineno"> 508 </span>        playing = <span class="keyword">false</span>;
-<span class="caretline"><span class="lineno"> 509 </span><span class="warning">        <span class="keyword">try</span> </span>{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 510 </span>            gameThread.join();
-<span class="lineno"> 511 </span>        } <span class="keyword">catch</span> (InterruptedException e) {
-<span class="lineno"> 512 </span>            Log.e(<span class="string">"Error:"</span>, <span class="string">"joining thread"</span>);
+<span class="location"><a href="../../src/main/java/dsa/upc/edu/talesofeetacclient/GameView.java">../../src/main/java/dsa/upc/edu/talesofeetacclient/GameView.java</a>:529</span>: <span class="message">Custom view <code>GameView</code> overrides <code>onTouchEvent</code> but not <code>performClick</code></span><br /><pre class="errorlines">
+<span class="lineno"> 526 </span>    <span class="comment">// If SimpleGameEngine Activity is paused/stopped</span>
+<span class="lineno"> 527 </span>    <span class="comment">// shutdown our thread.</span>
+<span class="lineno"> 528 </span>    <span class="keyword">public</span> <span class="keyword">void</span> pause() {
+<span class="caretline"><span class="lineno"> 529 </span>     <span class="warning">   playing =</span> <span class="keyword">false</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 530 </span>        <span class="keyword">try</span> {
+<span class="lineno"> 531 </span>            gameThread.join();
+<span class="lineno"> 532 </span>        } <span class="keyword">catch</span> (InterruptedException e) {
 </pre>
 
 </div>
