@@ -507,7 +507,7 @@ public class GameView extends SurfaceView implements Runnable {
             case 3: {
                 frameToDrawX.offsetTo(currentFrame * frameWidth, 3 * frameHeight);
 
-                new java.util.Timer().schedule(
+                /*new java.util.Timer().schedule(
                         new java.util.TimerTask() {
                             @Override
                             public void run(){
@@ -519,11 +519,11 @@ public class GameView extends SurfaceView implements Runnable {
                             }
                         },
                         600
-                );
+                ); */
 
-                /* Rect controlsUpRectP = new Rect(160, screenHeight / 2 + 200 + 200, 160 + 120, screenHeight / 2 + 200 + 120 + 200);
+                Rect controlsUpRectP = new Rect(160, screenHeight / 2 + 200 + 200, 160 + 120, screenHeight / 2 + 200 + 120 + 200);
                 Bitmap bmpupp = BitmapFactory.decodeResource(getResources(), R.drawable.ctrl_up_arrow_pressed);
-                canvas.drawBitmap(bmpupp, null, controlsUpRectP, null); */
+                canvas.drawBitmap(bmpupp, null, controlsUpRectP, null);
 
                 break;
             }
