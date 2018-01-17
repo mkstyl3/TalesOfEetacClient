@@ -547,32 +547,37 @@ public final class R {
     public static final int controls_a=0x7f050002;
     public static final int controls_b=0x7f050003;
     public static final int ctrl_down_arrow=0x7f050004;
-    public static final int ctrl_left_arrow=0x7f050005;
-    public static final int ctrl_right_arrow=0x7f050006;
-    public static final int ctrl_up_arrow=0x7f050007;
-    public static final int dirt_s84x84=0x7f050008;
-    public static final int dngn_closed_door84x84=0x7f050009;
-    public static final int drawer_shadow=0x7f05000a;
-    public static final int ic_drawer=0x7f05000b;
-    public static final int ic_launcher_background=0x7f05000c;
-    public static final int ic_launcher_foreground=0x7f05000d;
-    public static final int joypad=0x7f05000e;
-    public static final int link1=0x7f05000f;
-    public static final int link128x128=0x7f050010;
-    public static final int notification_action_background=0x7f050011;
-    public static final int notification_bg=0x7f050012;
-    public static final int notification_bg_low=0x7f050013;
-    public static final int notification_bg_low_normal=0x7f050014;
-    public static final int notification_bg_low_pressed=0x7f050015;
-    public static final int notification_bg_normal=0x7f050016;
-    public static final int notification_bg_normal_pressed=0x7f050017;
-    public static final int notification_icon_background=0x7f050018;
-    public static final int notification_template_icon_bg=0x7f050019;
-    public static final int notification_template_icon_low_bg=0x7f05001a;
-    public static final int notification_tile_bg=0x7f05001b;
-    public static final int notify_panel_notification_icon_bg=0x7f05001c;
-    public static final int stone_brick4_84x84=0x7f05001d;
-    public static final int tree1_red84x84=0x7f05001e;
+    public static final int ctrl_down_arrow_pressed=0x7f050005;
+    public static final int ctrl_left_arrow=0x7f050006;
+    public static final int ctrl_left_arrow_pressed=0x7f050007;
+    public static final int ctrl_right_arrow=0x7f050008;
+    public static final int ctrl_right_arrow_pressed=0x7f050009;
+    public static final int ctrl_up_arrow=0x7f05000a;
+    public static final int ctrl_up_arrow_pressed=0x7f05000b;
+    public static final int dirt_s84x84=0x7f05000c;
+    public static final int dngn_closed_door84x84=0x7f05000d;
+    public static final int drawer_shadow=0x7f05000e;
+    public static final int ic_action_name=0x7f05000f;
+    public static final int ic_drawer=0x7f050010;
+    public static final int ic_launcher_background=0x7f050011;
+    public static final int ic_launcher_foreground=0x7f050012;
+    public static final int joypad=0x7f050013;
+    public static final int link1=0x7f050014;
+    public static final int link128x128=0x7f050015;
+    public static final int notification_action_background=0x7f050016;
+    public static final int notification_bg=0x7f050017;
+    public static final int notification_bg_low=0x7f050018;
+    public static final int notification_bg_low_normal=0x7f050019;
+    public static final int notification_bg_low_pressed=0x7f05001a;
+    public static final int notification_bg_normal=0x7f05001b;
+    public static final int notification_bg_normal_pressed=0x7f05001c;
+    public static final int notification_icon_background=0x7f05001d;
+    public static final int notification_template_icon_bg=0x7f05001e;
+    public static final int notification_template_icon_low_bg=0x7f05001f;
+    public static final int notification_tile_bg=0x7f050020;
+    public static final int notify_panel_notification_icon_bg=0x7f050021;
+    public static final int stone_brick4_84x84=0x7f050022;
+    public static final int tree1_red84x84=0x7f050023;
   }
   public static final class id {
     public static final int action0=0x7f060000;
@@ -687,6 +692,7 @@ public final class R {
   public static final class raw {
     public static final int map1=0x7f0b0000;
     public static final int map2=0x7f0b0001;
+    public static final int map3=0x7f0b0002;
   }
   public static final class string {
     public static final int action_example=0x7f0c0000;

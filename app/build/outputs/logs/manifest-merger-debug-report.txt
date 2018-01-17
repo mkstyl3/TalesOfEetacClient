@@ -1,155 +1,155 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:2:1-34:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\69204019417a666fe7de78b9d88eb7c6\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\a02f701a08b2af759290c4b06b93cea0\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ecb5da9e006b2cb8e3a190f2ac9ce1f3\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3bff7cc8eb0594df1411048bbb3833b9\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8df2d4efd2b8fd6646a71350bcc6ab8d\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\9fabcdc83841f1b2c8b2ac22c135ee16\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\66356c498d2a3d9aec13a00beeb469b2\AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\602ae918eea832cac01c1a3cd86008b8\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:2:1-34:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/mike/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3205c92f541dedc4d627f22a6dd57cd0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/9cef541027dc18d0d39261a9fa90007a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/edeb9a1d43d2b0c01773aa6f044439ea/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/51a66ce6b26618d11c23781ff02ed350/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/ccc17019b13cc7f9c02bfba2ffe96072/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/bc08a0783ea776c66afcff1f404d9063/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/def9297c263366fe207633a2ee909867/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/d13c7dac749151f94f70ce419238269e/AndroidManifest.xml:17:1-30:12
+INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:2:1-34:12
 	package
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:3:5-45
-		INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:3:5-45
+		INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:2:1-34:12
-		INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
+		INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:2:1-34:12
+		INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:2:1-34:12
-		INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
+		INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:2:1-34:12
+		INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:7:5-32:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\69204019417a666fe7de78b9d88eb7c6\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\69204019417a666fe7de78b9d88eb7c6\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\a02f701a08b2af759290c4b06b93cea0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\a02f701a08b2af759290c4b06b93cea0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ecb5da9e006b2cb8e3a190f2ac9ce1f3\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ecb5da9e006b2cb8e3a190f2ac9ce1f3\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3bff7cc8eb0594df1411048bbb3833b9\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3bff7cc8eb0594df1411048bbb3833b9\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8df2d4efd2b8fd6646a71350bcc6ab8d\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8df2d4efd2b8fd6646a71350bcc6ab8d\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\9fabcdc83841f1b2c8b2ac22c135ee16\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\9fabcdc83841f1b2c8b2ac22c135ee16\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\66356c498d2a3d9aec13a00beeb469b2\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\66356c498d2a3d9aec13a00beeb469b2\AndroidManifest.xml:25:5-29:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\602ae918eea832cac01c1a3cd86008b8\AndroidManifest.xml:24:5-28:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\602ae918eea832cac01c1a3cd86008b8\AndroidManifest.xml:24:5-28:19
+ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:7:5-32:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/mike/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3205c92f541dedc4d627f22a6dd57cd0/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/mike/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3205c92f541dedc4d627f22a6dd57cd0/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-v4:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/9cef541027dc18d0d39261a9fa90007a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/9cef541027dc18d0d39261a9fa90007a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/edeb9a1d43d2b0c01773aa6f044439ea/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/edeb9a1d43d2b0c01773aa6f044439ea/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/51a66ce6b26618d11c23781ff02ed350/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/51a66ce6b26618d11c23781ff02ed350/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/ccc17019b13cc7f9c02bfba2ffe96072/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/ccc17019b13cc7f9c02bfba2ffe96072/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/bc08a0783ea776c66afcff1f404d9063/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/bc08a0783ea776c66afcff1f404d9063/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/def9297c263366fe207633a2ee909867/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/def9297c263366fe207633a2ee909867/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/d13c7dac749151f94f70ce419238269e/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/d13c7dac749151f94f70ce419238269e/AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:13:9-40
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:13:9-40
 activity#dsa.upc.edu.talesofeetacclient.MainGameActivity
-ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:14:9-54
+ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:14:9-54
 	android:name
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:14:19-51
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:14:19-51
 activity#dsa.upc.edu.talesofeetacclient.View.LoginActivity
-ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:15:9-23:20
+ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:15:9-23:20
 	android:label
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:17:13-57
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:17:13-57
 	android:name
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:16:13-47
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:16:13-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:19:17-69
+ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:21:17-77
+ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:21:27-74
 activity#dsa.upc.edu.talesofeetacclient.View.MainActivity
-ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:24:9-26:68
+ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:24:9-26:68
 	android:label
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:26:13-56
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:26:13-56
 	android:name
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:25:13-46
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:25:13-46
 activity#dsa.upc.edu.talesofeetacclient.View.UserInfo
-ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:27:9-51
+ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:27:9-51
 	android:name
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:27:19-48
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:27:19-48
 activity#dsa.upc.edu.talesofeetacclient.View.ItemInfo
-ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:28:9-31:20
+ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:28:9-31:20
 	android:label
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:30:13-60
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:30:13-60
 	android:name
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml:29:13-42
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml:29:13-42
 uses-sdk
-INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\69204019417a666fe7de78b9d88eb7c6\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\69204019417a666fe7de78b9d88eb7c6\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\a02f701a08b2af759290c4b06b93cea0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\a02f701a08b2af759290c4b06b93cea0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ecb5da9e006b2cb8e3a190f2ac9ce1f3\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ecb5da9e006b2cb8e3a190f2ac9ce1f3\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3bff7cc8eb0594df1411048bbb3833b9\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3bff7cc8eb0594df1411048bbb3833b9\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8df2d4efd2b8fd6646a71350bcc6ab8d\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8df2d4efd2b8fd6646a71350bcc6ab8d\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\9fabcdc83841f1b2c8b2ac22c135ee16\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\9fabcdc83841f1b2c8b2ac22c135ee16\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\66356c498d2a3d9aec13a00beeb469b2\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\66356c498d2a3d9aec13a00beeb469b2\AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\602ae918eea832cac01c1a3cd86008b8\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\602ae918eea832cac01c1a3cd86008b8\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
+INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
+INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/mike/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3205c92f541dedc4d627f22a6dd57cd0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/mike/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3205c92f541dedc4d627f22a6dd57cd0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/9cef541027dc18d0d39261a9fa90007a/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/9cef541027dc18d0d39261a9fa90007a/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/edeb9a1d43d2b0c01773aa6f044439ea/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/edeb9a1d43d2b0c01773aa6f044439ea/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/51a66ce6b26618d11c23781ff02ed350/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/51a66ce6b26618d11c23781ff02ed350/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/ccc17019b13cc7f9c02bfba2ffe96072/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/ccc17019b13cc7f9c02bfba2ffe96072/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/bc08a0783ea776c66afcff1f404d9063/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/bc08a0783ea776c66afcff1f404d9063/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/def9297c263366fe207633a2ee909867/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/def9297c263366fe207633a2ee909867/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/d13c7dac749151f94f70ce419238269e/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/d13c7dac749151f94f70ce419238269e/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
+INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\a02f701a08b2af759290c4b06b93cea0\AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:support-v4:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/9cef541027dc18d0d39261a9fa90007a/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
+		INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Josean\AndroidStudioProjects\TalesOfEetacClient\app\src\main\AndroidManifest.xml
+		INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
+		ADDED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:support-v4:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\a02f701a08b2af759290c4b06b93cea0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ecb5da9e006b2cb8e3a190f2ac9ce1f3\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ecb5da9e006b2cb8e3a190f2ac9ce1f3\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3bff7cc8eb0594df1411048bbb3833b9\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3bff7cc8eb0594df1411048bbb3833b9\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8df2d4efd2b8fd6646a71350bcc6ab8d\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8df2d4efd2b8fd6646a71350bcc6ab8d\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\9fabcdc83841f1b2c8b2ac22c135ee16\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\9fabcdc83841f1b2c8b2ac22c135ee16\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\66356c498d2a3d9aec13a00beeb469b2\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\66356c498d2a3d9aec13a00beeb469b2\AndroidManifest.xml:26:9-28:38
+ADDED from [com.android.support:support-v4:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/9cef541027dc18d0d39261a9fa90007a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/edeb9a1d43d2b0c01773aa6f044439ea/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/edeb9a1d43d2b0c01773aa6f044439ea/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/51a66ce6b26618d11c23781ff02ed350/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/51a66ce6b26618d11c23781ff02ed350/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/ccc17019b13cc7f9c02bfba2ffe96072/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/ccc17019b13cc7f9c02bfba2ffe96072/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/bc08a0783ea776c66afcff1f404d9063/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/bc08a0783ea776c66afcff1f404d9063/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/def9297c263366fe207633a2ee909867/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/def9297c263366fe207633a2ee909867/AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\a02f701a08b2af759290c4b06b93cea0\AndroidManifest.xml:28:13-35
+		ADDED from [com.android.support:support-v4:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/9cef541027dc18d0d39261a9fa90007a/AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\a02f701a08b2af759290c4b06b93cea0\AndroidManifest.xml:27:13-51
+		ADDED from [com.android.support:support-v4:26.1.0] /home/mike/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/9cef541027dc18d0d39261a9fa90007a/AndroidManifest.xml:27:13-51
 meta-data#android.arch.lifecycle.VERSION
-ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\602ae918eea832cac01c1a3cd86008b8\AndroidManifest.xml:25:9-27:47
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/d13c7dac749151f94f70ce419238269e/AndroidManifest.xml:25:9-27:47
 	android:value
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\602ae918eea832cac01c1a3cd86008b8\AndroidManifest.xml:27:13-44
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/d13c7dac749151f94f70ce419238269e/AndroidManifest.xml:27:13-44
 	android:name
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Josean\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\602ae918eea832cac01c1a3cd86008b8\AndroidManifest.xml:26:13-58
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/d13c7dac749151f94f70ce419238269e/AndroidManifest.xml:26:13-58
