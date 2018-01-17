@@ -12,5 +12,5 @@
 app/build/
 
 # Gradle
-.gradle
+.gradle/
 

@@ -8,6 +8,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.os.CountDownTimer;
 import android.text.Layout;
 import android.text.StaticLayout;
 import android.text.TextPaint;
@@ -505,18 +506,52 @@ public class GameView extends SurfaceView implements Runnable {
         switch (direction) {
             case 3: {
                 frameToDrawX.offsetTo(currentFrame * frameWidth, 3 * frameHeight);
+
+                /*new java.util.Timer().schedule(
+                        new java.util.TimerTask() {
+                            @Override
+                            public void run(){
+
+                                Rect controlsUpRectP = new Rect(160, screenHeight / 2 + 200 + 200, 160 + 120, screenHeight / 2 + 200 + 120 + 200);
+                                Bitmap bmpupp = BitmapFactory.decodeResource(getResources(), R.drawable.ctrl_up_arrow_pressed);
+                                canvas.drawBitmap(bmpupp, null, controlsUpRectP, null);
+                                //
+                            }
+                        },
+                        600
+                ); */
+
+                Rect controlsUpRectP = new Rect(160, screenHeight / 2 + 200 + 200, 160 + 120, screenHeight / 2 + 200 + 120 + 200);
+                Bitmap bmpupp = BitmapFactory.decodeResource(getResources(), R.drawable.ctrl_up_arrow_pressed);
+                canvas.drawBitmap(bmpupp, null, controlsUpRectP, null);
+
                 break;
             }
             case 0: {
                 frameToDrawX.offsetTo(currentFrame * frameWidth, 0 * frameHeight);
+
+                Rect controlsDownRectP = new Rect(160, screenHeight / 2 + 360 + 200, 160 + 120, screenHeight / 2 + 360 + 120 + 200);
+                Bitmap bmpdownp = BitmapFactory.decodeResource(getResources(), R.drawable.ctrl_down_arrow_pressed);
+                canvas.drawBitmap(bmpdownp, null, controlsDownRectP, null);
+
                 break;
             }
             case 2: {
                 frameToDrawX.offsetTo(currentFrame * frameWidth, 2 * frameHeight);
+
+                Rect controlsRightRectP = new Rect(280, screenHeight / 2 + 280 + 200, 280 + 120, screenHeight / 2 + 280 + 120 + 200);
+                Bitmap bmprightp = BitmapFactory.decodeResource(getResources(), R.drawable.ctrl_right_arrow_pressed);
+                canvas.drawBitmap(bmprightp, null, controlsRightRectP, null);
+
                 break;
             }
             case 1: {
                 frameToDrawX.offsetTo(currentFrame * frameWidth, 1 * frameHeight);
+
+                Rect controlsLeftRectP = new Rect(40, screenHeight / 2 + 280 + 200, 40 + 120, screenHeight / 2 + 280 + 120 + 200);
+                Bitmap bmpleftp = BitmapFactory.decodeResource(getResources(), R.drawable.ctrl_left_arrow_pressed);
+                canvas.drawBitmap(bmpleftp, null, controlsLeftRectP, null);
+
                 break;
             }
         }
@@ -559,6 +594,11 @@ public class GameView extends SurfaceView implements Runnable {
                     // Set isMoving so Bob is moved in the update method
                     isMoving = true;
                     direction = 3;
+
+                    /* Rect controlsUpRectP = new Rect(160, screenHeight / 2 + 200 + 200, 160 + 120, screenHeight / 2 + 200 + 120 + 200);
+                    Bitmap bmpupp = BitmapFactory.decodeResource(getResources(), R.drawable.ctrl_up_arrow_pressed);
+                    canvas.drawBitmap(bmpupp, null, controlsUpRectP, null); */
+
                     break;
                 } else if (controlsDownRect.contains(x, y)) {
                     // Set isMoving so Bob is moved in the update method

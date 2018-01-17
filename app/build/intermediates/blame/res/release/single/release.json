@@ -1,0 +1,370 @@
+[
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_part_time.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_drawer_shadow.9.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-mdpi\\drawer_shadow.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_dngn_closed_door84x84.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-hdpi\\dngn_closed_door84x84.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\generated\\res\\pngs\\release\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_drawer.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-xhdpi\\ic_drawer.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_drawer.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-mdpi\\ic_drawer.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable_link128x128.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable\\link128x128.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_drawer_shadow.9.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-xxhdpi\\drawer_shadow.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_bg_low.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout-v21_notification_action_tombstone.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_big_media_custom.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\a2254c94c8ea6b9ecf79e5e3ec520f81\\res\\layout\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\menu_main.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_icon_background.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\generated\\res\\pngs\\release\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout-v21_notification_action.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_drawer.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-hdpi\\ic_drawer.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_action.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\layout\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ctrl_up_arrow.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-mdpi\\ctrl_up_arrow.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_icon_group.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_chest2_closed84x84.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-hdpi\\chest2_closed84x84.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\generated\\res\\pngs\\release\\drawable-xxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_tree1_red84x84.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-hdpi\\tree1_red84x84.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_media_custom.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\a2254c94c8ea6b9ecf79e5e3ec520f81\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_iteminfo.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\layout\\activity_iteminfo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\raw_map2.txt.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\raw\\map2.txt"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_dirt_s84x84.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-hdpi\\dirt_s84x84.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_stone_brick4_84x84.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-hdpi\\stone_brick4_84x84.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_itemlist.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\layout\\activity_itemlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\generated\\res\\pngs\\release\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\a2254c94c8ea6b9ecf79e5e3ec520f81\\res\\layout\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_controls_a.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-hdpi\\controls_a.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_action_tombstone.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_drawer_shadow.9.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-hdpi\\drawer_shadow.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_drawer.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-xxhdpi\\ic_drawer.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_lines_media.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\a2254c94c8ea6b9ecf79e5e3ec520f81\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ctrl_left_arrow.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-mdpi\\ctrl_left_arrow.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable_joypad.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable\\joypad.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\raw_map1.txt.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\raw\\map1.txt"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ctrl_right_arrow.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-mdpi\\ctrl_right_arrow.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_tile_bg.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_controls_b.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-hdpi\\controls_b.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout-v16_notification_template_custom_big.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\layout-v16\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_media_cancel_action.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\a2254c94c8ea6b9ecf79e5e3ec520f81\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\generated\\res\\pngs\\release\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\menu_global.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\menu\\global.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-v21_notification_action_background.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\generated\\res\\pngs\\release\\drawable-xxxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable_link1.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable\\link1.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ctrl_down_arrow.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-mdpi\\ctrl_down_arrow.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_part_chronometer.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout-v21_notification_template_icon_group.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\generated\\res\\pngs\\release\\drawable-ldpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_main.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\layout\\fragment_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_media_action.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\a2254c94c8ea6b9ecf79e5e3ec520f81\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_drawer_main.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\layout\\drawer_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout-v21_notification_template_custom_big.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_drawer_shadow.9.png.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\drawable-xhdpi\\drawer_shadow.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_userinfo.xml.flat",
+        "source": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\src\\main\\res\\layout\\activity_userinfo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_big_media_narrow.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\a2254c94c8ea6b9ecf79e5e3ec520f81\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_media.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\a2254c94c8ea6b9ecf79e5e3ec520f81\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_big_media.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\a2254c94c8ea6b9ecf79e5e3ec520f81\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josean\\AndroidStudioProjects\\TalesOfEetacClient\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_bg.xml.flat",
+        "source": "C:\\Users\\Josean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8a8a4019f57d8674e9ead0bd3c2393db\\res\\drawable\\notification_bg.xml"
+    }
+]
