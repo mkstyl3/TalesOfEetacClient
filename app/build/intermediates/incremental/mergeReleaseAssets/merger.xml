@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/main/assets"/><source path="/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/build/generated/assets/shaders/release"/></dataSet><dataSet config="release"><source path="/home/mike/AndroidStudioProjects/TalesOfEetacClient/app/src/release/assets"/></dataSet></merger>
