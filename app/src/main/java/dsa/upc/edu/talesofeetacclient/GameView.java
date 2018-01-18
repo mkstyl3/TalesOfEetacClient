@@ -74,6 +74,7 @@ public class GameView extends SurfaceView implements Runnable {
     boolean isMoving = false;
     boolean actionA = false;
     boolean actionB = false;
+    boolean textMode = false;
 
     // He can walk at 150 pixels per second
     float walkSpeedPerSecond = 150;
@@ -359,12 +360,12 @@ public class GameView extends SurfaceView implements Runnable {
             canvas.drawBitmap(userCell.getBitmap(),
                     frameToDrawX,
                     whereToDrawX, paint);
-
             DrawControls();
-
             ourHolder.unlockCanvasAndPost(canvas);
         }
     }
+
+
 
     private void drawMap(int mapId, Canvas canvas) {
         for (int i = 0; i < 144; i++) {
