@@ -642,11 +642,19 @@ public class GameView extends SurfaceView implements Runnable {
 
     public Map createMap(int mapId) {
         //logger.info("loadMap: Loading map...");
+        BufferedReader br = null;
         try {
             StringBuilder s = new StringBuilder();
             s.append("map").append(mapId).append(".txt");
             ObjectMapper mapper = new ObjectMapper();
-            BufferedReader br = new BufferedReader(new InputStreamReader(this.getResources().openRawResource(R.raw.map1)), 8192);
+            if(mapId == 1){
+                InputStreamReader isr1 = new InputStreamReader(this.getResources().openRawResource(R.raw.map1));
+                br = new BufferedReader(isr1,8192);
+            }
+            else if (mapId == 2) {
+                InputStreamReader isr2 = new InputStreamReader(this.getResources().openRawResource(R.raw.map1));
+                br = new BufferedReader(isr2,8192);
+                }
             Cell cells[] = mapper.readValue(br, Cell[].class);
             for (Cell cell : cells) {
                 if (cell.getClass().getSimpleName().equals("Door")) {
