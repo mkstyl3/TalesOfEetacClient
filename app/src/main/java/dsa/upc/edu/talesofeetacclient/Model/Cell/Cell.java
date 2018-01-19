@@ -28,7 +28,8 @@ import dsa.upc.edu.talesofeetacclient.Model.Main.Location;
         @JsonSubTypes.Type(value = Wall.class, name = "Wall"),
         @JsonSubTypes.Type(value = Field.class, name = "Field"),
         @JsonSubTypes.Type(value = NPC.class, name = "NPC"),
-        @JsonSubTypes.Type(value = ChestCell.class, name = "ChestCell")
+        @JsonSubTypes.Type(value = ChestCell.class, name = "ChestCell"),
+        @JsonSubTypes.Type(value = Hole.class, name = "Hole")
 })
 public abstract class Cell {
 

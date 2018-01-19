@@ -138,6 +138,7 @@ public class GameView extends SurfaceView implements Runnable {
     List chest1;
     String text;
     boolean gotTheKey = false;
+    boolean gotTheInvocation = false;
 
 
     // When the we initialize (call new()) on gameView
@@ -157,9 +158,6 @@ public class GameView extends SurfaceView implements Runnable {
         paint = new Paint();
         initializeObjects();
 
-        // Load Bob from his .png file
-        setMap(createMap(1));
-        setMap(createMap(2));
 
         for (Cell cell : getMap(1).getCellArray()) {
             if (cell.getType().equals("ChestCell")) {
@@ -195,6 +193,9 @@ public class GameView extends SurfaceView implements Runnable {
         items = new ArrayList<>();
         chest0 = new ArrayList();
         chest1 = new ArrayList();
+        setMap(createMap(1));
+        setMap(createMap(2));
+        setMap(createMap(3));
     }
 
     public Map getMap(int id) {
@@ -278,6 +279,21 @@ public class GameView extends SurfaceView implements Runnable {
                             if (actionA) {
                                 text = ((NPC) nextCell).getDialogue();
                             }
+                            else if (actionB) {
+                                if (!gotTheInvocation) {
+                                    for (Item i: user.getItems()) {
+                                        if(i.getName().equals("dark hole")) {
+                                            currentMapId = 3;
+                                            gotTheKey = true;
+                                            textMode = false;
+                                        }
+                                        else {
+                                            text = "Locked";
+                                            textMode = true;
+                                        }
+                                    }
+                                }
+                            }
                             textMode = true;
                             actionA = false;
                             break;
@@ -292,7 +308,7 @@ public class GameView extends SurfaceView implements Runnable {
                                         else {
                                             user.getItems().addAll(chest0);
                                             chest0.clear();
-                                            text = "All items from chest retreived!";
+                                            text = "You've got a Dark Hole Invocation!";
                                             break;
                                         }
                                     }
@@ -304,7 +320,7 @@ public class GameView extends SurfaceView implements Runnable {
                                         else {
                                             user.getItems().addAll(chest1);
                                             chest1.clear();
-                                            text = "All items from chest retreived!";
+                                            text = "You've got the Master-Key!";
                                             break;
                                         }
                                     }
@@ -355,9 +371,6 @@ public class GameView extends SurfaceView implements Runnable {
                             }
                             break;
                         case 3:
-                            if (actionA) {
-                                text = ((NPC) nextCell).getDialogue();
-                            }
                             break;
                         case 4:
                             break;
@@ -379,9 +392,6 @@ public class GameView extends SurfaceView implements Runnable {
                         case 2:
                             break;
                         case 3:
-                            if (actionA) {
-                                text = ((NPC) nextCell).getDialogue();
-                            }
                             break;
                         case 4:
                             break;
@@ -404,9 +414,6 @@ public class GameView extends SurfaceView implements Runnable {
                             currentMapId = 2;
                             break;
                         case 3:
-                            if (actionA) {
-                                text = ((NPC) nextCell).getDialogue();
-                            }
                             break;
                         case 4:
                             break;
@@ -740,6 +747,10 @@ public class GameView extends SurfaceView implements Runnable {
                 InputStreamReader isr2 = new InputStreamReader(this.getResources().openRawResource(R.raw.map2));
                 br = new BufferedReader(isr2,8192);
                 }
+            else if (mapId == 3) {
+                InputStreamReader isr2 = new InputStreamReader(this.getResources().openRawResource(R.raw.map3));
+                br = new BufferedReader(isr2,8192);
+            }
             Cell cells[] = mapper.readValue(br, Cell[].class);
             for (Cell cell : cells) {
                 if (cell.getClass().getSimpleName().equals("Door")) {
@@ -754,6 +765,8 @@ public class GameView extends SurfaceView implements Runnable {
                     cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.chest2_closed84x84));
                 } else if (cell.getClass().getSimpleName().equals("NPC")) {
                     cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.angel_mace84x84));
+                } else if (cell.getClass().getSimpleName().equals("Hole")) {
+                    cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.dngn_trap_magical84x84));
                 }
             }
             Map map = new Map(mapId, cells);
