@@ -337,6 +337,8 @@ public class GameView extends SurfaceView implements Runnable {
                         case 1: //Do nothing
                             break;
                         case 2:
+                            setMap(createMap(2));
+                            currentMapId = 2;
                             break;
                         case 3:
                             break;
@@ -357,6 +359,8 @@ public class GameView extends SurfaceView implements Runnable {
                         case 1: //Do nothing
                             break;
                         case 2:
+                            setMap(createMap(2));
+                            currentMapId = 2;
                             break;
                         case 3:
                             break;
@@ -380,7 +384,7 @@ public class GameView extends SurfaceView implements Runnable {
             screenHeight = canvas.getHeight();
 
             drawUserInterface(screenWidth, screenHeight);
-            drawMap(1, canvas);
+            drawMap(currentMapId, canvas);
             //DrawCell();
             //drawUserCell(user);
             whereToDrawX.set((int) bobXPosition,
