@@ -219,7 +219,7 @@ public class GameView extends SurfaceView implements Runnable {
         return chestIds;
 
     }*/
-    
+
 
     @Override
     public void run() {
@@ -279,6 +279,7 @@ public class GameView extends SurfaceView implements Runnable {
                                             user.getItems().addAll(chest0);
                                             chest0.clear();
                                             text = "All items from chest retreived!";
+                                            getDeleteChestItems(0);
                                             break;
                                         }
                                     }
@@ -291,6 +292,7 @@ public class GameView extends SurfaceView implements Runnable {
                                             user.getItems().addAll(chest1);
                                             chest1.clear();
                                             text = "All items from chest retreived!";
+                                            getDeleteChestItems(1);
                                             break;
                                         }
                                     }
@@ -736,6 +738,28 @@ public class GameView extends SurfaceView implements Runnable {
         return true;
     } */
 
+    public void getDeleteChestItems(int chestId) {
+        Call<Boolean> call = ApiAdapter.getApiService("http://10.0.2.2:8080/talesofeetac/db/").deleteChestItemsService(chestId);
+        call.enqueue(new GetDeleteChestItemsCallback(chestId));
+    }
+
+    private class GetDeleteChestItemsCallback implements Callback<Boolean> {
+        int chestId;
+
+        public GetDeleteChestItemsCallback(int chestId) {
+            this.chestId = chestId;
+        }
+
+        @Override
+        public void onResponse(Call<Boolean> call, Response<Boolean> response) {
+            Boolean bool = response.body();
+        }
+
+        @Override
+        public void onFailure(Call<Boolean> call, Throwable t) {
+
+        }
+    }
 
     public void getChestItemList(int chestId) {
         Call<List<Item>> call = ApiAdapter.getApiService("http://10.0.2.2:8080/talesofeetac/db/").getChestItemsService(chestId);
@@ -969,6 +993,7 @@ public class GameView extends SurfaceView implements Runnable {
 
         return new Location(xNex,yNex);
     }
+
 
 
 }

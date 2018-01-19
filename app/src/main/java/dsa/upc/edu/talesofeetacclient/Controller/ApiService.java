@@ -20,5 +20,6 @@ public interface ApiService {
     Call<User> getUserLoginService (@Body User user);
     @GET("chest/{id}/items/all")
     Call<List<Item>> getChestItemsService (@Path("id") int chestId);
-
+    @GET("chest/{id}/items/deleteAll")
+    Call<Boolean> deleteChestItemsService(@Path("id") int chestId);
 }
