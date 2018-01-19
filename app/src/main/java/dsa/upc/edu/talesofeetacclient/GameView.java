@@ -23,6 +23,8 @@ import java.util.List;
 import dsa.upc.edu.talesofeetacclient.Controller.ApiAdapter;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.Cell;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.ChestCell;
+import dsa.upc.edu.talesofeetacclient.Model.Cell.Door;
+import dsa.upc.edu.talesofeetacclient.Model.Cell.NPC;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.UserCell;
 import dsa.upc.edu.talesofeetacclient.Model.Main.Item;
 import dsa.upc.edu.talesofeetacclient.Model.Main.Location;
@@ -155,7 +157,8 @@ public class GameView extends SurfaceView implements Runnable {
         initializeObjects();
 
         // Load Bob from his .png file
-        maps.add(createMap(1));
+        setMap(createMap(1));
+        setMap(createMap(2));
 
         for (Cell cell : getMap(1).getCellArray()) {
             if (cell.getType().equals("ChestCell")) {
@@ -181,6 +184,10 @@ public class GameView extends SurfaceView implements Runnable {
 
     }
 
+    private void populateMapsFromDb(int mapId) {
+
+    }
+
     private void initializeObjects() {
         maps = new ArrayList<>();
         nextCellLoc = new Location();
@@ -194,7 +201,7 @@ public class GameView extends SurfaceView implements Runnable {
     }
 
     public void setMap(Map map) {
-        this.maps.set(map.getId() - 1, map);
+        this.maps.add(map.getId() - 1, map);
     }
 
     public void setCell(int mapId, Cell cell) {
@@ -251,7 +258,7 @@ public class GameView extends SurfaceView implements Runnable {
         if (isMoving) {
             nextCellLoc = new Location();
             switch (direction) {
-                case 3: {
+                case 3: { //TOP
                     nextCellLoc.setCoords(user.getLocation().getX() - 1, user.getLocation().getY());
                     collisionResult = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
                     Cell nextCell = getCell(currentMapId, nextCellLoc);
@@ -266,6 +273,11 @@ public class GameView extends SurfaceView implements Runnable {
                         case 2:
                             break;
                         case 3:
+                            if (actionA) {
+                                text = ((NPC) nextCell).getDialogue();
+                            }
+                            textMode = true;
+                            actionA = false;
                             break;
                         case 4:
                             if (actionA) {
@@ -279,7 +291,6 @@ public class GameView extends SurfaceView implements Runnable {
                                             user.getItems().addAll(chest0);
                                             chest0.clear();
                                             text = "All items from chest retreived!";
-                                            getDeleteChestItems(0);
                                             break;
                                         }
                                     }
@@ -292,7 +303,6 @@ public class GameView extends SurfaceView implements Runnable {
                                             user.getItems().addAll(chest1);
                                             chest1.clear();
                                             text = "All items from chest retreived!";
-                                            getDeleteChestItems(1);
                                             break;
                                         }
                                     }
@@ -307,9 +317,10 @@ public class GameView extends SurfaceView implements Runnable {
                     }
                     break;
                 }
-                case 0: {
+                case 0: { //
                     nextCellLoc.setCoords(user.getLocation().getX() + 1, user.getLocation().getY());
                     int collisionResult = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
+                    Cell nextCell = getCell(currentMapId, nextCellLoc);
                     switch (collisionResult) {
                         case 0: {
                             bobYPosition = bobYPosition + (walkSpeedPerSecond / fps);
@@ -319,8 +330,15 @@ public class GameView extends SurfaceView implements Runnable {
                         case 1: //Do nothing
                             break;
                         case 2:
+                            if (actionA) {
+                                int nextLevel = ((Door) nextCell).getNextMap();
+                                currentMapId = nextLevel;
+                                }
                             break;
                         case 3:
+                            if (actionA) {
+                                text = ((NPC) nextCell).getDialogue();
+                            }
                             break;
                         case 4:
                             break;
@@ -330,6 +348,7 @@ public class GameView extends SurfaceView implements Runnable {
                 case 1: {
                     nextCellLoc.setCoords(user.getLocation().getX(), user.getLocation().getY() - 1);
                     int collisionResult = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
+                    Cell nextCell = getCell(currentMapId, nextCellLoc);
                     switch (collisionResult) {
                         case 0: {
                             bobXPosition = bobXPosition - (walkSpeedPerSecond / fps);
@@ -339,10 +358,11 @@ public class GameView extends SurfaceView implements Runnable {
                         case 1: //Do nothing
                             break;
                         case 2:
-                            setMap(createMap(2));
-                            currentMapId = 2;
                             break;
                         case 3:
+                            if (actionA) {
+                                text = ((NPC) nextCell).getDialogue();
+                            }
                             break;
                         case 4:
                             break;
@@ -352,7 +372,7 @@ public class GameView extends SurfaceView implements Runnable {
                 case 2: {
                     nextCellLoc.setCoords(user.getLocation().getX(), user.getLocation().getY() + 1);
                     int collisionResult = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
-                    switch (collisionResult) {
+                    Cell nextCell = getCell(currentMapId, nextCellLoc);switch (collisionResult) {
                         case 0: {
                             bobXPosition = bobXPosition + (walkSpeedPerSecond / fps);
                             user.setLocation(locateUser(whereToDrawX.centerX(), whereToDrawX.centerY()));
@@ -365,6 +385,9 @@ public class GameView extends SurfaceView implements Runnable {
                             currentMapId = 2;
                             break;
                         case 3:
+                            if (actionA) {
+                                text = ((NPC) nextCell).getDialogue();
+                            }
                             break;
                         case 4:
                             break;
@@ -413,7 +436,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     private void drawUserInterface(int screenWidth, int screenHeight) {
         Paint playScreenPaint = new Paint();
-        playScreenPaint.setColor(Color.argb(255, 26, 128, 182));
+        playScreenPaint.setColor(Color.argb(255, 51, 153, 51));
 
         Paint screenBorderPaint = new Paint();
         screenBorderPaint.setColor(Color.argb(255, 96, 96, 96));
@@ -695,7 +718,7 @@ public class GameView extends SurfaceView implements Runnable {
                 br = new BufferedReader(isr1,8192);
             }
             else if (mapId == 2) {
-                InputStreamReader isr2 = new InputStreamReader(this.getResources().openRawResource(R.raw.map1));
+                InputStreamReader isr2 = new InputStreamReader(this.getResources().openRawResource(R.raw.map2));
                 br = new BufferedReader(isr2,8192);
                 }
             Cell cells[] = mapper.readValue(br, Cell[].class);
@@ -710,6 +733,8 @@ public class GameView extends SurfaceView implements Runnable {
                     cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.dirt_s84x84));
                 } else if (cell.getClass().getSimpleName().equals("ChestCell")) {
                     cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.chest2_closed84x84));
+                } else if (cell.getClass().getSimpleName().equals("NPC")) {
+                    cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.angel_mace84x84));
                 }
             }
             Map map = new Map(mapId, cells);
@@ -752,7 +777,7 @@ public class GameView extends SurfaceView implements Runnable {
 
         @Override
         public void onResponse(Call<Boolean> call, Response<Boolean> response) {
-            Boolean bool = response.body();
+            Boolean bool = response.body(); //test purposes
         }
 
         @Override
