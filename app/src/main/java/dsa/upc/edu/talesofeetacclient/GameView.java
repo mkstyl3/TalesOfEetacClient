@@ -137,6 +137,7 @@ public class GameView extends SurfaceView implements Runnable {
     List chest0;
     List chest1;
     String text;
+    boolean gotTheKey = false;
 
 
     // When the we initialize (call new()) on gameView
@@ -273,6 +274,7 @@ public class GameView extends SurfaceView implements Runnable {
                         case 2:
                             break;
                         case 3:
+                            text = ((NPC) nextCell).getDialogue();
                             if (actionA) {
                                 text = ((NPC) nextCell).getDialogue();
                             }
@@ -317,7 +319,7 @@ public class GameView extends SurfaceView implements Runnable {
                     }
                     break;
                 }
-                case 0: { //
+                case 0: { //BOTT
                     nextCellLoc.setCoords(user.getLocation().getX() + 1, user.getLocation().getY());
                     int collisionResult = isCollisionDetected(userCell.getRect(), getCell(currentMapId, nextCellLoc).getRect());
                     Cell nextCell = getCell(currentMapId, nextCellLoc);
@@ -331,9 +333,26 @@ public class GameView extends SurfaceView implements Runnable {
                             break;
                         case 2:
                             if (actionA) {
-                                int nextLevel = ((Door) nextCell).getNextMap();
-                                currentMapId = nextLevel;
+                                if (!gotTheKey) {
+                                    for (Item i: user.getItems()) {
+                                        if(i.getName().equals("key")) {
+                                            currentMapId = ((Door) nextCell).getNextMap();
+                                            gotTheKey = true;
+                                            textMode = false;
+                                        }
+                                        else {
+                                            text = "Locked";
+                                            textMode = true;
+                                        }
+                                    }
                                 }
+                                else {
+                                    text = "Unlocked";
+                                    textMode = true;
+                                }
+
+                                actionA = false;
+                            }
                             break;
                         case 3:
                             if (actionA) {
