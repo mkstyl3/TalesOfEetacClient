@@ -10,6 +10,7 @@
 *.log
 
 app/build/
+build/
 
 # Gradle
 .gradle/

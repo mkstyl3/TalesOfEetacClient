@@ -1,17 +1,12 @@
 package dsa.upc.edu.talesofeetacclient;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.os.CountDownTimer;
-import android.text.Layout;
-import android.text.StaticLayout;
-import android.text.TextPaint;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -137,6 +132,9 @@ public class GameView extends SurfaceView implements Runnable {
     int collisionResult;
     //Queue<ChestCell> chestCellItemsFromCurrentMap = new ArrayDeque<>();
     List<Item> items;
+    List chest0;
+    List chest1;
+    String text;
 
 
     // When the we initialize (call new()) on gameView
@@ -158,14 +156,17 @@ public class GameView extends SurfaceView implements Runnable {
 
         // Load Bob from his .png file
         maps.add(createMap(1));
-            /*setCellChests();
 
-            for (Integer i : getChestIds()) {
-                getChestItemList(i);
+        for (Cell cell : getMap(1).getCellArray()) {
+            if (cell.getType().equals("ChestCell")) {
+                if (((ChestCell) cell).getChest().getId() == 0) {
+                    getChestItemList(0);
+                }
+                if (((ChestCell) cell).getChest().getId() == 1) {
+                    getChestItemList(1);
+                }
             }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
+        }
 
         userCell.setBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.link128x128));
         frameHeight = userCell.getBitmap().getHeight() / 4;
@@ -184,6 +185,8 @@ public class GameView extends SurfaceView implements Runnable {
         maps = new ArrayList<>();
         nextCellLoc = new Location();
         items = new ArrayList<>();
+        chest0 = new ArrayList();
+        chest1 = new ArrayList();
     }
 
     public Map getMap(int id) {
@@ -266,10 +269,39 @@ public class GameView extends SurfaceView implements Runnable {
                             break;
                         case 4:
                             if (actionA) {
-                                getChestItemList(((ChestCell) nextCell).getChest().getId());
+                                switch (((ChestCell) nextCell).getChest().getId()) {
+                                    case 0 : {
+                                        if (chest0.isEmpty()) {
+                                            text = "The chest is empty";
+                                            break;
+                                        }
+                                        else {
+                                            user.getItems().addAll(chest0);
+                                            chest0.clear();
+                                            text = "All items from chest retreived!";
+                                            break;
+                                        }
+                                    }
+                                    case 1 : {
+                                        if (chest1.isEmpty()) {
+                                            text = "The chest is empty";
+                                            break;
+                                        }
+                                        else {
+                                            user.getItems().addAll(chest1);
+                                            chest1.clear();
+                                            text = "All items from chest retreived!";
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                textMode = true;
                                 actionA = false;
+                                List temp=user.getItems();
                             }
                             break;
+
                     }
                     break;
                 }
@@ -361,11 +393,10 @@ public class GameView extends SurfaceView implements Runnable {
                     frameToDrawX,
                     whereToDrawX, paint);
             DrawControls();
+            if (textMode) drawDialogue(text);
             ourHolder.unlockCanvasAndPost(canvas);
         }
     }
-
-
 
     private void drawMap(int mapId, Canvas canvas) {
         for (int i = 0; i < 144; i++) {
@@ -402,16 +433,17 @@ public class GameView extends SurfaceView implements Runnable {
 
     }
 
-    private void drawDialogue (String string) {
+    private void drawDialogue (String text) {
 
-        Canvas canvas = new Canvas();
         Paint dialoguePaint = new Paint();
-
         dialoguePaint.setColor(Color.argb(255, 0, 0, 0));
+        dialoguePaint.setTextSize(60);
+        dialoguePaint.setTextAlign(Paint.Align.CENTER);
         Rect rect = new Rect (36, 1080, 1044, 1248);
-
-        canvas.drawRect(rect,dialoguePaint);
-
+        int width = rect.width();
+        int numOfChars = dialoguePaint.breakText(text,true,width,null);
+        int start = (text.length()-numOfChars)/2;
+        canvas.drawText(text,start,start+numOfChars,rect.exactCenterX(),rect.exactCenterY(),dialoguePaint);
     }
 
     private void DrawCell() {
@@ -593,6 +625,7 @@ public class GameView extends SurfaceView implements Runnable {
 
                 if (controlsUpRect.contains(x, y)) {
                     // Set isMoving so Bob is moved in the update method
+                    textMode = false;
                     isMoving = true;
                     direction = 3;
 
@@ -603,26 +636,30 @@ public class GameView extends SurfaceView implements Runnable {
                     break;
                 } else if (controlsDownRect.contains(x, y)) {
                     // Set isMoving so Bob is moved in the update method
+                    textMode = false;
                     isMoving = true;
                     direction = 0;
                     break;
                 } else if (controlsLeftRect.contains(x, y)) {
                     // Set isMoving so Bob is moved in the update method
+                    textMode = false;
                     isMoving = true;
                     direction = 1;
                     break;
                 } else if (controlsRightRect.contains(x, y)) {
                     // Set isMoving so Bob is moved in the update method
+                    textMode = false;
                     isMoving = true;
                     direction = 2;
                     break;
                 } else if (controlsARect.contains(x, y)) {
                     // Set isMoving so Bob is moved in the update method
-
+                    textMode = false;
                     actionA = true;
                     break;
                 } else if (controlsBRect.contains(x, y)) {
                     // Set isMoving so Bob is moved in the update method
+                    textMode = false;
                     actionB = true;
                     break;
                 }
@@ -698,15 +735,31 @@ public class GameView extends SurfaceView implements Runnable {
 
     public void getChestItemList(int chestId) {
         Call<List<Item>> call = ApiAdapter.getApiService("http://10.0.2.2:8080/talesofeetac/db/").getChestItemsService(chestId);
-        call.enqueue(new GetChestItemListCallback());
+        call.enqueue(new GetChestItemListCallback(chestId));
     }
 
     private class GetChestItemListCallback implements Callback<List<Item>> {
 
+        int chestId;
+
+        private GetChestItemListCallback (int chestId) {
+            this.chestId = chestId;
+        }
         @Override
         public void onResponse(Call<List<Item>> call, Response<List<Item>> response) {
-            items = response.body();
 
+            switch (chestId) {
+                case 0 :
+                {
+                    chest0 = response.body();
+                    break;
+                }
+                case 1 :
+                {
+                    chest1 = response.body();
+                    break;
+                }
+            }
         }
 
         @Override
