@@ -60,7 +60,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         User u = new User();
         u.setName(username);
         u.setPassword(password); // "http://10.0.2.2:8080/talesofeetac/db/"
-        Call<User> call = ApiAdapter.getApiService("http://10.192.111.244:8080/talesofeetac/db/").getUserLoginService(u);
+        Call<User> call = ApiAdapter.getApiService("http://10.192.244.81:8080/talesofeetac/db/").getUserLoginService(u);
         call.enqueue(new GetUserLoginCallback());
     }
 
