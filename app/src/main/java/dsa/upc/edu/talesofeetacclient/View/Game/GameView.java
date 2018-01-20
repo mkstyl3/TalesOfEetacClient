@@ -121,18 +121,9 @@ public class GameView extends SurfaceView implements Runnable {
     private Rect controlsARect;
     private Rect controlsBRect;
 
-<<<<<<< HEAD:app/src/main/java/dsa/upc/edu/talesofeetacclient/GameView.java
-
-
-    User user;
-    List<Cell> cells;
-    List<Map> maps;
-    Cell userCell;
-=======
     private User user;
     private List<Map> maps;
     private Cell userCell;
->>>>>>> 7c6452fea367ad8a52140e9d89fd436c13aa469c:app/src/main/java/dsa/upc/edu/talesofeetacclient/View/Game/GameView.java
     private int currentMapId = 1;
     private Location nextCellLoc;
     int collisionResult;

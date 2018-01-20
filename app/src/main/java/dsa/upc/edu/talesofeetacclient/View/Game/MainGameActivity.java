@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import dsa.upc.edu.talesofeetacclient.Model.Main.User;
+import dsa.upc.edu.talesofeetacclient.R;
 import dsa.upc.edu.talesofeetacclient.View.Game.GameView;
 
 public class MainGameActivity extends Activity {
@@ -25,7 +26,7 @@ public class MainGameActivity extends Activity {
         gameView = new GameView(this,user);
         setContentView(gameView);
 
-        mySong=MediaPlayer.create(MainGameActivity.this,R.raw.plateau);
+        mySong=MediaPlayer.create(MainGameActivity.this, R.raw.plateau);
 
     }
     // This method executes when the player starts the game
