@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 
 import dsa.upc.edu.talesofeetacclient.Model.Main.User;
-import dsa.upc.edu.talesofeetacclient.NavigationDrawerFragment;
 import dsa.upc.edu.talesofeetacclient.R;
 
 public class MainActivity extends Activity

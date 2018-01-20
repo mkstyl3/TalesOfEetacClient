@@ -1,4 +1,4 @@
-package dsa.upc.edu.talesofeetacclient;
+package dsa.upc.edu.talesofeetacclient.View;
 
 
 import android.app.Activity;
@@ -24,6 +24,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import dsa.upc.edu.talesofeetacclient.Model.Main.User;
+import dsa.upc.edu.talesofeetacclient.R;
+import dsa.upc.edu.talesofeetacclient.View.Game.MainGameActivity;
 import dsa.upc.edu.talesofeetacclient.View.MainActivity;
 import dsa.upc.edu.talesofeetacclient.View.UserInfo;
 
