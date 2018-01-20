@@ -19,6 +19,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.logging.Handler;
 
 import dsa.upc.edu.talesofeetacclient.Controller.ApiAdapter;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.Cell;
@@ -124,6 +127,8 @@ public class GameView extends SurfaceView implements Runnable {
     private Rect controlsRightRect;
     private Rect controlsARect;
     private Rect controlsBRect;
+
+
 
     User user;
     List<Cell> cells;
