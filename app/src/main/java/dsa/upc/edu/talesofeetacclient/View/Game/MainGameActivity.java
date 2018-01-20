@@ -1,4 +1,4 @@
-package dsa.upc.edu.talesofeetacclient;
+package dsa.upc.edu.talesofeetacclient.View.Game;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import dsa.upc.edu.talesofeetacclient.Model.Main.User;
+import dsa.upc.edu.talesofeetacclient.View.Game.GameView;
 
 public class MainGameActivity extends Activity {
     // gameView will be the view of the game

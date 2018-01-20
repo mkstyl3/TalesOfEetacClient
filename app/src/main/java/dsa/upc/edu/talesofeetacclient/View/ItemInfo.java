@@ -1,8 +1,8 @@
 package dsa.upc.edu.talesofeetacclient.View;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -10,6 +10,10 @@ import com.squareup.picasso.Picasso;
 
 import dsa.upc.edu.talesofeetacclient.Model.Main.Item;
 import dsa.upc.edu.talesofeetacclient.R;
+
+/**
+ * Created by mike on 20/01/18.
+ */
 
 public class ItemInfo extends Activity {
 
@@ -49,5 +53,4 @@ public class ItemInfo extends Activity {
         //Picasso.with(getBaseContext()).load(user.getAvatarUrl()).into(userAvatarView);
         Picasso.with(getBaseContext()).load("http://i.imgur.com/DvpvklR.png").into(item2View);
     }
-
 }
