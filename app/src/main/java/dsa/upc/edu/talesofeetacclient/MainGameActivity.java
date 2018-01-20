@@ -34,6 +34,7 @@ public class MainGameActivity extends Activity {
         // Tell the gameView resume method to execute
         gameView.resume();
 
+        mySong.setLooping(true);
         mySong.start();
     }
     // This method executes when the player quits the game
