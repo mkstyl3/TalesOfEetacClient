@@ -1366,7 +1366,7 @@
                                              		"bottom":708
 
                                           },
-    	   "type": "Field"
+    	   "type": "Lava"
     	},
     	{
 
@@ -1381,7 +1381,7 @@
                                              		"bottom":708
 
                                           },
-    	   "type": "Field"
+    	   "type": "Lava"
     	},
     	{
 
@@ -1486,7 +1486,7 @@
                                              		"bottom":792
 
                                           },
-    	   "type": "Field"
+    	   "type": "Lava"
     	},
     	{
 
@@ -1501,7 +1501,7 @@
                                              		"bottom":792
 
                                           },
-    	   "type": "Field"
+    	   "type": "Lava"
     	},
     	{
 
@@ -1679,7 +1679,7 @@
                                              		"bottom":876
 
                                           },
-    	   "type": "Field"
+    	   "type": "Lava"
     	},
     	{
     	   "onMapLoc": {

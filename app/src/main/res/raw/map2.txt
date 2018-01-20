@@ -1366,7 +1366,7 @@
                                              		"bottom":708
 
                                           },
-    	   "type": "Field"
+    	   "type": "Water"
     	},
     	{
 
@@ -1381,7 +1381,7 @@
                                              		"bottom":708
 
                                           },
-    	   "type": "Field"
+    	   "type": "Water"
     	},
     	{
 
@@ -1486,7 +1486,7 @@
                                              		"bottom":792
 
                                           },
-    	   "type": "Field"
+    	   "type": "Water"
     	},
     	{
 
@@ -1501,7 +1501,7 @@
                                              		"bottom":792
 
                                           },
-    	   "type": "Field"
+    	   "type": "Water"
     	},
     	{
 
@@ -1680,7 +1680,7 @@
                                              		"bottom":876
 
                                           },
-    	   "type": "Field"
+    	   "type": "Water"
     	},
     	{
     	   "onMapLoc": {

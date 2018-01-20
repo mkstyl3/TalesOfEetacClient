@@ -1006,7 +1006,7 @@
                                              		"bottom":540
 
                                           },
-    	   "type": "Water"
+    	   "type": "Field"
     	},
     	{
 
@@ -1021,7 +1021,7 @@
                                              		"bottom":540
 
                                           },
-    	   "type": "Lava"
+    	   "type": "Field"
     	},
     	{
 
