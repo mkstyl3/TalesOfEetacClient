@@ -2,6 +2,7 @@ package dsa.upc.edu.talesofeetacclient.View.Game;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import dsa.upc.edu.talesofeetacclient.Model.Main.User;
@@ -13,6 +14,7 @@ public class MainGameActivity extends Activity {
     // and respond to screen touches as well
     GameView gameView;
     User user;
+    MediaPlayer mySong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,8 @@ public class MainGameActivity extends Activity {
         gameView = new GameView(this,user);
         setContentView(gameView);
 
+        mySong=MediaPlayer.create(MainGameActivity.this,R.raw.plateau);
+
     }
     // This method executes when the player starts the game
     @Override
@@ -30,6 +34,9 @@ public class MainGameActivity extends Activity {
         super.onResume();
         // Tell the gameView resume method to execute
         gameView.resume();
+
+        mySong.setLooping(true);
+        mySong.start();
     }
     // This method executes when the player quits the game
     @Override
