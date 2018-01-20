@@ -121,18 +121,9 @@ public class GameView extends SurfaceView implements Runnable {
     private Rect controlsARect;
     private Rect controlsBRect;
 
-<<<<<<< HEAD:app/src/main/java/dsa/upc/edu/talesofeetacclient/GameView.java
-
-
-    User user;
-    List<Cell> cells;
-    List<Map> maps;
-    Cell userCell;
-=======
     private User user;
     private List<Map> maps;
     private Cell userCell;
->>>>>>> 7c6452fea367ad8a52140e9d89fd436c13aa469c:app/src/main/java/dsa/upc/edu/talesofeetacclient/View/Game/GameView.java
     private int currentMapId = 1;
     private Location nextCellLoc;
     int collisionResult;
@@ -527,6 +518,14 @@ public class GameView extends SurfaceView implements Runnable {
                             Log.v(TAG, "isCollisionDetected: collision detected with a Chest");
                             return COLLISION_WITH[4];
                         }
+                        case "Water": {
+                            Log.v(TAG, "isCollisionDetected: collision detected with water");
+                            return COLLISION_WITH[4];
+                        }
+                        case "Lava": {
+                            Log.v(TAG, "isCollisionDetected: collision detected with lava");
+                            return COLLISION_WITH[4];
+                        }
 
                     }
 
@@ -722,6 +721,10 @@ public class GameView extends SurfaceView implements Runnable {
                     cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.angel_mace84x84));
                 } else if (cell.getClass().getSimpleName().equals("Hole")) {
                     cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.dngn_trap_magical84x84));
+                } else if (cell.getClass().getSimpleName().equals("Water")) {
+                    cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.water));
+                } else if (cell.getClass().getSimpleName().equals("Lava")) {
+                    cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.lava));
                 }
             }
             Map map = new Map(mapId, cells);
@@ -737,7 +740,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     public void getDeleteChestItems(int chestId) {
         Log.v(TAG, "getDeleteChestItems: Deleting all items from chest with id: "+chestId+"...");
-        Call<Boolean> call = ApiAdapter.getApiService("http://10.192.111.244:8080/talesofeetac/db/").deleteChestItemsService(chestId);
+        Call<Boolean> call = ApiAdapter.getApiService("http://10.192.244.81:8080/talesofeetac/db/").deleteChestItemsService(chestId);
         call.enqueue(new GetDeleteChestItemsCallback(chestId));
     }
 
@@ -762,7 +765,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     public void getChestItemList(int chestId) {
         Log.v(TAG, "getChestItemList: Retreiving all items from chest with id: "+chestId+"...");
-        Call<List<Item>> call = ApiAdapter.getApiService("http://10.192.111.244:8080/talesofeetac/db/").getChestItemsService(chestId);
+        Call<List<Item>> call = ApiAdapter.getApiService("http://10.192.244.81:8080/talesofeetac/db/").getChestItemsService(chestId);
         call.enqueue(new GetChestItemListCallback(chestId));
     }
 

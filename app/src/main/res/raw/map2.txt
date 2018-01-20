@@ -526,7 +526,7 @@
                                                      		"bottom":288
 
                                                   },
-            	   "type": "Field"
+            	   "type": "Tree"
         },
         {
 
@@ -706,7 +706,7 @@
                                                      		"bottom":372
 
                                                   },
-            	   "type": "Field"
+            	   "type": "Tree"
         },
         {
 
@@ -1652,7 +1652,7 @@
                                              		"bottom":876
 
                                           },
-    	   "type": "Field"
+    	   "type": "Tree"
     	},
     	{
     	   "onMapLoc": {
