@@ -10,7 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.IOException;
 
 import dsa.upc.edu.talesofeetacclient.Controller.ApiAdapter;
 import dsa.upc.edu.talesofeetacclient.Model.Main.User;
@@ -32,6 +35,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private Button loginButton;
     protected Intent intent;
     private ProgressBar progressBar;
+    private static TextView registerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +43,19 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_login);
         loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(this);
-        usernameText = (EditText) findViewById(R.id.id2Text);
-        passwordText = (EditText) findViewById(R.id.passwordText);
+        usernameText = (EditText) findViewById(R.id.nameText);
+        passwordText = (EditText) findViewById(R.id.emailText);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
         intent = new Intent(getBaseContext(), MainActivity.class);
+        registerView = findViewById(R.id.registerView);
+        registerView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(getBaseContext(), RegisterActivity.class);
+                startActivityForResult(intent, 1000);
+            }
+        });
+        usernameText.requestFocus();
     }
     @Override
     public void onClick(View view) {
@@ -68,19 +80,43 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private class GetUserLoginCallback implements Callback<User> {
         @Override
         public void onResponse(Call<User> call, Response<User> response) {
-            progressBar.setProgress(20);
-            Toast.makeText(getBaseContext(), "We've got connection!", Toast.LENGTH_SHORT).show();
-            User user = response.body();
-            progressBar.setProgress(30);
-            intent.putExtra("data", user);
-            progressBar.setProgress(100);
-            progressBar.setVisibility(View.GONE);
-            startActivityForResult(intent,1);
+            if (response.isSuccessful()) {
+                progressBar.setProgress(20);
+                Toast.makeText(getBaseContext(), "We've got connection!", Toast.LENGTH_SHORT).show();
+                User user = response.body();
+                progressBar.setProgress(30);
+                intent.putExtra("data", user);
+                progressBar.setProgress(100);
+                progressBar.setVisibility(View.GONE);
+                startActivityForResult(intent,1);
+            } else if (response.errorBody() != null) {
+
+                try {
+                    Toast.makeText(getBaseContext(), response.errorBody().string(), Toast.LENGTH_SHORT).show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
         }
 
         @Override
         public void onFailure(Call<User> call, Throwable t) {
             Toast.makeText(getBaseContext(), "We've got NO connection!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        switch (requestCode) {
+            case (1000): {
+                if (resultCode == 1001) {
+                    User user = intent.getParcelableExtra("data");
+                    usernameText.setText(user.getName());
+                    passwordText.setText(user.getPassword());
+                }
+            }
         }
     }
 }

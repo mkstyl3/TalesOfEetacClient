@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".View.Game.MainGameActivity" />
+        <activity android:name=".View.RegisterActivity" />
         <activity
             android:name=".View.LoginActivity"
             android:label="@string/title_activity_login">
@@ -25,6 +26,7 @@
             android:name=".View.MainActivity"
             android:label="@string/title_activity_main"></activity>
         <activity android:name=".View.UserInfo" />
+
     </application>
 
 </manifest>

@@ -29,4 +29,5 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_iteminfo">iteminfo</string>
+    <string name="email">Enter your email</string>
 </resources>

@@ -22,4 +22,6 @@ public interface ApiService {
     Call<List<Item>> getChestItemsService (@Path("id") int chestId);
     @GET("chest/{id}/items/deleteAll")
     Call<Boolean> deleteChestItemsService(@Path("id") int chestId);
+    @POST("user/register")
+    Call<User> getUserRegisterService (@Body User user);
 }
