@@ -11,7 +11,7 @@
                       		"bottom":120
 
                    },
-    	   "type": "Wall"
+    	   "type": "Tree"
     	},
     	{
 
@@ -26,7 +26,7 @@
                                  		"bottom":120
 
                               },
-    	   "type": "Wall"
+    	   "type": "Tree"
     	},
     	{
 
@@ -42,7 +42,7 @@
 
                                           },
 
-    	   "type": "Wall"
+    	   "type": "Tree"
     	},
     	{
 
@@ -57,7 +57,7 @@
                                              		"bottom":120
 
                                           },
-    	   "type": "Wall"
+    	   "type": "Tree"
     	},
     	{
 
@@ -72,7 +72,7 @@
                                              		"bottom":120
 
                                           },
-    	   "type": "Wall"
+    	   "type": "Tree"
     	},
     	{
 
@@ -192,7 +192,7 @@
                                              		"bottom":204
 
                                           },
-    	   "type": "Wall"
+    	   "type": "Tree"
     	},
     	{
 
@@ -252,7 +252,7 @@
                                              		"bottom":204
 
                                           },
-    	   "type": "Field"
+    	   "type": "Tree"
     	},
     	{
 
@@ -267,7 +267,7 @@
                                              		"bottom":204
 
                                           },
-    	   "type": "Field"
+    	   "type": "Wall"
     	},
     	{
 
@@ -282,7 +282,7 @@
                                              		"bottom":204
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
 
@@ -297,7 +297,7 @@
                                              		"bottom":204
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
 
@@ -312,7 +312,7 @@
                                              		"bottom":204
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
 
@@ -327,7 +327,7 @@
                                              		"bottom":204
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
 
@@ -342,7 +342,7 @@
                                                      		"bottom":204
 
                                                   },
-            	   "type": "Field"
+            	   "type": "ChestCell"
         },
         {
 
@@ -372,7 +372,7 @@
                                              		"bottom":288
 
                                           },
-    	   "type": "Wall"
+    	   "type": "Tree"
     	},
     	{
 
@@ -434,7 +434,7 @@
                                              		"bottom":288
 
                                           },
-    	   "type": "ChestCell"
+    	   "type": "Field"
     	},
     	{
             "chest": {
@@ -451,7 +451,7 @@
                                              		"bottom":288
 
                                           },
-    	   "type": "ChestCell"
+    	   "type": "Wall"
     	},
     	{
 
@@ -466,7 +466,7 @@
                                              		"bottom":288
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
 
@@ -481,7 +481,7 @@
                                              		"bottom":288
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
 
@@ -496,7 +496,7 @@
                                              		"bottom":288
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
 
@@ -511,7 +511,7 @@
                                              		"bottom":288
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
 
@@ -526,7 +526,7 @@
                                                      		"bottom":288
 
                                                   },
-            	   "type": "Tree"
+            	   "type": "Floor"
         },
         {
 
@@ -556,7 +556,7 @@
                                              		"bottom":372
 
                                           },
-    	   "type": "Wall"
+    	   "type": "Tree"
     	},
     	{
 
@@ -571,7 +571,7 @@
                                              		"bottom":372
 
                                           },
-    	   "type": "Field"
+    	   "type": "Water"
     	},
     	{
 
@@ -601,7 +601,7 @@
                                              		"bottom":372
 
                                           },
-    	   "type": "Tree"
+    	   "type": "Field"
     	},
     	{
 
@@ -631,7 +631,7 @@
                                              		"bottom":372
 
                                           },
-    	   "type": "Field"
+    	   "type": "Wall"
     	},
     	{
 
@@ -646,7 +646,7 @@
                                              		"bottom":372
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
 
@@ -661,7 +661,7 @@
                                              		"bottom":372
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
 
@@ -676,7 +676,7 @@
                                              		"bottom":372
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
 
@@ -691,7 +691,7 @@
                                              		"bottom":372
 
                                           },
-    	   "type": "Field"
+    	   "type": "Water"
     	},
     	{
 
@@ -706,7 +706,7 @@
                                                      		"bottom":372
 
                                                   },
-            	   "type": "Tree"
+            	   "type": "Water"
         },
         {
 
@@ -736,924 +736,924 @@
                                              		"bottom":456
 
                                           },
-    	   "type": "Wall"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":4,
-           			 	    "y":1
-           		   	   },
-           		   	   "rect": {
-                                                   "left":120,
-                                             		"top":372,
-                                             		"right":204,
-                                             		"bottom":456
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":4,
-           			 	    "y":2
-           		   	   },
-           		   	   "rect": {
-                                                   "left":204,
-                                             		"top":372,
-                                             		"right":288,
-                                             		"bottom":456
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":4,
-           			 	    "y":3
-           		   	   },
-           		   	   "rect": {
-                                                   "left":288,
-                                             		"top":372,
-                                             		"right":372,
-                                             		"bottom":456
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":4,
-           			 	    "y":4
-           		   	   },
-           		   	   "rect": {
-                                                   "left":372,
-                                             		"top":372,
-                                             		"right":456,
-                                             		"bottom":456
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":4,
-           			 	    "y":5
-           		   	   },
-           		   	   "rect": {
-                                                   "left":456,
-                                             		"top":372,
-                                             		"right":540,
-                                             		"bottom":456
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":4,
-           			 	    "y":6
-           		   	   },
-           		   	   "rect": {
-                                                   "left":540,
-                                             		"top":372,
-                                             		"right":624,
-                                             		"bottom":456
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":4,
-           			 	    "y":7
-           		   	   },
-           		   	   "rect": {
-                                                   "left":624,
-                                             		"top":372,
-                                             		"right":708,
-                                             		"bottom":456
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":4,
-           			 	    "y":8
-           		   	   },
-           		   	   "rect": {
-                                                   "left":708,
-                                             		"top":372,
-                                             		"right":792,
-                                             		"bottom":456
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":4,
-           			 	    "y":9
-           		   	   },
-           		   	   "rect": {
-                                                   "left":792,
-                                             		"top":372,
-                                             		"right":876,
-                                             		"bottom":456
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-            	   "onMapLoc": {
-                   			 	    "x":4,
-                   			 	    "y":10
-                   		   	   },
-                   		   	   "rect": {
-                                                           "left":876,
-                                                     		"top":372,
-                                                     		"right":960,
-                                                     		"bottom":456
-
-                                                  },
-            	   "type": "Field"
-        },
-        {
-
-            	   "onMapLoc": {
-                   			 	    "x":4,
-                   			 	    "y":11
-                   		   	   },
-                   		   	   "rect": {
-                                                           "left":960,
-                                                     		"top":372,
-                                                     		"right":1044,
-                                                     		"bottom":456
-
-                                                  },
-            	   "type": "Wall"
-        },
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":5,
-           			 	    "y":0
-           		   	   },
-           		   	   "rect": {
-                                                   "left":36,
-                                             		"top":456,
-                                             		"right":120,
-                                             		"bottom":540
-
-                                          },
-    	   "type": "Wall"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":5,
-           			 	    "y":1
-           		   	   },
-           		   	   "rect": {
-                                                   "left":120,
-                                             		"top":456,
-                                             		"right":204,
-                                             		"bottom":540
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":5,
-           			 	    "y":2
-           		   	   },
-           		   	   "rect": {
-                                                   "left":204,
-                                             		"top":456,
-                                             		"right":288,
-                                             		"bottom":540
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":5,
-           			 	    "y":3
-           		   	   },
-           		   	   "rect": {
-                                                   "left":288,
-                                             		"top":456,
-                                             		"right":372,
-                                             		"bottom":540
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":5,
-           			 	    "y":4
-           		   	   },
-           		   	   "rect": {
-                                                   "left":372,
-                                             		"top":456,
-                                             		"right":456,
-                                             		"bottom":540
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":5,
-           			 	    "y":5
-           		   	   },
-           		   	   "rect": {
-                                                   "left":456,
-                                             		"top":456,
-                                             		"right":540,
-                                             		"bottom":540
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":5,
-           			 	    "y":6
-           		   	   },
-           		   	   "rect": {
-                                                   "left":540,
-                                             		"top":456,
-                                             		"right":624,
-                                             		"bottom":540
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":5,
-           			 	    "y":7
-           		   	   },
-           		   	   "rect": {
-                                                   "left":624,
-                                             		"top":456,
-                                             		"right":708,
-                                             		"bottom":540
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":5,
-           			 	    "y":8
-           		   	   },
-           		   	   "rect": {
-                                                   "left":708,
-                                             		"top":456,
-                                             		"right":792,
-                                             		"bottom":540
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":5,
-           			 	    "y":9
-           		   	   },
-           		   	   "rect": {
-                                                   "left":792,
-                                             		"top":456,
-                                             		"right":876,
-                                             		"bottom":540
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-            	   "onMapLoc": {
-                   			 	    "x":5,
-                   			 	    "y":10
-                   		   	   },
-                   		   	   "rect": {
-                                                           "left":876,
-                                                     		"top":456,
-                                                     		"right":960,
-                                                     		"bottom":540
-
-                                                  },
-            	   "type": "Field"
-        },
-        {
-
-            	   "onMapLoc": {
-                   			 	    "x":5,
-                   			 	    "y":11
-                   		   	   },
-                   		   	   "rect": {
-                                                           "left":960,
-                                                     		"top":456,
-                                                     		"right":1044,
-                                                     		"bottom":540
-
-                                                  },
-            	   "type": "Wall"
-        },
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":6,
-           			 	    "y":0
-           		   	   },
-           		   	   "rect": {
-                                                   "left":36,
-                                             		"top":540,
-                                             		"right":120,
-                                             		"bottom":624
-
-                                          },
-    	   "type": "Wall"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":6,
-           			 	    "y":1
-           		   	   },
-           		   	   "rect": {
-                                                   "left":120,
-                                             		"top":540,
-                                             		"right":204,
-                                             		"bottom":624
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":6,
-           			 	    "y":2
-           		   	   },
-           		   	   "rect": {
-                                                   "left":204,
-                                             		"top":540,
-                                             		"right":288,
-                                             		"bottom":624
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":6,
-           			 	    "y":3
-           		   	   },
-           		   	   "rect": {
-                                                   "left":288,
-                                             		"top":540,
-                                             		"right":372,
-                                             		"bottom":624
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":6,
-           			 	    "y":4
-           		   	   },
-           		   	   "rect": {
-                                                   "left":372,
-                                             		"top":540,
-                                             		"right":456,
-                                             		"bottom":624
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":6,
-           			 	    "y":5
-           		   	   },
-           		   	   "rect": {
-                                                   "left":456,
-                                             		"top":540,
-                                             		"right":540,
-                                             		"bottom":624
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":6,
-           			 	    "y":6
-           		   	   },
-           		   	   "rect": {
-                                                   "left":540,
-                                             		"top":540,
-                                             		"right":624,
-                                             		"bottom":624
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":6,
-           			 	    "y":7
-           		   	   },
-           		   	   "rect": {
-                                                   "left":624,
-                                             		"top":540,
-                                             		"right":708,
-                                             		"bottom":624
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":6,
-           			 	    "y":8
-           		   	   },
-           		   	   "rect": {
-                                                   "left":708,
-                                             		"top":540,
-                                             		"right":792,
-                                             		"bottom":624
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":6,
-           			 	    "y":9
-           		   	   },
-           		   	   "rect": {
-                                                   "left":792,
-                                             		"top":540,
-                                             		"right":876,
-                                             		"bottom":624
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-            	   "onMapLoc": {
-                   			 	    "x":6,
-                   			 	    "y":10
-                   		   	   },
-                   		   	   "rect": {
-                                                           "left":876,
-                                                     		"top":540,
-                                                     		"right":960,
-                                                     		"bottom":624
-
-                                                  },
-            	   "type": "Field"
-        },
-        {
-
-            	   "onMapLoc": {
-                   			 	    "x":6,
-                   			 	    "y":11
-                   		   	   },
-                   		   	   "rect": {
-                                                           "left":960,
-                                                     		"top":540,
-                                                     		"right":1044,
-                                                     		"bottom":624
-
-                                                  },
-            	   "type": "Wall"
-        },
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":7,
-           			 	    "y":0
-           		   	   },
-           		   	   "rect": {
-                                                   "left":36,
-                                             		"top":624,
-                                             		"right":120,
-                                             		"bottom":708
-
-                                          },
-    	   "type": "Wall"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":7,
-           			 	    "y":1
-           		   	   },
-           		   	   "rect": {
-                                                   "left":120,
-                                             		"top":624,
-                                             		"right":204,
-                                             		"bottom":708
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":7,
-           			 	    "y":2
-           		   	   },
-           		   	   "rect": {
-                                                   "left":204,
-                                             		"top":624,
-                                             		"right":288,
-                                             		"bottom":708
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":7,
-           			 	    "y":3
-           		   	   },
-           		   	   "rect": {
-                                                   "left":288,
-                                             		"top":624,
-                                             		"right":372,
-                                             		"bottom":708
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":7,
-           			 	    "y":4
-           		   	   },
-           		   	   "rect": {
-                                                   "left":372,
-                                             		"top":624,
-                                             		"right":456,
-                                             		"bottom":708
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":7,
-           			 	    "y":5
-           		   	   },
-           		   	   "rect": {
-                                                   "left":456,
-                                             		"top":624,
-                                             		"right":540,
-                                             		"bottom":708
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":7,
-           			 	    "y":6
-           		   	   },
-           		   	   "rect": {
-                                                   "left":540,
-                                             		"top":624,
-                                             		"right":624,
-                                             		"bottom":708
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":7,
-           			 	    "y":7
-           		   	   },
-           		   	   "rect": {
-                                                   "left":624,
-                                             		"top":624,
-                                             		"right":708,
-                                             		"bottom":708
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":7,
-           			 	    "y":8
-           		   	   },
-           		   	   "rect": {
-                                                   "left":708,
-                                             		"top":624,
-                                             		"right":792,
-                                             		"bottom":708
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":7,
-           			 	    "y":9
-           		   	   },
-           		   	   "rect": {
-                                                   "left":792,
-                                             		"top":624,
-                                             		"right":876,
-                                             		"bottom":708
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-            	   "onMapLoc": {
-                   			 	    "x":7,
-                   			 	    "y":10
-                   		   	   },
-                   		   	   "rect": {
-                                                           "left":876,
-                                                     		"top":624,
-                                                     		"right":960,
-                                                     		"bottom":708
-
-                                                  },
-            	   "type": "Field"
-        },
-        {
-
-            	   "onMapLoc": {
-                   			 	    "x":7,
-                   			 	    "y":11
-                   		   	   },
-                   		   	   "rect": {
-                                                           "left":960,
-                                                     		"top":624,
-                                                     		"right":1044,
-                                                     		"bottom":708
-
-                                                  },
-            	   "type": "Wall"
-        },
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":8,
-           			 	    "y":0
-           		   	   },
-           		   	   "rect": {
-                                                   "left":36,
-                                             		"top":708,
-                                             		"right":120,
-                                             		"bottom":792
-
-                                          },
-    	   "type": "Wall"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":8,
-           			 	    "y":1
-           		   	   },
-           		   	   "rect": {
-                                                   "left":120,
-                                             		"top":708,
-                                             		"right":204,
-                                             		"bottom":792
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":8,
-           			 	    "y":2
-           		   	   },
-           		   	   "rect": {
-                                                   "left":204,
-                                             		"top":708,
-                                             		"right":288,
-                                             		"bottom":792
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":8,
-           			 	    "y":3
-           		   	   },
-           		   	   "rect": {
-                                                   "left":288,
-                                             		"top":708,
-                                             		"right":372,
-                                             		"bottom":792
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":8,
-           			 	    "y":4
-           		   	   },
-           		   	   "rect": {
-                                                   "left":372,
-                                             		"top":708,
-                                             		"right":456,
-                                             		"bottom":792
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":8,
-           			 	    "y":5
-           		   	   },
-           		   	   "rect": {
-                                                   "left":456,
-                                             		"top":708,
-                                             		"right":540,
-                                             		"bottom":792
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":8,
-           			 	    "y":6
-           		   	   },
-           		   	   "rect": {
-                                                   "left":540,
-                                             		"top":708,
-                                             		"right":624,
-                                             		"bottom":792
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":8,
-           			 	    "y":7
-           		   	   },
-           		   	   "rect": {
-                                                   "left":624,
-                                             		"top":708,
-                                             		"right":708,
-                                             		"bottom":792
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":8,
-           			 	    "y":8
-           		   	   },
-           		   	   "rect": {
-                                                   "left":708,
-                                             		"top":708,
-                                             		"right":792,
-                                             		"bottom":792
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":8,
-           			 	    "y":9
-           		   	   },
-           		   	   "rect": {
-                                                   "left":792,
-                                             		"top":708,
-                                             		"right":876,
-                                             		"bottom":792
-
-                                          },
-    	   "type": "Field"
-    	},
-    	{
-
-            	   "onMapLoc": {
-                   			 	    "x":8,
-                   			 	    "y":10
-                   		   	   },
-                   		   	   "rect": {
-                                                           "left":876,
-                                                     		"top":708,
-                                                     		"right":960,
-                                                     		"bottom":792
-
-                                                  },
-            	   "type": "Field"
-        },
-        {
-
-            	   "onMapLoc": {
-                   			 	    "x":8,
-                   			 	    "y":11
-                   		   	   },
-                   		   	   "rect": {
-                                                           "left":960,
-                                                     		"top":708,
-                                                     		"right":1044,
-                                                     		"bottom":792
-
-                                                  },
-            	   "type": "Wall"
-        },
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":9,
-           			 	    "y":0
-           		   	   },
-           		   	   "rect": {
-                                                   "left":36,
-                                             		"top":792,
-                                             		"right":120,
-                                             		"bottom":876
-
-                                          },
-    	   "type": "Wall"
-    	},
-    	{
-
-    	   "onMapLoc": {
-           			 	    "x":9,
-           			 	    "y":1
-           		   	   },
-           		   	   "rect": {
-                                                   "left":120,
-                                             		"top":792,
-                                             		"right":204,
-                                             		"bottom":876
-
-                                          },
     	   "type": "Tree"
     	},
     	{
+
+    	   "onMapLoc": {
+           			 	    "x":4,
+           			 	    "y":1
+           		   	   },
+           		   	   "rect": {
+                                                   "left":120,
+                                             		"top":372,
+                                             		"right":204,
+                                             		"bottom":456
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":4,
+           			 	    "y":2
+           		   	   },
+           		   	   "rect": {
+                                                   "left":204,
+                                             		"top":372,
+                                             		"right":288,
+                                             		"bottom":456
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":4,
+           			 	    "y":3
+           		   	   },
+           		   	   "rect": {
+                                                   "left":288,
+                                             		"top":372,
+                                             		"right":372,
+                                             		"bottom":456
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":4,
+           			 	    "y":4
+           		   	   },
+           		   	   "rect": {
+                                                   "left":372,
+                                             		"top":372,
+                                             		"right":456,
+                                             		"bottom":456
+
+                                          },
+    	   "type": "Field"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":4,
+           			 	    "y":5
+           		   	   },
+           		   	   "rect": {
+                                                   "left":456,
+                                             		"top":372,
+                                             		"right":540,
+                                             		"bottom":456
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":4,
+           			 	    "y":6
+           		   	   },
+           		   	   "rect": {
+                                                   "left":540,
+                                             		"top":372,
+                                             		"right":624,
+                                             		"bottom":456
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":4,
+           			 	    "y":7
+           		   	   },
+           		   	   "rect": {
+                                                   "left":624,
+                                             		"top":372,
+                                             		"right":708,
+                                             		"bottom":456
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":4,
+           			 	    "y":8
+           		   	   },
+           		   	   "rect": {
+                                                   "left":708,
+                                             		"top":372,
+                                             		"right":792,
+                                             		"bottom":456
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":4,
+           			 	    "y":9
+           		   	   },
+           		   	   "rect": {
+                                                   "left":792,
+                                             		"top":372,
+                                             		"right":876,
+                                             		"bottom":456
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+            	   "onMapLoc": {
+                   			 	    "x":4,
+                   			 	    "y":10
+                   		   	   },
+                   		   	   "rect": {
+                                                           "left":876,
+                                                     		"top":372,
+                                                     		"right":960,
+                                                     		"bottom":456
+
+                                                  },
+            	   "type": "Water"
+        },
+        {
+
+            	   "onMapLoc": {
+                   			 	    "x":4,
+                   			 	    "y":11
+                   		   	   },
+                   		   	   "rect": {
+                                                           "left":960,
+                                                     		"top":372,
+                                                     		"right":1044,
+                                                     		"bottom":456
+
+                                                  },
+            	   "type": "Wall"
+        },
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":5,
+           			 	    "y":0
+           		   	   },
+           		   	   "rect": {
+                                                   "left":36,
+                                             		"top":456,
+                                             		"right":120,
+                                             		"bottom":540
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":5,
+           			 	    "y":1
+           		   	   },
+           		   	   "rect": {
+                                                   "left":120,
+                                             		"top":456,
+                                             		"right":204,
+                                             		"bottom":540
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":5,
+           			 	    "y":2
+           		   	   },
+           		   	   "rect": {
+                                                   "left":204,
+                                             		"top":456,
+                                             		"right":288,
+                                             		"bottom":540
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":5,
+           			 	    "y":3
+           		   	   },
+           		   	   "rect": {
+                                                   "left":288,
+                                             		"top":456,
+                                             		"right":372,
+                                             		"bottom":540
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":5,
+           			 	    "y":4
+           		   	   },
+           		   	   "rect": {
+                                                   "left":372,
+                                             		"top":456,
+                                             		"right":456,
+                                             		"bottom":540
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":5,
+           			 	    "y":5
+           		   	   },
+           		   	   "rect": {
+                                                   "left":456,
+                                             		"top":456,
+                                             		"right":540,
+                                             		"bottom":540
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":5,
+           			 	    "y":6
+           		   	   },
+           		   	   "rect": {
+                                                   "left":540,
+                                             		"top":456,
+                                             		"right":624,
+                                             		"bottom":540
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":5,
+           			 	    "y":7
+           		   	   },
+           		   	   "rect": {
+                                                   "left":624,
+                                             		"top":456,
+                                             		"right":708,
+                                             		"bottom":540
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":5,
+           			 	    "y":8
+           		   	   },
+           		   	   "rect": {
+                                                   "left":708,
+                                             		"top":456,
+                                             		"right":792,
+                                             		"bottom":540
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":5,
+           			 	    "y":9
+           		   	   },
+           		   	   "rect": {
+                                                   "left":792,
+                                             		"top":456,
+                                             		"right":876,
+                                             		"bottom":540
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+            	   "onMapLoc": {
+                   			 	    "x":5,
+                   			 	    "y":10
+                   		   	   },
+                   		   	   "rect": {
+                                                           "left":876,
+                                                     		"top":456,
+                                                     		"right":960,
+                                                     		"bottom":540
+
+                                                  },
+            	   "type": "Water"
+        },
+        {
+
+            	   "onMapLoc": {
+                   			 	    "x":5,
+                   			 	    "y":11
+                   		   	   },
+                   		   	   "rect": {
+                                                           "left":960,
+                                                     		"top":456,
+                                                     		"right":1044,
+                                                     		"bottom":540
+
+                                                  },
+            	   "type": "Wall"
+        },
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":6,
+           			 	    "y":0
+           		   	   },
+           		   	   "rect": {
+                                                   "left":36,
+                                             		"top":540,
+                                             		"right":120,
+                                             		"bottom":624
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":6,
+           			 	    "y":1
+           		   	   },
+           		   	   "rect": {
+                                                   "left":120,
+                                             		"top":540,
+                                             		"right":204,
+                                             		"bottom":624
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":6,
+           			 	    "y":2
+           		   	   },
+           		   	   "rect": {
+                                                   "left":204,
+                                             		"top":540,
+                                             		"right":288,
+                                             		"bottom":624
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":6,
+           			 	    "y":3
+           		   	   },
+           		   	   "rect": {
+                                                   "left":288,
+                                             		"top":540,
+                                             		"right":372,
+                                             		"bottom":624
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":6,
+           			 	    "y":4
+           		   	   },
+           		   	   "rect": {
+                                                   "left":372,
+                                             		"top":540,
+                                             		"right":456,
+                                             		"bottom":624
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":6,
+           			 	    "y":5
+           		   	   },
+           		   	   "rect": {
+                                                   "left":456,
+                                             		"top":540,
+                                             		"right":540,
+                                             		"bottom":624
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":6,
+           			 	    "y":6
+           		   	   },
+           		   	   "rect": {
+                                                   "left":540,
+                                             		"top":540,
+                                             		"right":624,
+                                             		"bottom":624
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":6,
+           			 	    "y":7
+           		   	   },
+           		   	   "rect": {
+                                                   "left":624,
+                                             		"top":540,
+                                             		"right":708,
+                                             		"bottom":624
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":6,
+           			 	    "y":8
+           		   	   },
+           		   	   "rect": {
+                                                   "left":708,
+                                             		"top":540,
+                                             		"right":792,
+                                             		"bottom":624
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":6,
+           			 	    "y":9
+           		   	   },
+           		   	   "rect": {
+                                                   "left":792,
+                                             		"top":540,
+                                             		"right":876,
+                                             		"bottom":624
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+            	   "onMapLoc": {
+                   			 	    "x":6,
+                   			 	    "y":10
+                   		   	   },
+                   		   	   "rect": {
+                                                           "left":876,
+                                                     		"top":540,
+                                                     		"right":960,
+                                                     		"bottom":624
+
+                                                  },
+            	   "type": "Wall"
+        },
+        {
+
+            	   "onMapLoc": {
+                   			 	    "x":6,
+                   			 	    "y":11
+                   		   	   },
+                   		   	   "rect": {
+                                                           "left":960,
+                                                     		"top":540,
+                                                     		"right":1044,
+                                                     		"bottom":624
+
+                                                  },
+            	   "type": "Wall"
+        },
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":7,
+           			 	    "y":0
+           		   	   },
+           		   	   "rect": {
+                                                   "left":36,
+                                             		"top":624,
+                                             		"right":120,
+                                             		"bottom":708
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":7,
+           			 	    "y":1
+           		   	   },
+           		   	   "rect": {
+                                                   "left":120,
+                                             		"top":624,
+                                             		"right":204,
+                                             		"bottom":708
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":7,
+           			 	    "y":2
+           		   	   },
+           		   	   "rect": {
+                                                   "left":204,
+                                             		"top":624,
+                                             		"right":288,
+                                             		"bottom":708
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":7,
+           			 	    "y":3
+           		   	   },
+           		   	   "rect": {
+                                                   "left":288,
+                                             		"top":624,
+                                             		"right":372,
+                                             		"bottom":708
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":7,
+           			 	    "y":4
+           		   	   },
+           		   	   "rect": {
+                                                   "left":372,
+                                             		"top":624,
+                                             		"right":456,
+                                             		"bottom":708
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":7,
+           			 	    "y":5
+           		   	   },
+           		   	   "rect": {
+                                                   "left":456,
+                                             		"top":624,
+                                             		"right":540,
+                                             		"bottom":708
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":7,
+           			 	    "y":6
+           		   	   },
+           		   	   "rect": {
+                                                   "left":540,
+                                             		"top":624,
+                                             		"right":624,
+                                             		"bottom":708
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":7,
+           			 	    "y":7
+           		   	   },
+           		   	   "rect": {
+                                                   "left":624,
+                                             		"top":624,
+                                             		"right":708,
+                                             		"bottom":708
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":7,
+           			 	    "y":8
+           		   	   },
+           		   	   "rect": {
+                                                   "left":708,
+                                             		"top":624,
+                                             		"right":792,
+                                             		"bottom":708
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":7,
+           			 	    "y":9
+           		   	   },
+           		   	   "rect": {
+                                                   "left":792,
+                                             		"top":624,
+                                             		"right":876,
+                                             		"bottom":708
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
+
+            	   "onMapLoc": {
+                   			 	    "x":7,
+                   			 	    "y":10
+                   		   	   },
+                   		   	   "rect": {
+                                                           "left":876,
+                                                     		"top":624,
+                                                     		"right":960,
+                                                     		"bottom":708
+
+                                                  },
+            	   "type": "Water"
+        },
+        {
+
+            	   "onMapLoc": {
+                   			 	    "x":7,
+                   			 	    "y":11
+                   		   	   },
+                   		   	   "rect": {
+                                                           "left":960,
+                                                     		"top":624,
+                                                     		"right":1044,
+                                                     		"bottom":708
+
+                                                  },
+            	   "type": "Wall"
+        },
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":8,
+           			 	    "y":0
+           		   	   },
+           		   	   "rect": {
+                                                   "left":36,
+                                             		"top":708,
+                                             		"right":120,
+                                             		"bottom":792
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":8,
+           			 	    "y":1
+           		   	   },
+           		   	   "rect": {
+                                                   "left":120,
+                                             		"top":708,
+                                             		"right":204,
+                                             		"bottom":792
+
+                                          },
+    	   "type": "ChestCell"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":8,
+           			 	    "y":2
+           		   	   },
+           		   	   "rect": {
+                                                   "left":204,
+                                             		"top":708,
+                                             		"right":288,
+                                             		"bottom":792
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":8,
+           			 	    "y":3
+           		   	   },
+           		   	   "rect": {
+                                                   "left":288,
+                                             		"top":708,
+                                             		"right":372,
+                                             		"bottom":792
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":8,
+           			 	    "y":4
+           		   	   },
+           		   	   "rect": {
+                                                   "left":372,
+                                             		"top":708,
+                                             		"right":456,
+                                             		"bottom":792
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":8,
+           			 	    "y":5
+           		   	   },
+           		   	   "rect": {
+                                                   "left":456,
+                                             		"top":708,
+                                             		"right":540,
+                                             		"bottom":792
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":8,
+           			 	    "y":6
+           		   	   },
+           		   	   "rect": {
+                                                   "left":540,
+                                             		"top":708,
+                                             		"right":624,
+                                             		"bottom":792
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":8,
+           			 	    "y":7
+           		   	   },
+           		   	   "rect": {
+                                                   "left":624,
+                                             		"top":708,
+                                             		"right":708,
+                                             		"bottom":792
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":8,
+           			 	    "y":8
+           		   	   },
+           		   	   "rect": {
+                                                   "left":708,
+                                             		"top":708,
+                                             		"right":792,
+                                             		"bottom":792
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":8,
+           			 	    "y":9
+           		   	   },
+           		   	   "rect": {
+                                                   "left":792,
+                                             		"top":708,
+                                             		"right":876,
+                                             		"bottom":792
+
+                                          },
+    	   "type": "Floor"
+    	},
+    	{
+
+            	   "onMapLoc": {
+                   			 	    "x":8,
+                   			 	    "y":10
+                   		   	   },
+                   		   	   "rect": {
+                                                           "left":876,
+                                                     		"top":708,
+                                                     		"right":960,
+                                                     		"bottom":792
+
+                                                  },
+            	   "type": "Floor"
+        },
+        {
+
+            	   "onMapLoc": {
+                   			 	    "x":8,
+                   			 	    "y":11
+                   		   	   },
+                   		   	   "rect": {
+                                                           "left":960,
+                                                     		"top":708,
+                                                     		"right":1044,
+                                                     		"bottom":792
+
+                                                  },
+            	   "type": "Wall"
+        },
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":9,
+           			 	    "y":0
+           		   	   },
+           		   	   "rect": {
+                                                   "left":36,
+                                             		"top":792,
+                                             		"right":120,
+                                             		"bottom":876
+
+                                          },
+    	   "type": "Wall"
+    	},
+    	{
+
+    	   "onMapLoc": {
+           			 	    "x":9,
+           			 	    "y":1
+           		   	   },
+           		   	   "rect": {
+                                                   "left":120,
+                                             		"top":792,
+                                             		"right":204,
+                                             		"bottom":876
+
+                                          },
+    	   "type": "Water"
+    	},
+    	{
     	   "onMapLoc": {
            			 	    "x":9,
            			 	    "y":2
@@ -1665,7 +1665,7 @@
                                              		"bottom":876
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
     	   "onMapLoc": {
@@ -1679,7 +1679,7 @@
                                              		"bottom":876
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
     	   "onMapLoc": {
@@ -1693,7 +1693,7 @@
                                              		"bottom":876
 
                                           },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
     	    "onMapLoc": {
@@ -1707,7 +1707,7 @@
                                           		    "bottom":876
 
                                        },
-    	   "type": "Field"
+    	   "type": "Wall"
     	},
     	{
     	    "onMapLoc": {
@@ -1721,7 +1721,7 @@
                                               		"bottom":876
 
                                            },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
     	    "onMapLoc": {
@@ -1735,7 +1735,7 @@
                                               		"bottom":876
 
                                            },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
     	    "onMapLoc": {
@@ -1749,7 +1749,7 @@
                                               		"bottom":876
 
                                            },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
     	    "onMapLoc": {
@@ -1763,7 +1763,7 @@
                                               		"bottom":876
 
                                            },
-    	   "type": "Field"
+    	   "type": "Floor"
     	},
     	{
             	    "onMapLoc": {
@@ -1777,7 +1777,7 @@
                                                       		"bottom":876
 
                                                    },
-            	   "type": "Field"
+            	   "type": "Floor"
         },
         {
             	    "onMapLoc": {
@@ -1819,7 +1819,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Field"
+                            	   "type": "Water"
         },
         {
                             	    "onMapLoc": {
@@ -1833,7 +1833,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Field"
+                            	   "type": "Water"
         },
         {
                             	    "onMapLoc": {
@@ -1847,7 +1847,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Field"
+                            	   "type": "Water"
         },
         {
                             	    "onMapLoc": {
@@ -1861,7 +1861,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Field"
+                            	   "type": "Water"
         },
         {
                             	    "onMapLoc": {
@@ -1875,7 +1875,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Field"
+                            	   "type": "Wall"
         },
         {
                             	    "onMapLoc": {
@@ -1889,7 +1889,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Field"
+                            	   "type": "Floor"
         },
         {
                             	    "onMapLoc": {
@@ -1903,7 +1903,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Field"
+                            	   "type": "Wall"
         },
         {
                             	    "onMapLoc": {
@@ -1917,7 +1917,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Field"
+                            	   "type": "Floor"
         },
         {
                             	    "onMapLoc": {
@@ -1931,7 +1931,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Field"
+                            	   "type": "Floor"
         },
         {
                             	    "onMapLoc": {
@@ -1945,7 +1945,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Field"
+                            	   "type": "Floor"
         },
         {
                             	    "onMapLoc": {

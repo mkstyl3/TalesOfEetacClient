@@ -724,7 +724,9 @@ public class GameView extends SurfaceView implements Runnable {
                 } else if (cell.getClass().getSimpleName().equals("Water")) {
                     cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.water));
                 } else if (cell.getClass().getSimpleName().equals("Lava")) {
-                    cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.lava));
+                    cell.setBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.lava0));
+                } else if (cell.getClass().getSimpleName().equals("Floor")){
+                    cell.setBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.floor));
                 }
             }
             Map map = new Map(mapId, cells);
