@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.Toast;
 
 import dsa.upc.edu.talesofeetacclient.Model.Main.User;
 import dsa.upc.edu.talesofeetacclient.R;
@@ -127,6 +128,8 @@ public class MainActivity extends Activity
             ((MainActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
+
+
     }
 
 }

@@ -72,7 +72,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         User u = new User();
         u.setName(username);
         u.setPassword(password); // "http://10.0.2.2:8080/talesofeetac/db/"
-        Call<User> call = ApiAdapter.getApiService("http://10.192.111.244:8080/talesofeetac/db/").getUserLoginService(u);
+        Call<User> call = ApiAdapter.getApiService("http://10.193.96.32:8080/talesofeetac/db/").getUserLoginService(u);
         call.enqueue(new GetUserLoginCallback());
     }
 
@@ -104,6 +104,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
         @Override
         public void onFailure(Call<User> call, Throwable t) {
+            progressBar.setVisibility(View.GONE);
             Toast.makeText(getBaseContext(), "We've got NO connection!", Toast.LENGTH_SHORT).show();
         }
     }
@@ -119,6 +120,11 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 }
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }
 

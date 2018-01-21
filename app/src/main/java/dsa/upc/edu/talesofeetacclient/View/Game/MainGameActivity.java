@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import dsa.upc.edu.talesofeetacclient.Model.Main.User;
 import dsa.upc.edu.talesofeetacclient.R;
@@ -25,7 +26,6 @@ public class MainGameActivity extends Activity {
         user = intent.getParcelableExtra("profile");
         gameView = new GameView(this,user);
         setContentView(gameView);
-
         mySong=MediaPlayer.create(MainGameActivity.this, R.raw.plateau);
 
     }
@@ -45,5 +45,11 @@ public class MainGameActivity extends Activity {
         super.onPause();
         // Tell the gameView pause method to execute
         gameView.pause();
+    }
+    @Override
+    public void onBackPressed() {
+        mySong.stop();
+        finish();
+        return;
     }
 }

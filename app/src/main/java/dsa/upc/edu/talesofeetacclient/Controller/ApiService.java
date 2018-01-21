@@ -2,11 +2,11 @@ package dsa.upc.edu.talesofeetacclient.Controller;
 
 import java.util.List;
 
-import dsa.upc.edu.talesofeetacclient.Model.Main.ChestItem;
+import dsa.upc.edu.talesofeetacclient.Model.Main.Relation.ChestItem;
 import dsa.upc.edu.talesofeetacclient.Model.Main.Item;
+import dsa.upc.edu.talesofeetacclient.Model.Main.Relation.UserItem;
 import dsa.upc.edu.talesofeetacclient.Model.Main.User;
 import retrofit2.Call;
-import retrofit2.Response;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
@@ -25,6 +25,6 @@ public interface ApiService {
     Call<Boolean> deleteChestItemsService(@Path("id") int chestId);
     @POST("user/register")
     Call<User> getUserRegisterService (@Body User user);
-    @POST("chestItem/add")
-    Call<Boolean> setChestItemService (@Body ChestItem chestItem);
+    @POST("userItem/add")
+    Call<Boolean> setUserItemService (@Body UserItem userItem);
 }

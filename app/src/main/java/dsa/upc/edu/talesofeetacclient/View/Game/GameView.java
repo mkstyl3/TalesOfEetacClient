@@ -19,9 +19,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.logging.Handler;
 
 import dsa.upc.edu.talesofeetacclient.Controller.ApiAdapter;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.Cell;
@@ -29,10 +26,11 @@ import dsa.upc.edu.talesofeetacclient.Model.Cell.ChestCell;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.Door;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.NPC;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.UserCell;
-import dsa.upc.edu.talesofeetacclient.Model.Main.ChestItem;
+import dsa.upc.edu.talesofeetacclient.Model.Main.Relation.ChestItem;
 import dsa.upc.edu.talesofeetacclient.Model.Main.Item;
 import dsa.upc.edu.talesofeetacclient.Model.Main.Location;
 import dsa.upc.edu.talesofeetacclient.Model.Main.Map;
+import dsa.upc.edu.talesofeetacclient.Model.Main.Relation.UserItem;
 import dsa.upc.edu.talesofeetacclient.Model.Main.User;
 import dsa.upc.edu.talesofeetacclient.R;
 import retrofit2.Call;
@@ -279,8 +277,8 @@ public class GameView extends SurfaceView implements Runnable {
                                         }
                                         else {
                                             user.getItems().addAll(chest0);
-                                            ChestItem chestItem = new ChestItem(0,5);
-                                            setChestItem(chestItem);
+                                            UserItem userItem = new UserItem(user.getId(),5);
+                                            setUserItem(userItem);
                                             chest0.clear();
                                             //getDeleteChestItems(0);
                                             text = "You've got a Dark Hole Invocation!";
@@ -294,8 +292,8 @@ public class GameView extends SurfaceView implements Runnable {
                                         }
                                         else {
                                             user.getItems().addAll(chest1);
-                                            ChestItem chestItem = new ChestItem(1,10);
-                                            setChestItem(chestItem);
+                                            UserItem userItem = new UserItem(user.getId(),10);
+                                            setUserItem(userItem);
                                             chest1.clear();
                                             //getDeleteChestItems(1);
                                             text = "You've got the Master-Key!";
@@ -749,7 +747,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     public void getDeleteChestItems(int chestId) {
         Log.v(TAG, "getDeleteChestItems: Deleting all items from chest with id: "+chestId+"...");
-        Call<Boolean> call = ApiAdapter.getApiService("http://10.192.111.244:8080/talesofeetac/db/").deleteChestItemsService(chestId);
+        Call<Boolean> call = ApiAdapter.getApiService("http://10.193.96.32:8080/talesofeetac/db/").deleteChestItemsService(chestId);
         call.enqueue(new GetDeleteChestItemsCallback(chestId));
     }
 
@@ -774,7 +772,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     public void getChestItemList(int chestId) {
         Log.v(TAG, "getChestItemList: Retreiving all items from chest with id: "+chestId+"...");
-        Call<List<Item>> call = ApiAdapter.getApiService("http://10.192.111.244:8080/talesofeetac/db/").getChestItemsService(chestId);
+        Call<List<Item>> call = ApiAdapter.getApiService("http://10.193.96.32:8080/talesofeetac/db/").getChestItemsService(chestId);
         call.enqueue(new GetChestItemListCallback(chestId));
     }
 
@@ -809,13 +807,13 @@ public class GameView extends SurfaceView implements Runnable {
         }
     }
 
-    public void setChestItem(ChestItem chestItem) {
-        Log.v(TAG, "setChestItem: Adding chestItem with id: "+chestItem.getId()+" to the db...");
-        Call<Boolean> call = ApiAdapter.getApiService("http://10.192.111.244:8080/talesofeetac/db/").setChestItemService(chestItem);
-        call.enqueue(new setChestItemCallback());
+    public void setUserItem(UserItem userItem) {
+        Log.v(TAG, "setUserItem: Adding userItem with id: "+userItem.getId()+" to the db...");
+        Call<Boolean> call = ApiAdapter.getApiService("http://10.193.96.32:8080/talesofeetac/db/").setUserItemService(userItem);
+        call.enqueue(new setUserItemCallback());
     }
 
-    private class setChestItemCallback implements Callback<Boolean> {
+    private class setUserItemCallback implements Callback<Boolean> {
         @Override
         public void onResponse(Call<Boolean> call, Response<Boolean> response) {
             Boolean bool = response.body();

@@ -117,8 +117,7 @@ public class NavigationDrawerFragment extends Fragment {
                 new String[]{
                         getString(R.string.profile),
                         getString(R.string.play),
-                        getString(R.string.ranking),
-                        getString(R.string.logout)
+                        "BACK"
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
@@ -217,6 +216,9 @@ public class NavigationDrawerFragment extends Fragment {
                     intent2.putExtra("profile", user);
                     startActivityForResult(intent2,3 );
                     break;
+                }
+                case 2: {
+                    mDrawerLayout.closeDrawer(mFragmentContainerView);
                 }
             }
             mDrawerListView.setItemChecked(position, true);

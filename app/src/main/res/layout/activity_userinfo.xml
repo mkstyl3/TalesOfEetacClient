@@ -30,7 +30,7 @@
         android:src="@mipmap/ic_launcher_round"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.057"
@@ -43,7 +43,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="20dp"
         android:text="User ID:"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="@+id/userAvatarView"
@@ -82,12 +81,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Email:"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="@+id/userAvatarView"
         app:layout_constraintEnd_toEndOf="@+id/passwordText"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/passwordText"
         app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
@@ -116,13 +115,14 @@
     <TextView
         android:id="@+id/emailView"
         android:layout_width="wrap_content"
-        android:layout_height="21dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="10dp"
         android:text="TextView"
         android:textColor="@android:color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/emailText"
         app:layout_constraintEnd_toEndOf="@+id/passwordView"
-        app:layout_constraintStart_toStartOf="@+id/passwordView" />
+        app:layout_constraintStart_toStartOf="@+id/passwordView"
+        app:layout_constraintTop_toBottomOf="@+id/passwordView" />
 
     <TextView
         android:id="@+id/textView3"
@@ -148,7 +148,7 @@
         android:layout_height="256dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="188dp"
         android:scrollbars="horizontal|vertical"
         android:visibility="visible"

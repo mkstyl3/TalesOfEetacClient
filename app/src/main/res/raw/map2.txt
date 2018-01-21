@@ -2057,12 +2057,7 @@
                                                                       		"bottom":1044
 
                                                         },
-<<<<<<< HEAD
-                            	   "type": "Wall",
-=======
-                            	   "type": "Wall"
-
->>>>>>> efdb1f79e96b894fcc5017d1e8e991104004355c
+                                    "type": "Wall"
         },
         {
                             	    "onMapLoc": {

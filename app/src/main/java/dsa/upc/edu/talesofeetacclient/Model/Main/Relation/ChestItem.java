@@ -1,4 +1,4 @@
-package dsa.upc.edu.talesofeetacclient.Model.Main;
+package dsa.upc.edu.talesofeetacclient.Model.Main.Relation;
 
 /**
  * Created by mike on 1/01/18.
