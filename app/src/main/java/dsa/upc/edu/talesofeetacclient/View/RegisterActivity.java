@@ -89,6 +89,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
                 finish();
             } else if (response.errorBody() != null) {
                 try {
+                    progressBar.setVisibility(View.GONE);
                     Toast.makeText(getBaseContext(), response.errorBody().string(), Toast.LENGTH_LONG).show();
                 } catch (IOException e) {
                     e.printStackTrace();

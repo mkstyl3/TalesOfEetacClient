@@ -92,6 +92,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             } else if (response.errorBody() != null) {
 
                 try {
+                    progressBar.setVisibility(View.GONE);
                     Toast.makeText(getBaseContext(), response.errorBody().string(), Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
                     e.printStackTrace();
