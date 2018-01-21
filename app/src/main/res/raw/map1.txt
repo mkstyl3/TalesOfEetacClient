@@ -252,7 +252,7 @@
                                              		"bottom":204
 
                                           },
-    	   "type": "Tree"
+    	   "type": "Field"
     	},
     	{
 
@@ -1350,7 +1350,7 @@
                                              		"bottom":708
 
                                           },
-    	   "type": "Floor"
+    	   "type": "Wall"
     	},
     	{
 
