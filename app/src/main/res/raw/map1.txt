@@ -330,7 +330,9 @@
     	   "type": "Floor"
     	},
     	{
-
+                   "chest": {
+                                           "id":1
+                                       },
             	   "onMapLoc": {
                    			 	    "x":1,
                    			 	    "y":10
@@ -420,10 +422,7 @@
     	   "type": "Field"
     	},
     	{
-           "chest": {
-                        "id":0
-                    },
-    	   "onMapLoc": {
+           "onMapLoc": {
            			 	    "x":2,
            			 	    "y":4
            		   	   },
@@ -437,9 +436,7 @@
     	   "type": "Field"
     	},
     	{
-            "chest": {
-                                    "id":1
-                                },
+
     	   "onMapLoc": {
            			 	    "x":2,
            			 	    "y":5
@@ -1459,7 +1456,9 @@
     	   "type": "Wall"
     	},
     	{
-
+            "chest": {
+                                    "id":0
+                                },
     	   "onMapLoc": {
            			 	    "x":8,
            			 	    "y":1

@@ -6,8 +6,6 @@ package dsa.upc.edu.talesofeetacclient.Model.Cell;
 
 public class Floor extends Cell {
 
-
-
     private final String type = "Floor";
 
     public Floor () {}
