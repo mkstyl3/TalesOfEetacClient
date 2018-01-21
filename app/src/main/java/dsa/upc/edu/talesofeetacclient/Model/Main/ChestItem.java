@@ -12,8 +12,8 @@ public class ChestItem {
 
     public ChestItem() {}
 
-    public ChestItem(int userId, int itemId) {
-        this.chestId = userId;
+    public ChestItem(int chestId, int itemId) {
+        this.chestId = chestId;
         this.itemId = itemId;
     }
 

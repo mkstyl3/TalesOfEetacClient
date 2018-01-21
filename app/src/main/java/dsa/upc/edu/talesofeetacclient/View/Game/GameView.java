@@ -29,6 +29,7 @@ import dsa.upc.edu.talesofeetacclient.Model.Cell.ChestCell;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.Door;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.NPC;
 import dsa.upc.edu.talesofeetacclient.Model.Cell.UserCell;
+import dsa.upc.edu.talesofeetacclient.Model.Main.ChestItem;
 import dsa.upc.edu.talesofeetacclient.Model.Main.Item;
 import dsa.upc.edu.talesofeetacclient.Model.Main.Location;
 import dsa.upc.edu.talesofeetacclient.Model.Main.Map;
@@ -128,8 +129,8 @@ public class GameView extends SurfaceView implements Runnable {
     private Location nextCellLoc;
     int collisionResult;
     private List<Item> items;
-    private List chest0;
-    private List chest1;
+    private List<Item> chest0;
+    private List<Item> chest1;
     private String text;
     private boolean gotTheKey = false;
     private boolean gotTheInvocation = false;
@@ -278,7 +279,10 @@ public class GameView extends SurfaceView implements Runnable {
                                         }
                                         else {
                                             user.getItems().addAll(chest0);
+                                            ChestItem chestItem = new ChestItem(0,5);
+                                            setChestItem(chestItem);
                                             chest0.clear();
+                                            //getDeleteChestItems(0);
                                             text = "You've got a Dark Hole Invocation!";
                                             break;
                                         }
@@ -290,7 +294,10 @@ public class GameView extends SurfaceView implements Runnable {
                                         }
                                         else {
                                             user.getItems().addAll(chest1);
+                                            ChestItem chestItem = new ChestItem(1,10);
+                                            setChestItem(chestItem);
                                             chest1.clear();
+                                            //getDeleteChestItems(1);
                                             text = "You've got the Master-Key!";
                                             break;
                                         }
@@ -802,6 +809,28 @@ public class GameView extends SurfaceView implements Runnable {
         }
     }
 
+    public void setChestItem(ChestItem chestItem) {
+        Log.v(TAG, "setChestItem: Adding chestItem with id: "+chestItem.getId()+" to the db...");
+        Call<Boolean> call = ApiAdapter.getApiService("http://10.192.111.244:8080/talesofeetac/db/").setChestItemService(chestItem);
+        call.enqueue(new setChestItemCallback());
+    }
+
+    private class setChestItemCallback implements Callback<Boolean> {
+        @Override
+        public void onResponse(Call<Boolean> call, Response<Boolean> response) {
+            Boolean bool = response.body();
+        }
+
+        @Override
+        public void onFailure(Call<Boolean> call, Throwable t) {
+
+        }
+    }
+
+
+
+
+
     private Location locateUser(int x, int y) {
         int xNex =-1;
         int yNex = -1;
@@ -999,7 +1028,5 @@ public class GameView extends SurfaceView implements Runnable {
 
         return new Location(xNex,yNex);
     }
-
-
 
 }
