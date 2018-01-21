@@ -2056,8 +2056,8 @@
                                                                       		"bottom":1044
 
                                                         },
-                            	   "type": "Floor",
-                            	   "nextMap": 2
+                            	   "type": "Floor"
+
         },
         {
                             	    "onMapLoc": {

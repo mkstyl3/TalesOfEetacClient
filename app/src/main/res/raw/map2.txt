@@ -2057,8 +2057,8 @@
                                                                       		"bottom":1044
 
                                                         },
-                            	   "type": "Wall",
-                            	   "nextMap": 2
+                            	   "type": "Wall"
+
         },
         {
                             	    "onMapLoc": {
