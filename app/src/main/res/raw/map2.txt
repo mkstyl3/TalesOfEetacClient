@@ -568,7 +568,7 @@
                                              		"bottom":372
 
                                           },
-    	   "type": "Lava"
+    	   "type": "Field"
     	},
     	{
 
@@ -748,7 +748,7 @@
                                              		"bottom":456
 
                                           },
-    	   "type": "Lava"
+    	   "type": "Field"
     	},
     	{
 
@@ -763,7 +763,7 @@
                                              		"bottom":456
 
                                           },
-    	   "type": "Lava"
+    	   "type": "Field"
     	},
     	{
 
@@ -778,7 +778,7 @@
                                              		"bottom":456
 
                                           },
-    	   "type": "Lava"
+    	   "type": "Field"
     	},
     	{
 
@@ -1560,7 +1560,7 @@
                                              		"bottom":792
 
                                           },
-    	   "type": "Floor"
+    	   "type": "Wall"
     	},
     	{
 
@@ -1777,7 +1777,7 @@
                                                       		"bottom":876
 
                                                    },
-            	   "type": "Floor"
+            	   "type": "Lava"
         },
         {
             	    "onMapLoc": {
@@ -1917,7 +1917,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Floor"
+                            	   "type": "Lava"
         },
         {
                             	    "onMapLoc": {
@@ -1931,7 +1931,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Floor"
+                            	   "type": "Lava"
         },
         {
                             	    "onMapLoc": {
@@ -1945,7 +1945,7 @@
                                                                       		"bottom":960
 
                                                                    },
-                            	   "type": "Floor"
+                            	   "type": "Lava"
         },
         {
                             	    "onMapLoc": {
@@ -2058,7 +2058,6 @@
 
                                                         },
                             	   "type": "Wall",
-                            	   "nextMap": 2
         },
         {
                             	    "onMapLoc": {
