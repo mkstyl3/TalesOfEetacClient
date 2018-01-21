@@ -2,18 +2,21 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="73dp">
 
     <TextView
         android:id="@+id/idView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
         android:textColor="@android:color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/idText"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/idText" />
 
     <ImageView
@@ -21,13 +24,16 @@
         android:layout_width="130dp"
         android:layout_height="115dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:src="@mipmap/ic_launcher_round"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.057"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
@@ -35,30 +41,38 @@
         android:id="@+id/idText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="20dp"
         android:text="User ID:"
         android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/userAvatarView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toEndOf="@+id/userAvatarView"
-        app:layout_constraintTop_toTopOf="@+id/userAvatarView" />
+        app:layout_constraintTop_toTopOf="@+id/userAvatarView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/nameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Username"
+        android:text="Username:"
         android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/idText"
         app:layout_constraintStart_toStartOf="@+id/idText"
         app:layout_constraintTop_toBottomOf="@+id/idText" />
 
     <TextView
-        android:id="@+id/emailText"
+        android:id="@+id/passwordText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:text="Password:"
         android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/nameText"
         app:layout_constraintStart_toStartOf="@+id/nameText"
         app:layout_constraintTop_toBottomOf="@+id/nameText" />
 
@@ -66,71 +80,82 @@
         android:id="@+id/emailText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Email:"
         android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="@+id/emailText"
-        app:layout_constraintTop_toBottomOf="@+id/emailText" />
+        app:layout_constraintBottom_toBottomOf="@+id/userAvatarView"
+        app:layout_constraintEnd_toEndOf="@+id/passwordText"
+        app:layout_constraintStart_toStartOf="@+id/passwordText"
+        app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
 
     <TextView
         android:id="@+id/nameView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
         android:textColor="@android:color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/nameText"
-        app:layout_constraintStart_toStartOf="@+id/idView" />
+        app:layout_constraintEnd_toEndOf="@+id/idView"
+        app:layout_constraintStart_toStartOf="@+id/idView"
+        app:layout_constraintTop_toBottomOf="@+id/idView" />
 
     <TextView
         android:id="@+id/passwordView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="21dp"
         android:text="TextView"
         android:textColor="@android:color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/emailText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/passwordText"
         app:layout_constraintStart_toStartOf="@+id/nameView" />
 
     <TextView
         android:id="@+id/emailView"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
+        android:layout_marginEnd="8dp"
         android:text="TextView"
         android:textColor="@android:color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/emailText"
+        app:layout_constraintEnd_toEndOf="@+id/passwordView"
         app:layout_constraintStart_toStartOf="@+id/passwordView" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif"
         android:text="Items"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/itemListView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userAvatarView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
 
     <ListView
         android:id="@+id/itemListView"
         android:layout_width="279dp"
-        android:layout_height="269dp"
+        android:layout_height="256dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="188dp"
         android:scrollbars="horizontal|vertical"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nameView"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/userAvatarView"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userAvatarView"
-        app:layout_constraintVertical_bias="0.692"
+        app:layout_constraintStart_toStartOf="@+id/userAvatarView"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:visibility="visible" />
 </android.support.constraint.ConstraintLayout>

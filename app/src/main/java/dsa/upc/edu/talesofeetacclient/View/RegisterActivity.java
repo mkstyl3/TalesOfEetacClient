@@ -88,17 +88,15 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
                 setResult(1001,intent);
                 finish();
             } else if (response.errorBody() != null) {
-                try {
-                    Toast.makeText(getBaseContext(), response.errorBody().string(), Toast.LENGTH_LONG).show();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+               progressBar.setVisibility(View.GONE);
+               Toast.makeText(getBaseContext(), "Duplicated username", Toast.LENGTH_SHORT).show();
             }
 
         }
 
         @Override
         public void onFailure(Call<User> call, Throwable t) {
+            progressBar.setVisibility(View.GONE);
             Toast.makeText(getBaseContext(), "Could't complete the registration", Toast.LENGTH_SHORT).show();
             finish();
         }
