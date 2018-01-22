@@ -46,5 +46,12 @@ public class MainGameActivity extends Activity {
         // Tell the gameView pause method to execute
         gameView.pause();
     }
-    
+
+    @Override
+    public void onBackPressed() {
+        mySong.stop();
+        finish();
+        return;
+    }
+
 }

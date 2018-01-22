@@ -69,7 +69,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
         u.setName(username);
         u.setPassword(password);
         u.setEmail(email);
-        Call<User> call = ApiAdapter.getApiService("http://10.193.96.32:8080/talesofeetac/db/").getUserRegisterService(u);
+        Call<User> call = ApiAdapter.getApiService("http://192.168.0.107:8080/talesofeetac/db/").getUserRegisterService(u);
         call.enqueue(new GetUserRegisterCallback());
     }
 

@@ -747,7 +747,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     public void getDeleteChestItems(int chestId) {
         Log.v(TAG, "getDeleteChestItems: Deleting all items from chest with id: "+chestId+"...");
-        Call<Boolean> call = ApiAdapter.getApiService("http://10.193.96.32:8080/talesofeetac/db/")
+        Call<Boolean> call = ApiAdapter.getApiService("http://192.168.0.107:8080/talesofeetac/db/")
                 .deleteChestItemsService(chestId);
         call.enqueue(new GetDeleteChestItemsCallback(chestId));
     }
@@ -773,7 +773,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     public void getChestItemList(int chestId) {
         Log.v(TAG, "getChestItemList: Retreiving all items from chest with id: "+chestId+"...");
-        Call<List<Item>> call = ApiAdapter.getApiService("http://10.193.96.32:8080/talesofeetac/db/").getChestItemsService(chestId);
+        Call<List<Item>> call = ApiAdapter.getApiService("http://192.168.0.107:8080/talesofeetac/db/").getChestItemsService(chestId);
         call.enqueue(new GetChestItemListCallback(chestId));
     }
 
@@ -810,7 +810,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     public void setUserItem(UserItem userItem) {
         Log.v(TAG, "setUserItem: Adding userItem with id: "+userItem.getId()+" to the db...");
-        Call<Boolean> call = ApiAdapter.getApiService("http://10.193.96.32:8080/talesofeetac/db/").setUserItemService(userItem);
+        Call<Boolean> call = ApiAdapter.getApiService("http://192.168.0.107:8080/talesofeetac/db/").setUserItemService(userItem);
         call.enqueue(new setUserItemCallback());
     }
 
